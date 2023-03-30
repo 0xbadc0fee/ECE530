@@ -13,6 +13,9 @@
 - [X] Collect information for use in publishing as a report
 - [X] Create a references section for external resources, links
 
+  **!!MAY HAVE TO REMOVE 'US.' FROM UBUNTU ARCHIVE SOURCES.LIST!!**
+  if newly created VM's can't get updates, change the sources.list and remove US region from URL's
+
 *** General Notes:
 + Use Yoga Install Instructions https://docs.openstack.org/swift/yoga/install/
 + Use minimal install version of OS (Ubuntu 20.0.4)

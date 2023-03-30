@@ -2,16 +2,16 @@
 
 * Installation
 ** HW 01: Install Keystone, Glance, Nova, Networking, Horizon, & Cinder
-*** TODO Install VM's [3/6]
+*** TODO Trial / Test VM's [5/6]
 - [X] Install a HyperVisor (VMware / esxi)
 - [-] Create multiple VM's for OpenStack Components
   - [X] CPU = 6 Cores
   - [X] RAM = 6 GB
-  - [ ] HDD = 200 GB
+  - [ ] +HDD = 200 GB+
 - [X] DO NOT USE AUTODEPLOY TOOLS
 - [X] Take Screenshots for steps, attach here in journal
-- [ ] Collect information for use in publishing as a report
-- [ ] Create a references section for external resources, links
+- [X] Collect information for use in publishing as a report
+- [X] Create a references section for external resources, links
 
 *** General Notes:
 + Use Yoga Install Instructions https://docs.openstack.org/swift/yoga/install/
@@ -30,16 +30,29 @@
 + template build.... 2 core, 6gb ram, 40 gb hdd, 2 NIC
 
 *** Configuration and Installation Sequence (1 VM per host method)
-- [-] 5.2 VM & NETWORKING [1/6]
-  - [X] Create VM: 'controller'[3/3]
+- [-] 5.1 Preconfigure VM's [4/5]
+  (specs from testing above, using HP Proliant Microserver & ESXI 7.0)
+  - [X] CPU = 2 cores
+  - [X] RAM = 4 GB
+  - [X] HDD = 40 GB
+  - [X] NICs = 2x
+  - [-] 5x Instances
+    - [X] 'controller'
+    - [ ] 'compute1'
+    - [ ] 'block1'
+    - [ ] 'object1'
+    - [ ] 'object2'
+- [ ] _SNAPSHOTS_ (baremetal)
+- [-] 5.2 VM NETWORKING [1/6]
+  - [X] 'controller'[3/3]
     - [X] Management NIC : 10.0.0.11/24, gw:10.0.0.1
     - [X] Provider NIC  : via netplan, set dhcp4 & dhcp6 false, do not set static ip
     - [X] Edit etc/hosts: see pg 20 in pdf version of install docs
-  - [ ] Create VM: 'compute1'[0/3]
+  - [ ] 'compute1'[0/3]
     - [ ] Management NIC : 10.0.0.31/24, gw:10.0.0.1
     - [ ] Provider NIC : via netplan, set dhcp4 & dhcp6 false, do not set static ip
     - [ ] Edit etc/hosts: see pg 22 in pdf version of install docs
-  - [ ] Create VM: 'block1'[0/2]
+  - [ ] 'block1'[0/2]
     - [ ] Management NIC : 10.0.0.41/24, gw:10.0.0.1
     - [ ] Edit etc/hosts: see pg 23 in pdf version of install docs
   - [ ] Confirm Connectivity: [0/4]
@@ -47,12 +60,13 @@
     - [ ] from @controller, ping -c 4 compute1
     - [ ] from @compute, ping -c 4 openstack.org
     - [ ] from @compute, ping -c 4 controller
-  - [ ] Create VM: 'object1'
-  - [ ] Create VM: 'object2'
+  - [ ] 'object1'
+  - [ ] 'object2'
 - [ ] 5.3 NETWORK TIME PROTOCOL [0/3]
   - [ ] Controller Node
   - [ ] Other Nodes
   - [ ] Verify
+- [ ] _SNAPSHOTS_ (post-NTP, pre-package install)
 - [ ] 5.4 OPENSTACK PACKAGES (repeat on all nodes) [0/1]
   - [ ] Enable Repository / Ubuntu 20.04 / Yoga
 

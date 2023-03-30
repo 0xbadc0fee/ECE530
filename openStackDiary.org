@@ -1,0 +1,114 @@
+#+TITLE: OpenStack Diary
+
+* Installation
+** HW 01: Install Keystone, Glance, Nova, Networking, Horizon, & Cinder
+*** TODO Install VM's [3/6]
+- [X] Install a HyperVisor (VMware / esxi)
+- [-] Create multiple VM's for OpenStack Components
+  - [X] CPU = 6 Cores
+  - [X] RAM = 6 GB
+  - [ ] HDD = 200 GB
+- [X] DO NOT USE AUTODEPLOY TOOLS
+- [X] Take Screenshots for steps, attach here in journal
+- [ ] Collect information for use in publishing as a report
+- [ ] Create a references section for external resources, links
+
+*** General Notes:
++ Use Yoga Install Instructions https://docs.openstack.org/swift/yoga/install/
++ Use minimal install version of OS (Ubuntu 20.0.4)
++ Use 64bit version of OS
++ Build Ea Host as it's own VM.  Can take snapshots, rollbacks, etc.
+  (note that many vm's WILL have reduced performance as number of VMs increases)
+
+*** Hypervisor Install Notes
++ Installed on HP ProLiant MicroServer, 4 TB, 32GB Ram
++ Balance min requirements per vm host comparing Ubuntu min req's and OpenStack min Req's, if room, install each service on sep host.
++ Build template vm and then replicate for each service, make edits as needed (#of nics, # of cores, etc)
++ Per yoga install... controller node: 1 core, 4GB ram, 5GB hdd
++ per yoga install... compute node:1 core, 2gb ram, 10GB hdd
++ Ubuntu lts server... 2 core, 4gb ram, 25gb hdd
++ template build.... 2 core, 6gb ram, 40 gb hdd, 2 NIC
+
+*** Configuration and Installation Sequence (1 VM per host method)
+- [-] 5.2 VM & NETWORKING [1/6]
+  - [X] Create VM: 'controller'[3/3]
+    - [X] Management NIC : 10.0.0.11/24, gw:10.0.0.1
+    - [X] Provider NIC  : via netplan, set dhcp4 & dhcp6 false, do not set static ip
+    - [X] Edit etc/hosts: see pg 20 in pdf version of install docs
+  - [ ] Create VM: 'compute1'[0/3]
+    - [ ] Management NIC : 10.0.0.31/24, gw:10.0.0.1
+    - [ ] Provider NIC : via netplan, set dhcp4 & dhcp6 false, do not set static ip
+    - [ ] Edit etc/hosts: see pg 22 in pdf version of install docs
+  - [ ] Create VM: 'block1'[0/2]
+    - [ ] Management NIC : 10.0.0.41/24, gw:10.0.0.1
+    - [ ] Edit etc/hosts: see pg 23 in pdf version of install docs
+  - [ ] Confirm Connectivity: [0/4]
+    - [ ] from @controller, ping -c 4 docs.openstack.org == PASS
+    - [ ] from @controller, ping -c 4 compute1
+    - [ ] from @compute, ping -c 4 openstack.org
+    - [ ] from @compute, ping -c 4 controller
+  - [ ] Create VM: 'object1'
+  - [ ] Create VM: 'object2'
+- [ ] 5.3 NETWORK TIME PROTOCOL [0/3]
+  - [ ] Controller Node
+  - [ ] Other Nodes
+  - [ ] Verify
+- [ ] 5.4 OPENSTACK PACKAGES (repeat on all nodes) [0/1]
+  - [ ] Enable Repository / Ubuntu 20.04 / Yoga
+
+
+*** NODE 1: Controller Notes
++ From [[https://docs.openstack.org/install-guide/environment-networking.html]] :
+#+BEGIN_QUOTE
+The example architectures assume use of the following networks:
+_Management on 10.0.0.0/24 with gateway 10.0.0.1_
+This network requires a gateway to provide Internet access to all nodes for administrative purposes such as package installation, security updates, DNS, and NTP.
+_Provider on 203.0.113.0/24 with gateway 203.0.113.1_
+This network requires a gateway to provide Internet access to instances in your OpenStack environment.
+You can modify these ranges and gateways to work with your particular network infrastructure.
+Network interface names vary by distribution. Traditionally, interfaces use eth followed by a sequential number. To cover all variations, this guide refers to the first interface as the interface with the lowest number and the second interface as the interface with the highest number.
+ Note
+Ubuntu has changed the network interface naming concept. Refer Changing Network Interfaces name Ubuntu 16.04.
+Unless you intend to use the exact configuration provided in this example architecture, you must modify the networks in this procedure to match your environment. Each node must resolve the other nodes by name in addition to IP address. _For example, the controller name must resolve to 10.0.0.11, the IP address of the management interface on the controller node._
+#+END_QUOTE
+
++ <2023-03-30 Thu> NOTE: Installation Guide / Controller Node / Configure Network Interfaces...
+  Documentation refers to old legacy method of network config using networkinterfaces.  Since Ubuntu 20.04 use /etc/netplan, not /etc/network/interfaces
+#+NAME:Ubuntu Netplan Config
+#+begin_src shell
+sgc@ops-cntrl-01:~$ cat /etc/netplan/00-installer-config.yaml
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    ens160:
+      addresses:
+        - 10.0.0.11/24
+      gateway4: 10.0.0.1
+      nameservers:
+              addresses: [8.8.8.8, 1.1.1.1]
+    ens192:
+      dhcp4: false
+      dhcp6: false
+  version: 2
+#+end_src
+- Be sure that both /etc/hosts and /etc/hostname have the corect names.
+- If all is working, should be able to SSH to host (i.e. 10.0.0.11) and when logged in host name will display correctly in terminal
+
++ <2023-03-30 Thu> NOTE: Archive Enablement:
+  using OpenStack Yoga for Ubuntu 20.04 LTS (server 64bit)
+  - add-apt-repository cloud-archive:yoga
+
+
+
+
+*** NODE 2: Storage Notes
+
+*** VM: OPS_HORIZON Notes
+
+*** VM: OPS_CINDER Notes
+
+
+
+* Deployment
+
+* 

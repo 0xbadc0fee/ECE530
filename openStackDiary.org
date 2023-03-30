@@ -139,10 +139,4 @@ network:
 
 *** VM: OPS_HORIZON Notes
 
-*** VM: OPS_CINDER Notes
-
-
-
-* Deployment
-
-* 
+*** VM: OPS_CINDER Notes 

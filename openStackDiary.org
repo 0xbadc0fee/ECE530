@@ -2,12 +2,12 @@
 
 * Installation
 ** HW 01: Install Keystone, Glance, Nova, Networking, Horizon, & Cinder
-*** TODO Trial / Test VM's [5/6]
+*** TODO Trial / Test VM's [6/6]
 - [X] Install a HyperVisor (VMware / esxi)
-- [-] Create multiple VM's for OpenStack Components
+- [X] Create multiple VM's for OpenStack Components
   - [X] CPU = 6 Cores
   - [X] RAM = 6 GB
-  - [ ] +HDD = 200 GB+
+  - [X] +HDD = 200 GB+
 - [X] DO NOT USE AUTODEPLOY TOOLS
 - [X] Take Screenshots for steps, attach here in journal
 - [X] Collect information for use in publishing as a report
@@ -28,6 +28,23 @@
 + per yoga install... compute node:1 core, 2gb ram, 10GB hdd
 + Ubuntu lts server... 2 core, 4gb ram, 25gb hdd
 + template build.... 2 core, 6gb ram, 40 gb hdd, 2 NIC
+------
+*** Home Lab Config Notes:
++ Hypervisor (HVS): HP Proliant Microserver Gen10, 4tb, 32gb ram, 4 NICS,
++ Router (RTR): pfSense Firewall / Router, 4 NICS (WAN,LAN,OPT1,OTP2),
+  + WAN : ISP
+  + LAN: CLASS C 192.168.1.1/24
+  + OPT1: CLASS A 10.0.0.1/24 DHCP4=FALSE
+  + OPT2: CLASS C 203.0.113.1/24 DHCP4=TRUE
++ Physical Network
+  + RTR igb0 <-> ISP
+  + HVS igb0 <-> RTR igb1
+  + HVS igb1  X
+  + HVS igb2 <-> RTR igb2
+  + HVS igb3 <-> RTR igb3
++ Virtual Network
+  + vSwitch1 = management network <-> HVS igb2
+  + vSwitch2 = provider network <-> HVS igb3
 
 *** Configuration and Installation Sequence (1 VM per host method)
 - [-] 5.1 Preconfigure VM's [4/5]

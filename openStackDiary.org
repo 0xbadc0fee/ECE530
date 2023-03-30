@@ -45,7 +45,7 @@
 + Virtual Network
   + vSwitch1 = management network <-> HVS igb2
   + vSwitch2 = provider network <-> HVS igb3
-
+-------
 *** TODO Configuration and Installation Sequence (1 VM per host method) [0/6]
 - [-] 5.1 Preconfigure VM's [4/5]
   (specs from testing above, using HP Proliant Microserver & ESXI 7.0)

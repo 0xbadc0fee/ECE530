@@ -68,60 +68,63 @@ Set up OpenStack, see Mod 1 rubric
   + vSwitch2 = provider network <-> HVS igb3
 -----
 *** TODO Environment Install Task List / YOGA / UBUNTU (1 VM per host method)
-- [-] 5.1 _Security_ (Preconfigure VM's) [4/5]
+- [X] 5.1 _Security_ (Preconfigure VM's) [5/5]
   (specs from testing above, using HP Proliant Microserver & ESXI 7.0)
   - [X] CPU = 2 cores
   - [X] RAM = 4 GB
   - [X] HDD = 40 GB
   - [X] NICs = 2x
-  - [-] 5x Instances
+  - [X] 5x Instances
     - [X] 'controller'
-    - [ ] 'compute1'
-    - [ ] 'block1'
-    - [ ] 'object1'
-    - [ ] 'object2'
+    - [X] 'compute1'
+    - [X] 'block1'
+    - [X] 'object1'
+    - [X] 'object2'
 - [ ] _SNAPSHOTS_ (baremetal)
-- [-] 5.2 _Host Networking_ [1/6]
+- [X] 5.2 _Host Networking_ [6/6]
   - [X] 'controller'[3/3]
     - [X] Management NIC : 10.0.0.11/24, gw:10.0.0.1
     - [X] Provider NIC  : via netplan, set dhcp4 & dhcp6 false, do not set static ip
     - [X] Edit etc/hosts: see pg 20 in pdf version of install docs
-  - [ ] 'compute1'[0/3]
-    - [ ] Management NIC : 10.0.0.31/24, gw:10.0.0.1
-    - [ ] Provider NIC : via netplan, set dhcp4 & dhcp6 false, do not set static ip
-    - [ ] Edit etc/hosts: see pg 22 in pdf version of install docs
-  - [ ] 'block1'[0/2]
-    - [ ] Management NIC : 10.0.0.41/24, gw:10.0.0.1
-    - [ ] Edit etc/hosts: see pg 23 in pdf version of install docs
-  - [ ] Confirm Connectivity: [0/4]
-    - [ ] from @controller, ping -c 4 docs.openstack.org == PASS
-    - [ ] from @controller, ping -c 4 compute1
-    - [ ] from @compute, ping -c 4 openstack.org
-    - [ ] from @compute, ping -c 4 controller
-  - [ ] 'object1'
-  - [ ] 'object2'
-- [ ] 5.3 _NTP_ [0/3]
-  - [ ] Controller Node
-  - [ ] Other Nodes
-  - [ ] Verify
+  - [X] 'compute1'[3/3]
+    - [X] Management NIC : 10.0.0.31/24, gw:10.0.0.1
+    - [X] Provider NIC : via netplan, set dhcp4 & dhcp6 false, do not set static ip
+    - [X] Edit etc/hosts: see pg 22 in pdf version of install docs
+  - [X] 'block1'[2/2]
+    - [X] Management NIC : 10.0.0.41/24, gw:10.0.0.1
+    - [X] Edit etc/hosts: see pg 23 in pdf version of install docs
+  - [X] Confirm Connectivity: [7/7]
+    - [X] from @controller, ping -c 4 docs.openstack.org == PASS
+    - [X] from @controller, ping -c 4 compute1
+    - [X] from @compute, ping -c 4 openstack.org
+    - [X] from @compute, ping -c 4 controller
+    - [X] repeat ping from @block1
+    - [X] repeat ping from @object1
+    - [X] repeat ping from @object2
+  - [X] 'object1'
+  - [X] 'object2'
+- [X] 5.3 _NTP_ [3/3]
+  - [X] Controller Node
+  - [X] Other Nodes
+  - [X] Verify
 - [ ] _SNAPSHOTS_ (post-NTP, pre-package install)
-- [ ] 5.4 _Package Archives_ (repeat on all nodes) [0/1]
-  - [ ] Enable Repository / Ubuntu 20.04 / Yoga
-- [ ] _SQL_ [0/3]
-  - [ ] Install Package
-  - [ ] Create & Edit config file
-  - [ ] Finalize
-- [ ] _Message Queue_ [0/3]
-  - [ ] Install Package
-  - [ ] Add openstack user
-  - [ ] Permit config, write, & read access for user
-- [ ] _Memcached_ [0/3]
-  - [ ] Install package [0/0]
-  - [ ] edit config file
-  - [ ] Finalize (start service)
-- [ ] _Etcd_
-  - [ ] Install Package
-  - [ ] edit config files
+- [X] 5.4 _Package Archives_ (repeat on all nodes) [1/1]
+  - [X] Enable Repository / Ubuntu 20.04 / Yoga
+- [X] _SQL_ (on controller) [3/3]
+  - [X] Install Package
+  - [X] Create & Edit config file
+  - [X] Finalize
+- [X] _Message Queue_ (on controller) [3/3]
+  - [X] Install Package
+  - [X] Add openstack user
+  - [X] Permit config, write, & read access for user
+- [X] _Memcached_ (on controller) [3/3]
+  - [X] Install package (python3 version)
+  - [X] edit config file
+  - [X] Finalize (start service)
+- [X] _Etcd_ (on controller) [2/2]
+  - [X] Install Package
+  - [X] edit config files
 ------
 ** Environment Install Footnotes 
 + From [[https://docs.openstack.org/install-guide/environment-networking.html]] :

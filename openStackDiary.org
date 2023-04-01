@@ -1,6 +1,27 @@
 #+TITLE: OpenStack Diary
 
-* Installation
+* HW 1
+Set up OpenStack, see Mod 1 rubric
+* Roadmap
+1. Environment Installation
+   1. Security
+   2. Host Networking
+   3. NTP
+   4. Package Archives
+   5. SQL
+   6. Message Queue
+   7. Memcached
+   8. Etcd
+2. Projects Installation
+   1. Keystone
+   2. Glance
+   3. Placement
+   4. Nova
+   5. Neutron
+   6. Horizon
+   7. Cinder
+      
+* Envrionment Installation Journal
 ** HW 01: Install Keystone, Glance, Nova, Networking, Horizon, & Cinder
 *** TODO Trial / Test VM's [6/6]
 - [X] Install a HyperVisor (VMware / esxi)
@@ -13,9 +34,6 @@
 - [X] Collect information for use in publishing as a report
 - [X] Create a references section for external resources, links
 
-  **!!MAY HAVE TO REMOVE 'US.' FROM UBUNTU ARCHIVE SOURCES.LIST!!**
-  if newly created VM's can't get updates, change the sources.list and remove US region from URL's
-
 *** General Notes:
 + Use Yoga Install Instructions https://docs.openstack.org/swift/yoga/install/
 + Use minimal install version of OS (Ubuntu 20.0.4)
@@ -26,7 +44,7 @@
 *** Hypervisor Install Notes
 + Installed on HP ProLiant MicroServer, 4 TB, 32GB Ram
 + Balance min requirements per vm host comparing Ubuntu min req's and OpenStack min Req's, if room, install each service on sep host.
-+ Build template vm and then replicate for each service, make edits as needed (#of nics, # of cores, etc)
++ Build template vm and then replcate for each service, make edits as needed (#of nics, # of cores, etc)
 + Per yoga install... controller node: 1 core, 4GB ram, 5GB hdd
 + per yoga install... compute node:1 core, 2gb ram, 10GB hdd
 + Ubuntu lts server... 2 core, 4gb ram, 25gb hdd
@@ -48,8 +66,8 @@
 + Virtual Network
   + vSwitch1 = management network <-> HVS igb2
   + vSwitch2 = provider network <-> HVS igb3
--------
-*** TODO Configuration and Installation Sequence (1 VM per host method) [0/6]
+
+*** TODO Configuration and Installation Sequence (1 VM per host method)
 - [-] 5.1 Preconfigure VM's [4/5]
   (specs from testing above, using HP Proliant Microserver & ESXI 7.0)
   - [X] CPU = 2 cores
@@ -139,4 +157,8 @@ network:
 
 *** VM: OPS_HORIZON Notes
 
-*** VM: OPS_CINDER Notes 
+*** VM: OPS_CINDER Notes
+
+
+
+* Project(s) Installation Journal

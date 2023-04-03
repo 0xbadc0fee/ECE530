@@ -168,13 +168,15 @@ network:
   - add-apt-repository cloud-archive:yoga
 
 ------
+------
 * Project(s) Installation Journal
 
 *** TODO Projects(s) Install Task List / YOGA / UBUNTU
-**** TODO Service Install : Keystone
+**** TODO Service Install : Keystone [6/6]
 - REF: Projects Install Doc / Yoga / Keystone ([[https:docs.openstack.org/keystone/yoga/doc-keystone.pdf][link]])
 - TARGET(S): controller
 - USER: root (either 'sudo -i'  or 'su -')
+- [X] Initialize SQL
 #+NAME: Database Prep
 #+begin_src sh
   # mysql
@@ -184,31 +186,31 @@ network:
 #+end_src
 
 - NOTE: A good test here would be to exit root (#), and as user ($) try to access the database.  If you get 1045 errors, that indicates an authentication problem and the rest of the process will fail until authentication is working.  When done testing from user, remember to return to root for remainder of process.  If the below does not produce a connection to SQL, stop and troubleshoot.
-
+- [X] Test SQL Connection
   #+begin_src
     $ mysql -u keystone -p
     MariaDB [(none)]>
   #+end_src
 
-  
+- [X] Instlal Kestone Package
 #+name: Install Keystone Package [2023-04-03 Mon] 
-#+begin_src sh
+#+begin_src
   # apt install keystone
   # vi /etc/keystone/keystone.conf (make edits per docs)
   # su -s /bin/sh -c "keystone-manage db_sync" keystone
 #+end_src
-
+- [X] Initialize Repositories
 #+name: Initialize Key Repositories
 #+begin_src
   # keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
   # keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
 #+end_src
-
+- [X] Bootstrap ID service
 #+name: Bootstrap the Identity Service [admin pwd = pwd123]
 #+begin_src sh
 keystone-manage bootstrap --bootstrap-password pwd123 --bootstrap-admin-url http://controller:5000/v3/ --bootstrap-internal-url http://controller:5000/v3/ --bootstrap-public-url http://controller:5000/v3/ --bootstrap-region-id RegionOne 
 #+end_src
-
+- [X] Edit Env Variables
 #+name: Bootstrap Env Variables
 #+begin_src
   $ export OS_USERNAME=admin
@@ -222,6 +224,8 @@ keystone-manage bootstrap --bootstrap-password pwd123 --bootstrap-admin-url http
 
 - NOTE: Before doing the above, do a '$ printenv' and look at the environment variables.  There should already be populated a number of OS_ (openstack) entries.  If not, it may mean that the bootstraping commands did not complete correctly.  This happened to me.  After backing up and going through the bootstrapping commands again I found 5 of the 7 above env variables already in print env.  After adding the missing two, the rest of the process ran correctly.
 
+**** TODO HW RESULTS: [4/4]
+- [X] Confirm Token Assignment
 #+name: TOKEN  
 #+begin_example
 +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -238,6 +242,7 @@ keystone-manage bootstrap --bootstrap-password pwd123 --bootstrap-admin-url http
 +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 #+end_example
 
+- [X] Confirm demo (myuser) and admin users are created
 #+name:Create demo (myuser) and admin users
 #+begin_example
 sgc@controller:~$ openstack --os-auth-url http://controller:5000/v3 \
@@ -275,7 +280,7 @@ Password:
 +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 #+end_example
 
-
+- [X] Confirm user list can be retrieved
 #+name: RETRIEVE USER LIST
 #+begin_example
 MariaDB [keystone]> SELECT * FROM user
@@ -289,6 +294,7 @@ MariaDB [keystone]> SELECT * FROM user
 2 rows in set (0.000 sec)
 #+end_example
 
+- [X] Confirm role list can be retrieved
 #+name:RETRIEVE ROLE LIST
 #+begin_example
 MariaDB [keystone]> SELECT * FROM role;
@@ -304,13 +310,15 @@ MariaDB [keystone]> SELECT * FROM role;
 
 MariaDB [keystone]>
 #+end_example
-
-
-
+------
 **** TODO Service Install : Glance
+------
 **** TODO Service Install : Placement
+------
 **** TODO Service Install : Neutron
+------
 **** TODO Service Install : Horizon
+------
 **** TODO Service Install : Cinder
 ------
  

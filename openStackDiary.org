@@ -186,7 +186,7 @@ network:
 #+end_src
 
 - NOTE: A good test here would be to exit root (#), and as user ($) try to access the database.  If you get 1045 errors, that indicates an authentication problem and the rest of the process will fail until authentication is working.  When done testing from user, remember to return to root for remainder of process.  If the below does not produce a connection to SQL, stop and troubleshoot.
-- [X] Test SQL Connection
+- [X] *Test SQL Connection*
   #+begin_src
     $ mysql -u keystone -p
     MariaDB [(none)]>

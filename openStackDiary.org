@@ -311,7 +311,7 @@ MariaDB [keystone]> SELECT * FROM role;
 MariaDB [keystone]>
 #+end_example
 ------
-**** TODO Glance: Install (on controller) [5/5]
+**** TODO Glance: Install (on controller) [10/10]
 - [X] *DB Configuration*
   #+begin_src
     # mysql
@@ -344,31 +344,27 @@ Repeat User Password:
 openstack service create --name glance \
 --description "OpenStack Image" image
   #+end_src
-- [ ] Create the Image Service API
+- [X] Create the Image Service API
   #+begin_src
     $ openstack endpoint create --region RegionOne \
       image public http://controller:9292
   #+end_src
-- [ ] Install glance packages
+- [X] Install glance packages
   #+begin_src
     # apt install glance
   #+end_src
-- [ ] Make edits to =/etc/glance/glance-api.conf=
+- [X] Make edits to =/etc/glance/glance-api.conf=
   + Online documentation is does not match conf file installed via steps above.
   + [oslo_limit] section was missing but may not matter, not doing quota's
   + =use_keystone_quotas= is now =use_keystone_limits=, but no impact, left default false.
-
-- [ ] Populate Image service database and restart service
+- [X] Populate Image service database and restart service
   #+begin_src
     # su -s /bin/sh -c "glance-manage db_sync" glance
     # service glance-api restart
   #+end_src
-
-- [ ] Verify Operation (see doc [[https://docs.openstack.org/glance/yoga/install/verify.html][link]])
-
-**** TODO Glance: HW RESULTS
-
-- [ ] HW Glance 1: Import Cirros OS Image
+- [X] Verify Operation (see doc [[https://docs.openstack.org/glance/yoga/install/verify.html][link]])
+**** TODO Glance: HW RESULTS [2/2]
+- [X] HW Glance 1: Import Cirros OS Image
 #+begin_example
 sgc@controller:~$ glance image-create --name "cirros" \
 > --file cirros-0.4.0-x86_64-disk.img \
@@ -400,8 +396,7 @@ sgc@controller:~$ glance image-create --name "cirros" \
 +------------------+----------------------------------------------------------------------------------+
 sgc@controller:~$
 #+end_example
-
-- [ ] HW Glance 2: Retrieve Image List
+- [X] HW Glance 2: Retrieve Image List
 #+begin_example
 sgc@controller:~$ glance image-list
 +--------------------------------------+--------+

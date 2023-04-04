@@ -1,4 +1,10 @@
 #+TITLE: OpenStack Diary
+#+AUTHOR:Silas Curfman
+#+DESCRIPTION: Intro to Cloud, Spring 2023b
+#+TEXT: Outline and Task list for report
+#+SEQ_TODO: NEXT(n) TODO(t) WAITING(w) SOMEDAY(s) | DONE(d) CANCELLED(c)
+#+SETUPFILE: ~/0xbadc0fee-standard-latex-export.org
+#+OPTIONS: toc:t broken-links:mark
 
 * HW 1
 Set up OpenStack, see Mod 1 rubric
@@ -21,7 +27,7 @@ Set up OpenStack, see Mod 1 rubric
    6. Horizon
    7. Cinder
 
-* Envrionment Installation Journal
+* Envrionment Installation Journal 
 ** Pre-install Tests / Notes
 *** TODO Trial / Test VM's [6/6]
 - [X] Install a HyperVisor (VMware / esxi)
@@ -144,7 +150,7 @@ Unless you intend to use the exact configuration provided in this example archit
 + <2023-03-30 Thu> NOTE: Installation Guide / Controller Node / Configure Network Interfaces...
   Documentation refers to old legacy method of network config using networkinterfaces.  Since Ubuntu 20.04 use /etc/netplan, not /etc/network/interfaces
 #+NAME:Ubuntu Netplan Config
-#+begin_src shell
+#+begin_src shell -n
 sgc@ops-cntrl-01:~$ cat /etc/netplan/00-installer-config.yaml
 # This is the network config written by 'subiquity'
 network:
@@ -171,14 +177,14 @@ network:
 ------
 * Project(s) Installation Journal
 
-*** TODO Projects(s) Install Task List / YOGA / UBUNTU
-**** TODO Keystone: Install [6/6]
+** TODO Projects(s) Install Task List / YOGA / UBUNTU
+*** TODO Keystone: Install [6/6]
 - REF: Projects Install Doc / Yoga / Keystone ([[https:docs.openstack.org/keystone/yoga/doc-keystone.pdf][link]])
 - TARGET(S): controller
 - USER: root (either 'sudo -i'  or 'su -')
 - [X] *Initialize SQL*
 #+NAME: Database Prep
-#+begin_src sh
+#+begin_src sh -n
   # mysql
   MariaDB > CREATE DATABASE keystone;
   MariaDB > GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost' IDENTIFIED BY 'pwd123';
@@ -187,32 +193,32 @@ network:
 
 - NOTE: A good test here would be to exit root (#), and as user ($) try to access the database.  If you get 1045 errors, that indicates an authentication problem and the rest of the process will fail until authentication is working.  When done testing from user, remember to return to root for remainder of process.  If the below does not produce a connection to SQL, stop and troubleshoot.
 - [X] *Test SQL Connection*
-  #+begin_src
+  #+begin_src sh -n
     $ mysql -u keystone -p
     MariaDB [(none)]>
   #+end_src
 
 - [X] *Instlal Kestone Package*
 #+name: Install Keystone Package [2023-04-03 Mon] 
-#+begin_src
+#+begin_src sh -n
   # apt install keystone
   # vi /etc/keystone/keystone.conf (make edits per docs)
   # su -s /bin/sh -c "keystone-manage db_sync" keystone
 #+end_src
 - [X] *Initialize Repositories*
 #+name: Initialize Key Repositories
-#+begin_src
+#+begin_src sh -n
   # keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
   # keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
 #+end_src
 - [X] *Bootstrap ID service*
 #+name: Bootstrap the Identity Service [admin pwd = pwd123]
-#+begin_src sh
-keystone-manage bootstrap --bootstrap-password pwd123 --bootstrap-admin-url http://controller:5000/v3/ --bootstrap-internal-url http://controller:5000/v3/ --bootstrap-public-url http://controller:5000/v3/ --bootstrap-region-id RegionOne 
+#+begin_src sh -n
+  # keystone-manage bootstrap --bootstrap-password pwd123 --bootstrap-admin-url http://controller:5000/v3/ --bootstrap-internal-url http://controller:5000/v3/ --bootstrap-public-url http://controller:5000/v3/ --bootstrap-region-id RegionOne 
 #+end_src
 - [X] *Edit Env Variables*
 #+name: Bootstrap Env Variables
-#+begin_src
+#+begin_src sh -n
   $ export OS_USERNAME=admin
   $ export OS_PASSWORD=ADMIN_PASS
   $ export OS_PROJECT_NAME=admin
@@ -224,10 +230,12 @@ keystone-manage bootstrap --bootstrap-password pwd123 --bootstrap-admin-url http
 
 - NOTE: Before doing the above, do a '$ printenv' and look at the environment variables.  There should already be populated a number of OS_ (openstack) entries.  If not, it may mean that the bootstraping commands did not complete correctly.  This happened to me.  After backing up and going through the bootstrapping commands again I found 5 of the 7 above env variables already in print env.  After adding the missing two, the rest of the process ran correctly.
 
-**** TODO Keystone: HW RESULTS [4/4]
+*** TODO Keystone: HW RESULTS [4/4]
 - [X] *Confirm Token Assignment*
-#+name: TOKEN  
-#+begin_example
+
+#+name: TOKEN
+#+ATTR_LATEX: :options frame=single
+#+begin_example sn -n
 +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field      | Value
          |
@@ -244,7 +252,7 @@ keystone-manage bootstrap --bootstrap-password pwd123 --bootstrap-admin-url http
 
 - [X] *Confirm demo (myuser) and admin users are created*
 #+name:Create demo (myuser) and admin users
-#+begin_example
+#+begin_example sh -n
 sgc@controller:~$ openstack --os-auth-url http://controller:5000/v3 \
 > --os-project-domain-name Default --os-user-domain-name Default \
 > --os-project-name admin --os-username admin token issue
@@ -282,7 +290,7 @@ Password:
 
 - [X] *Confirm user list can be retrieved*
 #+name: RETRIEVE USER LIST
-#+begin_example
+#+begin_example sh -n
 MariaDB [keystone]> SELECT * FROM user
     -> ;
 +----------------------------------+-------+---------+--------------------+---------------------+----------------+-----------+
@@ -296,7 +304,7 @@ MariaDB [keystone]> SELECT * FROM user
 
 - [X] *Confirm role list can be retrieved*
 #+name:RETRIEVE ROLE LIST
-#+begin_example
+#+begin_example sh -n
 MariaDB [keystone]> SELECT * FROM role;
 +----------------------------------+--------+-------+-----------+-------------+
 | id                               | name   | extra | domain_id | description |
@@ -311,17 +319,17 @@ MariaDB [keystone]> SELECT * FROM role;
 MariaDB [keystone]>
 #+end_example
 ------
-**** TODO Glance: Install (on controller) [10/10]
+*** TODO Glance: Install (on controller) [10/10]
 - [X] *DB Configuration*
-  #+begin_src
+  #+begin_src sh -n
     # mysql
     MariaDB [(none)] CREATE DATABASE glance;
   #+end_src
 
 - [X] Source the admin credentials (./os-scripts/) ~$ . admin-openrc~
 - [X] Create the =glance= user
-    #+begin_src
-sgc@controller:~/os-scripts$ openstack user create --domain default --password-prompt glance
+    #+begin_src sh -n
+$ ~/os-scripts$ openstack user create --domain default --password-prompt glance
 User Password:
 Repeat User Password:
 +---------------------+----------------------------------+
@@ -336,37 +344,37 @@ Repeat User Password:
 +---------------------+----------------------------------+
 #+end_src
 - [X] Add the admin role to the glance user and service project
-  #+begin_src
-    $ openstack role add --project service --user glance admin
+  #+begin_src sh -n
+  $ openstack role add --project service --user glance admin
   #+end_src
 - [X] Create the glance service entry
-  #+begin_src
-openstack service create --name glance \
---description "OpenStack Image" image
+  #+begin_src sh -n
+  $ openstack service create --name glance \
+  $ --description "OpenStack Image" image
   #+end_src
 - [X] Create the Image Service API
-  #+begin_src
-    $ openstack endpoint create --region RegionOne \
-      image public http://controller:9292
+  #+begin_src sh -n
+  $ openstack endpoint create --region RegionOne \
+  $ image public http://controller:9292
   #+end_src
 - [X] Install glance packages
-  #+begin_src
-    # apt install glance
+  #+begin_src sh -n
+  # apt install glance
   #+end_src
 - [X] Make edits to =/etc/glance/glance-api.conf=
   + Online documentation is does not match conf file installed via steps above.
   + [oslo_limit] section was missing but may not matter, not doing quota's
   + =use_keystone_quotas= is now =use_keystone_limits=, but no impact, left default false.
 - [X] Populate Image service database and restart service
-  #+begin_src
+  #+begin_src sh -n
     # su -s /bin/sh -c "glance-manage db_sync" glance
     # service glance-api restart
   #+end_src
 - [X] Verify Operation (see doc [[https://docs.openstack.org/glance/yoga/install/verify.html][link]])
-**** TODO Glance: HW RESULTS [2/2]
+*** TODO Glance: HW RESULTS [2/2]
 - [X] HW Glance 1: Import Cirros OS Image
-#+begin_example
-sgc@controller:~$ glance image-create --name "cirros" \
+#+begin_example sh -n
+  $ glance image-create --name "cirros" \
 > --file cirros-0.4.0-x86_64-disk.img \
 > --disk-format qcow2 --container-format bare \
 > --visibility=public
@@ -397,7 +405,7 @@ sgc@controller:~$ glance image-create --name "cirros" \
 sgc@controller:~$
 #+end_example
 - [X] HW Glance 2: Retrieve Image List
-#+begin_example
+#+begin_example sh -n
 sgc@controller:~$ glance image-list
 +--------------------------------------+--------+
 | ID                                   | Name   |
@@ -407,16 +415,16 @@ sgc@controller:~$ glance image-list
 sgc@controller:~$
 #+end_example
 ------
-**** TODO Placement: Install
-**** TODO Placement: HW RESULTS
+*** TODO Placement: Install
+*** TODO Placement: HW RESULTS
 ------
-**** TODO Neutron: Install
-**** TODO Neutron: HW RESULTS
+*** TODO Neutron: Install
+*** TODO Neutron: HW RESULTS
 ------
-**** TODO Horizon: Install
-**** TODO Horizon: HW RESULTS
+*** TODO Horizon: Install
+*** TODO Horizon: HW RESULTS
 ------
-**** TODO Cinder: Install
-**** TODO Cinder: HW RESUlts
+*** TODO Cinder: Install
+*** TODO Cinder: HW RESUlts
 ------
  

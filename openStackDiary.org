@@ -311,9 +311,106 @@ MariaDB [keystone]> SELECT * FROM role;
 MariaDB [keystone]>
 #+end_example
 ------
-------
-**** TODO Glance: Install
+**** TODO Glance: Install (on controller) [5/5]
+- [X] *DB Configuration*
+  #+begin_src
+    # mysql
+    MariaDB [(none)] CREATE DATABASE glance;
+  #+end_src
+
+- [X] Source the admin credentials (./os-scripts/) ~$ . admin-openrc~
+- [X] Create the =glance= user
+    #+begin_src
+sgc@controller:~/os-scripts$ openstack user create --domain default --password-prompt glance
+User Password:
+Repeat User Password:
++---------------------+----------------------------------+
+| Field               | Value                            |
++---------------------+----------------------------------+
+| domain_id           | default                          |
+| enabled             | True                             |
+| id                  | 5e99d020af48473da06c73a4ce96e50a |
+| name                | glance                           |
+| options             | {}                               |
+| password_expires_at | None                             |
++---------------------+----------------------------------+
+#+end_src
+- [X] Add the admin role to the glance user and service project
+  #+begin_src
+    $ openstack role add --project service --user glance admin
+  #+end_src
+- [X] Create the glance service entry
+  #+begin_src
+openstack service create --name glance \
+--description "OpenStack Image" image
+  #+end_src
+- [ ] Create the Image Service API
+  #+begin_src
+    $ openstack endpoint create --region RegionOne \
+      image public http://controller:9292
+  #+end_src
+- [ ] Install glance packages
+  #+begin_src
+    # apt install glance
+  #+end_src
+- [ ] Make edits to =/etc/glance/glance-api.conf=
+  + Online documentation is does not match conf file installed via steps above.
+  + [oslo_limit] section was missing but may not matter, not doing quota's
+  + =use_keystone_quotas= is now =use_keystone_limits=, but no impact, left default false.
+
+- [ ] Populate Image service database and restart service
+  #+begin_src
+    # su -s /bin/sh -c "glance-manage db_sync" glance
+    # service glance-api restart
+  #+end_src
+
+- [ ] Verify Operation (see doc [[https://docs.openstack.org/glance/yoga/install/verify.html][link]])
+
 **** TODO Glance: HW RESULTS
+
+- [ ] HW Glance 1: Import Cirros OS Image
+#+begin_example
+sgc@controller:~$ glance image-create --name "cirros" \
+> --file cirros-0.4.0-x86_64-disk.img \
+> --disk-format qcow2 --container-format bare \
+> --visibility=public
++------------------+----------------------------------------------------------------------------------+
+| Property         | Value                                                                            |
++------------------+----------------------------------------------------------------------------------+
+| checksum         | 443b7623e27ecf03dc9e01ee93f67afe                                                 |
+| container_format | bare                                                                             |
+| created_at       | 2023-04-04T01:24:37Z                                                             |
+| disk_format      | qcow2                                                                            |
+| id               | 25c894f6-fe98-4da3-a8d9-89ef27508d46                                             |
+| min_disk         | 0                                                                                |
+| min_ram          | 0                                                                                |
+| name             | cirros                                                                           |
+| os_hash_algo     | sha512                                                                           |
+| os_hash_value    | 6513f21e44aa3da349f248188a44bc304a3653a04122d8fb4535423c8e1d14cd6a153f735bb0982e |
+|                  | 2161b5b5186106570c17a9e58b64dd39390617cd5a350f78                                 |
+| os_hidden        | False                                                                            |
+| owner            | af55244dfe134e73bb68d80af4842abb                                                 |
+| protected        | False                                                                            |
+| size             | 12716032                                                                         |
+| status           | active                                                                           |
+| tags             | []                                                                               |
+| updated_at       | 2023-04-04T01:24:37Z                                                             |
+| virtual_size     | 46137344                                                                         |
+| visibility       | public                                                                           |
++------------------+----------------------------------------------------------------------------------+
+sgc@controller:~$
+#+end_example
+
+- [ ] HW Glance 2: Retrieve Image List
+#+begin_example
+sgc@controller:~$ glance image-list
++--------------------------------------+--------+
+| ID                                   | Name   |
++--------------------------------------+--------+
+| 25c894f6-fe98-4da3-a8d9-89ef27508d46 | cirros |
++--------------------------------------+--------+
+sgc@controller:~$
+#+end_example
 ------
 **** TODO Placement: Install
 **** TODO Placement: HW RESULTS

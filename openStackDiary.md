@@ -1,43 +1,43 @@
 
 # Table of Contents
 
-1.  [HW 1](#org954358e)
-2.  [Roadmap](#org217a061)
-3.  [Envrionment Installation Journal](#org342b97c)
-    1.  [Pre-install Tests / Notes](#orgf128dad)
-        1.  [Trial / Test VM's <code>[6/6]</code>](#org00f03c4)
-        2.  [General Notes:](#orgdd579f4)
-        3.  [Hypervisor Install Notes](#org46333f8)
-        4.  [Home Lab Config Notes:](#org2b83a43)
-        5.  [Environment Install Task List / YOGA / UBUNTU (1 VM per host method)](#org09350c0)
-    2.  [Environment Install Footnotes](#orgb81c67a)
-4.  [Project(s) Installation Journal](#org92d4acd)
-    1.  [Projects(s) Install Task List / YOGA / UBUNTU](#org373d7cb)
-        1.  [Keystone: Install <code>[6/6]</code>](#org2d1cefe)
-        2.  [Keystone: HW RESULTS <code>[4/4]</code>](#org251631d)
-        3.  [Glance: Install (on controller) <code>[10/10]</code>](#org303f4a6)
-        4.  [Glance: HW RESULTS <code>[2/2]</code>](#org956c7e1)
-        5.  [Placement: Install <code>[4/4]</code>](#org41aee2e)
-        6.  [Placement: HW RESULTS <code>[1/1]</code>](#org7dd5127)
-        7.  [Nova: Install](#org2b0be14)
-        8.  [Nova: HW RESULTS](#org0bdb267)
-        9.  [Neutron: Install](#org3b91252)
-        10. [Neutron: HW RESULTS](#org800a6b9)
-        11. [Horizon: Install](#org04a602c)
-        12. [Horizon: HW RESULTS](#org6bdafd0)
-        13. [Cinder: Install](#org7ca4137)
-        14. [Cinder: HW RESUlts](#org07787fd)
+1.  [HW 1](#orgef95816)
+2.  [Roadmap](#org8e4586a)
+3.  [Envrionment Installation Journal](#org86a3ba4)
+    1.  [Pre-install Tests / Notes](#org94e34cc)
+        1.  [Trial / Test VM's <code>[6/6]</code>](#orgcf5f943)
+        2.  [General Notes:](#org00b7530)
+        3.  [Hypervisor Install Notes](#org9bbc645)
+        4.  [Home Lab Config Notes:](#org574e92d)
+        5.  [Environment Install Task List / YOGA / UBUNTU (1 VM per host method)](#org34d4988)
+    2.  [Environment Install Footnotes](#orgee548ee)
+4.  [Project(s) Installation Journal](#org6933845)
+    1.  [Projects(s) Install Task List / YOGA / UBUNTU](#org7babb3c)
+        1.  [Keystone: Install <code>[6/6]</code>](#orgc3d1916)
+        2.  [Keystone: HW RESULTS <code>[4/4]</code>](#org21bd444)
+        3.  [Glance: Install (on controller) <code>[10/10]</code>](#org1953947)
+        4.  [Glance: HW RESULTS <code>[2/2]</code>](#org67a0c96)
+        5.  [Placement: Install <code>[4/4]</code>](#orgefea469)
+        6.  [Placement: HW RESULTS <code>[1/1]</code>](#orgcbaff5f)
+        7.  [Nova: Install](#org10dfdd5)
+        8.  [Nova: HW RESULTS](#orge712376)
+        9.  [Neutron: Install](#org68eca09)
+        10. [Neutron: HW RESULTS](#org2fb1f06)
+        11. [Horizon: Install](#org2da091a)
+        12. [Horizon: HW RESULTS](#org989cc1c)
+        13. [Cinder: Install](#orgd413534)
+        14. [Cinder: HW RESUlts](#org7f0b8dd)
 
 
 
-<a id="org954358e"></a>
+<a id="orgef95816"></a>
 
 # HW 1
 
 Set up OpenStack, see Mod 1 rubric
 
 
-<a id="org217a061"></a>
+<a id="org8e4586a"></a>
 
 # Roadmap
 
@@ -60,17 +60,17 @@ Set up OpenStack, see Mod 1 rubric
     7.  Cinder
 
 
-<a id="org342b97c"></a>
+<a id="org86a3ba4"></a>
 
 # Envrionment Installation Journal
 
 
-<a id="orgf128dad"></a>
+<a id="org94e34cc"></a>
 
 ## Pre-install Tests / Notes
 
 
-<a id="org00f03c4"></a>
+<a id="orgcf5f943"></a>
 
 ### TODO Trial / Test VM's <code>[6/6]</code>
 
@@ -85,7 +85,7 @@ Set up OpenStack, see Mod 1 rubric
 -   [X] Create a references section for external resources, links
 
 
-<a id="orgdd579f4"></a>
+<a id="org00b7530"></a>
 
 ### General Notes:
 
@@ -96,7 +96,7 @@ Set up OpenStack, see Mod 1 rubric
     (note that many vm's WILL have reduced performance as number of VMs increases)
 
 
-<a id="org46333f8"></a>
+<a id="org9bbc645"></a>
 
 ### Hypervisor Install Notes
 
@@ -111,7 +111,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org2b83a43"></a>
+<a id="org574e92d"></a>
 
 ### Home Lab Config Notes:
 
@@ -134,7 +134,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org09350c0"></a>
+<a id="org34d4988"></a>
 
 ### TODO Environment Install Task List / YOGA / UBUNTU (1 VM per host method)
 
@@ -199,7 +199,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="orgb81c67a"></a>
+<a id="orgee548ee"></a>
 
 ## Environment Install Footnotes
 
@@ -246,17 +246,17 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org92d4acd"></a>
+<a id="org6933845"></a>
 
 # Project(s) Installation Journal
 
 
-<a id="org373d7cb"></a>
+<a id="org7babb3c"></a>
 
 ## TODO Projects(s) Install Task List / YOGA / UBUNTU
 
 
-<a id="org2d1cefe"></a>
+<a id="orgc3d1916"></a>
 
 ### TODO Keystone: Install <code>[6/6]</code>
 
@@ -304,7 +304,7 @@ Set up OpenStack, see Mod 1 rubric
 -   NOTE: Before doing the above, do a '$ printenv' and look at the environment variables.  There should already be populated a number of OS\_ (openstack) entries.  If not, it may mean that the bootstraping commands did not complete correctly.  This happened to me.  After backing up and going through the bootstrapping commands again I found 5 of the 7 above env variables already in print env.  After adding the missing two, the rest of the process ran correctly.
 
 
-<a id="org251631d"></a>
+<a id="org21bd444"></a>
 
 ### TODO Keystone: HW RESULTS <code>[4/4]</code>
 
@@ -389,7 +389,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org303f4a6"></a>
+<a id="org1953947"></a>
 
 ### TODO Glance: Install (on controller) <code>[10/10]</code>
 
@@ -440,7 +440,7 @@ Set up OpenStack, see Mod 1 rubric
 -   [X] Verify Operation (see doc [link](https://docs.openstack.org/glance/yoga/install/verify.html))
 
 
-<a id="org956c7e1"></a>
+<a id="org67a0c96"></a>
 
 ### TODO Glance: HW RESULTS <code>[2/2]</code>
 
@@ -488,7 +488,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org41aee2e"></a>
+<a id="orgefea469"></a>
 
 ### TODO Placement: Install <code>[4/4]</code>
 
@@ -596,12 +596,12 @@ Set up OpenStack, see Mod 1 rubric
             # vi /etc/placement/placement.conf
             (... make edits per docs ...)
         
-        -   ****WARNING: IN ABOVE, YOU MUST REMOVE THE TEXT " # use noauth2 if not using keystone"****
+        -   **WARNING: IN ABOVE, YOU MUST REMOVE THE TEXT " # use noauth2 if not using keystone"**
     -   [X] Populate the placement database
 -   [X] Finalize Installation
 
 
-<a id="org7dd5127"></a>
+<a id="orgcbaff5f"></a>
 
 ### TODO Placement: HW RESULTS <code>[1/1]</code>
 
@@ -610,20 +610,20 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org2b0be14"></a>
+<a id="org10dfdd5"></a>
 
 ### TODO Nova: Install
 
 NOTE: Nova installation will require steps done on both 'controller' and 'compute1'
 NOTE: Nova installation will include the following services:
 
-1.  `=nova-api=` service
-2.  `=nova-api-metadata=` service
-3.  `=nova-computer=` service
-4.  `=nova-scheduler=` service
-5.  `=nova-conductor=` module
-6.  `=nova-novncproxy=` daemon
-7.  `=nova-spicehtml5proxy=` daemon
+1.  `nova-api` service
+2.  `nova-api-metadata` service
+3.  `nova-computer` service
+4.  `nova-scheduler` service
+5.  `nova-conductor` module
+6.  `nova-novncproxy` daemon
+7.  `nova-spicehtml5proxy` daemon
 8.  the queue (RammitMQ)
 9.  SQL database
 
@@ -637,43 +637,43 @@ NOTE: Nova installation will include the following services:
 2.  Install and Configure Compute Node (doc 3.2.1.4)
 
 
-<a id="org0bdb267"></a>
+<a id="orge712376"></a>
 
 ### TODO Nova: HW RESULTS
 
 ---
 
 
-<a id="org3b91252"></a>
+<a id="org68eca09"></a>
 
 ### TODO Neutron: Install
 
 
-<a id="org800a6b9"></a>
+<a id="org2fb1f06"></a>
 
 ### TODO Neutron: HW RESULTS
 
 ---
 
 
-<a id="org04a602c"></a>
+<a id="org2da091a"></a>
 
 ### TODO Horizon: Install
 
 
-<a id="org6bdafd0"></a>
+<a id="org989cc1c"></a>
 
 ### TODO Horizon: HW RESULTS
 
 ---
 
 
-<a id="org7ca4137"></a>
+<a id="orgd413534"></a>
 
 ### TODO Cinder: Install
 
 
-<a id="org07787fd"></a>
+<a id="org7f0b8dd"></a>
 
 ### TODO Cinder: HW RESUlts
 

@@ -527,7 +527,7 @@ sgc@controller:~$
 # vi /etc/placement/placement.conf
 (... make edits per docs ...)
     #+end_src
-    - **WARNING: IN ABOVE, YOU MUST REMOVE THE TEXT " # use noauth2 if not using keystone"**
+    - *WARNING: IN ABOVE, YOU MUST REMOVE THE TEXT " # use noauth2 if not using keystone"*
   - [X] Populate the placement database
 - [X] Finalize Installation
 *** TODO Placement: HW RESULTS [1/1]
@@ -536,13 +536,13 @@ sgc@controller:~$
 *** TODO Nova: Install
 NOTE: Nova installation will require steps done on both 'controller' and 'compute1'
 NOTE: Nova installation will include the following services:
-1. ==nova-api== service
-2. ==nova-api-metadata== service
-3. ==nova-computer== service
-4. ==nova-scheduler== service
-5. ==nova-conductor== module
-6. ==nova-novncproxy== daemon
-7. ==nova-spicehtml5proxy== daemon
+1. =nova-api= service
+2. =nova-api-metadata= service
+3. =nova-computer= service
+4. =nova-scheduler= service
+5. =nova-conductor= module
+6. =nova-novncproxy= daemon
+7. =nova-spicehtml5proxy= daemon
 8. the queue (RammitMQ)
 9. SQL database
 **** Configure Controller Node (doc 3.2.1.3) [0/4]

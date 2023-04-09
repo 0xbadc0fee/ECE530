@@ -1,43 +1,43 @@
 
 # Table of Contents
 
-1.  [HW 1](#orgef95816)
-2.  [Roadmap](#org8e4586a)
-3.  [Envrionment Installation Journal](#org86a3ba4)
-    1.  [Pre-install Tests / Notes](#org94e34cc)
-        1.  [Trial / Test VM's <code>[6/6]</code>](#orgcf5f943)
-        2.  [General Notes:](#org00b7530)
-        3.  [Hypervisor Install Notes](#org9bbc645)
-        4.  [Home Lab Config Notes:](#org574e92d)
-        5.  [Environment Install Task List / YOGA / UBUNTU (1 VM per host method)](#org34d4988)
-    2.  [Environment Install Footnotes](#orgee548ee)
-4.  [Project(s) Installation Journal](#org6933845)
-    1.  [Projects(s) Install Task List / YOGA / UBUNTU](#org7babb3c)
-        1.  [Keystone: Install <code>[6/6]</code>](#orgc3d1916)
-        2.  [Keystone: HW RESULTS <code>[4/4]</code>](#org21bd444)
-        3.  [Glance: Install (on controller) <code>[10/10]</code>](#org1953947)
-        4.  [Glance: HW RESULTS <code>[2/2]</code>](#org67a0c96)
-        5.  [Placement: Install <code>[4/4]</code>](#orgefea469)
-        6.  [Placement: HW RESULTS <code>[1/1]</code>](#orgcbaff5f)
-        7.  [Nova: Install](#org10dfdd5)
-        8.  [Nova: HW RESULTS](#orge712376)
-        9.  [Neutron: Install](#org68eca09)
-        10. [Neutron: HW RESULTS](#org2fb1f06)
-        11. [Horizon: Install](#org2da091a)
-        12. [Horizon: HW RESULTS](#org989cc1c)
-        13. [Cinder: Install](#orgd413534)
-        14. [Cinder: HW RESUlts](#org7f0b8dd)
+1.  [HW 1](#org3fb1e67)
+2.  [Roadmap](#org28b0fea)
+3.  [Envrionment Installation Journal](#org5b976d0)
+    1.  [Pre-install Tests / Notes](#orgb2f8423)
+        1.  [Trial / Test VM's <code>[6/6]</code>](#orgd21be9e)
+        2.  [General Notes:](#orge4a1685)
+        3.  [Hypervisor Install Notes](#org889fcc7)
+        4.  [Home Lab Config Notes:](#org27a0e12)
+        5.  [Environment Install Task List / YOGA / UBUNTU (1 VM per host method)](#orgc899932)
+    2.  [Environment Install Footnotes](#orgbf503f6)
+4.  [Project(s) Installation Journal](#orgb88337a)
+    1.  [Projects(s) Install Task List / YOGA / UBUNTU](#orga585666)
+        1.  [Keystone: Install <code>[6/6]</code>](#orgf756271)
+        2.  [Keystone: HW RESULTS <code>[4/4]</code>](#org5750c63)
+        3.  [Glance: Install (on controller) <code>[10/10]</code>](#org1aff74a)
+        4.  [Glance: HW RESULTS <code>[2/2]</code>](#orgef75206)
+        5.  [Placement: Install <code>[4/4]</code>](#orgc5887c5)
+        6.  [Placement: HW RESULTS <code>[1/1]</code>](#orga416efb)
+        7.  [Nova: Install <code>[1/1]</code>](#orgde42961)
+        8.  [Nova: HW RESULTS](#orgceb7011)
+        9.  [Neutron: Install <code>[0/3]</code>](#org78538af)
+        10. [Neutron: HW RESULTS](#org40e2ebf)
+        11. [Horizon: Install <code>[3/3]</code>](#org210902b)
+        12. [Horizon: HW RESULTS](#org0f382b8)
+        13. [Cinder: Install](#org8630861)
+        14. [Cinder: HW RESUlts](#org7f8198a)
 
 
 
-<a id="orgef95816"></a>
+<a id="org3fb1e67"></a>
 
 # HW 1
 
 Set up OpenStack, see Mod 1 rubric
 
 
-<a id="org8e4586a"></a>
+<a id="org28b0fea"></a>
 
 # Roadmap
 
@@ -60,17 +60,17 @@ Set up OpenStack, see Mod 1 rubric
     7.  Cinder
 
 
-<a id="org86a3ba4"></a>
+<a id="org5b976d0"></a>
 
 # Envrionment Installation Journal
 
 
-<a id="org94e34cc"></a>
+<a id="orgb2f8423"></a>
 
 ## Pre-install Tests / Notes
 
 
-<a id="orgcf5f943"></a>
+<a id="orgd21be9e"></a>
 
 ### TODO Trial / Test VM's <code>[6/6]</code>
 
@@ -85,7 +85,7 @@ Set up OpenStack, see Mod 1 rubric
 -   [X] Create a references section for external resources, links
 
 
-<a id="org00b7530"></a>
+<a id="orge4a1685"></a>
 
 ### General Notes:
 
@@ -96,7 +96,7 @@ Set up OpenStack, see Mod 1 rubric
     (note that many vm's WILL have reduced performance as number of VMs increases)
 
 
-<a id="org9bbc645"></a>
+<a id="org889fcc7"></a>
 
 ### Hypervisor Install Notes
 
@@ -111,7 +111,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org574e92d"></a>
+<a id="org27a0e12"></a>
 
 ### Home Lab Config Notes:
 
@@ -134,7 +134,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org34d4988"></a>
+<a id="orgc899932"></a>
 
 ### TODO Environment Install Task List / YOGA / UBUNTU (1 VM per host method)
 
@@ -199,7 +199,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="orgee548ee"></a>
+<a id="orgbf503f6"></a>
 
 ## Environment Install Footnotes
 
@@ -246,19 +246,19 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org6933845"></a>
+<a id="orgb88337a"></a>
 
 # Project(s) Installation Journal
 
 
-<a id="org7babb3c"></a>
+<a id="orga585666"></a>
 
 ## TODO Projects(s) Install Task List / YOGA / UBUNTU
 
 
-<a id="orgc3d1916"></a>
+<a id="orgf756271"></a>
 
-### TODO Keystone: Install <code>[6/6]</code>
+### DONE Keystone: Install <code>[6/6]</code>
 
 -   REF: Projects Install Doc / Yoga / Keystone ([link](https:docs.openstack.org/keystone/yoga/doc-keystone.pdf))
 -   TARGET(S): controller
@@ -304,9 +304,9 @@ Set up OpenStack, see Mod 1 rubric
 -   NOTE: Before doing the above, do a '$ printenv' and look at the environment variables.  There should already be populated a number of OS\_ (openstack) entries.  If not, it may mean that the bootstraping commands did not complete correctly.  This happened to me.  After backing up and going through the bootstrapping commands again I found 5 of the 7 above env variables already in print env.  After adding the missing two, the rest of the process ran correctly.
 
 
-<a id="org21bd444"></a>
+<a id="org5750c63"></a>
 
-### TODO Keystone: HW RESULTS <code>[4/4]</code>
+### DONE Keystone: HW RESULTS <code>[4/4]</code>
 
 -   [X] **Confirm Token Assignment**
 
@@ -389,9 +389,9 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org1953947"></a>
+<a id="org1aff74a"></a>
 
-### TODO Glance: Install (on controller) <code>[10/10]</code>
+### DONE Glance: Install (on controller) <code>[10/10]</code>
 
 -   [X] **DB Configuration**
     
@@ -440,9 +440,9 @@ Set up OpenStack, see Mod 1 rubric
 -   [X] Verify Operation (see doc [link](https://docs.openstack.org/glance/yoga/install/verify.html))
 
 
-<a id="org67a0c96"></a>
+<a id="orgef75206"></a>
 
-### TODO Glance: HW RESULTS <code>[2/2]</code>
+### DONE Glance: HW RESULTS <code>[2/2]</code>
 
 -   [X] HW Glance 1: Import Cirros OS Image
 
@@ -488,9 +488,9 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="orgefea469"></a>
+<a id="orgc5887c5"></a>
 
-### TODO Placement: Install <code>[4/4]</code>
+### DONE Placement: Install <code>[4/4]</code>
 
 -   [X] Create Database <code>[1/1]</code>
     -   [X] &#x2026; MySQL
@@ -601,18 +601,18 @@ Set up OpenStack, see Mod 1 rubric
 -   [X] Finalize Installation
 
 
-<a id="orgcbaff5f"></a>
+<a id="orga416efb"></a>
 
-### TODO Placement: HW RESULTS <code>[1/1]</code>
+### DONE Placement: HW RESULTS <code>[1/1]</code>
 
 -   [X] N/A, no placement resulst for HW required.
 
 ---
 
 
-<a id="org10dfdd5"></a>
+<a id="orgde42961"></a>
 
-### TODO Nova: Install
+### DONE Nova: Install <code>[1/1]</code>
 
 NOTE: Nova installation will require steps done on both 'controller' and 'compute1'
 NOTE: Nova installation will include the following services:
@@ -627,53 +627,321 @@ NOTE: Nova installation will include the following services:
 8.  the queue (RammitMQ)
 9.  SQL database
 
-1.  Configure Controller Node (doc 3.2.1.3) <code>[0/4]</code>
+1.  TODO Controller Node: Prerequisites (doc 3.2.1.3) <code>[8/8]</code>
 
-    1.  [ ] Create Database(s)
-    2.  [ ] refresh admin credentials
-    3.  [ ] Create Compute Service credentials
-    4.  [ ] Create Compute API service endpoints
+    1.  [X] Create Database(s)
+        
+            MariaDB [(none)]> CREATE DATABASE nova_api;
+            Query OK, 1 row affected (0.000 sec)
+            
+            MariaDB [(none)]> CREATE DATABASE nova;
+            Query OK, 1 row affected (0.001 sec)
+            
+            MariaDB [(none)]> CREATE DATABASE nova_cell0;
+            Query OK, 1 row affected (0.000 sec)
+            
+            MariaDB [(none)]> GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'localhost' IDENTIFIED BY 'pwd123';
+            Query OK, 0 rows affected (0.023 sec)
+            
+            MariaDB [(none)]> GRANT ALL PRIVILEGES ON nova_api.* TO 'nova'@'%' IDENTIFIED BY 'pwd123';
+            Query OK, 0 rows affected (0.001 sec)
+            
+            MariaDB [(none)]> GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'localhost' IDENTIFIED BY 'pwd123';
+            Query OK, 0 rows affected (0.001 sec)
+            
+            MariaDB [(none)]> GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'%' IDENTIFIED BY 'pwd123';
+            Query OK, 0 rows affected (0.001 sec)
+            
+            MariaDB [(none)]> GRANT ALL PRIVILEGES ON nova_cell0.* TO 'nova'@'localhost' IDENTIFIED BY 'pwd123';
+            Query OK, 0 rows affected (0.000 sec)
+            
+            MariaDB [(none)]> GRANT ALL PRIVILEGES ON nova_cell0.* TO 'nova'@'%' IDENTIFIED BY 'pwd123';
+            Query OK, 0 rows affected (0.001 sec)
+            
+            MariaDB [(none)]> exit
+    2.  [X] refresh admin credentials
+    3.  [X] Create Compute Service credentials
+        `$ openstack user create --domain default --password-prompt nova`
+        
+            User Password:
+            Repeat User Password:
+            +---------------------+----------------------------------+
+            | Field               | Value                            |
+            +---------------------+----------------------------------+
+            | domain_id           | default                          |
+            | enabled             | True                             |
+            | id                  | 5265a363fa7448d28fb3dbeb3e207f41 |
+            | name                | nova                             |
+            | options             | {}                               |
+            | password_expires_at | None                             |
+            +---------------------+----------------------------------+
+        
+        `$ openstack role add --project service --user nova admin`
+    4.  [X] Create Compute API service endpoints
+    5.  [X] `openstack endpoint create --region RegionOne compute public http://controller:8774/v2.1`
+    6.  [X] `openstack endpoint create --region RegionOne compute internal http://controller:8774/v2.1`
+    7.  [X] `openstack endpoint create --region RegionOne compute admin http://controller:8774/v2.1`
+    8.  OUTPUT:
+        
+            +--------------+----------------------------------+
+            | Field        | Value                            |
+            +--------------+----------------------------------+
+            | enabled      | True                             |
+            | id           | c5095a0dbe6042129e5c16fe7aea8a2b |
+            | interface    | public                           |
+            | region       | RegionOne                        |
+            | region_id    | RegionOne                        |
+            | service_id   | 5c50e287f96c40a69a6f17c7153631ff |
+            | service_name | nova                             |
+            | service_type | compute                          |
+            | url          | http://controller:8774/v2.1      |
+            +--------------+----------------------------------+
+            
+            +--------------+----------------------------------+
+            | Field        | Value                            |
+            +--------------+----------------------------------+
+            | enabled      | True                             |
+            | id           | 037ca65f5b494c6691037e0ecde56810 |
+            | interface    | internal                         |
+            | region       | RegionOne                        |
+            | region_id    | RegionOne                        |
+            | service_id   | 5c50e287f96c40a69a6f17c7153631ff |
+            | service_name | nova                             |
+            | service_type | compute                          |
+            | url          | http://controller:8774/v2.1      |
+            +--------------+----------------------------------+
+            
+            +--------------+----------------------------------+
+            | Field        | Value                            |
+            +--------------+----------------------------------+
+            | enabled      | True                             |
+            | id           | de4fc9eabb394888af11d21316106a15 |
+            | interface    | admin                            |
+            | region       | RegionOne                        |
+            | region_id    | RegionOne                        |
+            | service_id   | 5c50e287f96c40a69a6f17c7153631ff |
+            | service_name | nova                             |
+            | service_type | compute                          |
+            | url          | http://controller:8774/v2.1      |
+            +--------------+----------------------------------+
+    9.  [X] Install Placement Service (completed prior, see previous section)
 
-2.  Install and Configure Compute Node (doc 3.2.1.4)
+2.  TODO Controller Node: Install & Configure Components (doc 3.2.1.3 cont) <code>[8/8]</code>
+
+    1.  [X] Install packages
+        `# apt install nova-api nova-conductor nova-novncproxy nova-scheduler`
+    2.  [X] Edit /etc/nova/nova.conf
+        -   confusing step on [neutron] edits to nova.conf, duplicated in neutron setupd
+    3.  [X] Populate `nova-api` database
+        `# su-s /bin/sh -c "nova-manage api_db sync" nova`
+    4.  [X] Register cell0 database
+        `# su -s /bin/sh -c "nova-manage cell_v2 map_cell0" nova`
+    5.  [X] create `cell1` cell
+        `# su -s /bin/sh -c "nova-manage cell_v2 create_cell --name=cell --verbose" nova`
+    6.  [X] Populate the `nova` database
+        `# su -s /bin/sh -c "nova-manage db sync" nova`
+    7.  [X] Verify nova `cell0` and `cell1` registered correctly
+        `#su -s /bin/sh -c "nova-manage cell_v2 list_cells" nova`
+    8.  [X] Finalize and restart services
+        
+            # service nova-api restart
+            # service nova-scheduler restart
+            # service nova-conductor restart
+            # service nova-novncproxy restart
+
+3.  TODO Install and Configure Compute Node (doc 3.2.1.4) <code>[3/3]</code>
+
+    **NOTE: DO THESE STEPS ON THE COMPUTE NODE, NOT THE CONTROLLER NODE**
+    **NOTE: to sync admin credential scripts, use SCP to copy ~/os-scripts to target node**
+    
+    1.  [X] Install packages
+    2.  [X] Make edits to /etc/nova/nova.conf (on compute node)
+    3.  [X] Finalize
 
 
-<a id="orge712376"></a>
+<a id="orgceb7011"></a>
 
-### TODO Nova: HW RESULTS
+### WAITING Nova: HW RESULTS
 
 ---
 
 
-<a id="org68eca09"></a>
+<a id="org78538af"></a>
 
-### TODO Neutron: Install
+### DONE Neutron: Install <code>[0/3]</code>
+
+1.  TODO Verifiy connectivity <code>[4/4]</code>
+
+    -   [X] controller to compute1
+        
+            sgc@controller:~$ ping -c 2 compute1
+            PING compute1 (10.0.0.31) 56(84) bytes of data.
+            64 bytes from compute1 (10.0.0.31): icmp_seq=1 ttl=64 time=0.121 ms
+            64 bytes from compute1 (10.0.0.31): icmp_seq=2 ttl=64 time=0.251 ms
+            
+            --- compute1 ping statistics ---
+            2 packets transmitted, 2 received, 0% packet loss, time 1026ms
+            rtt min/avg/max/mdev = 0.121/0.186/0.251/0.065 ms
+    -   [X] controller to WAN
+    
+        sgc@controller:~$ ping -c 2 www.google.com
+        PING www.google.com (142.250.217.68) 56(84) bytes of data.
+        64 bytes from sea09s29-in-f4.1e100.net (142.250.217.68): icmp_seq=1 ttl=56 time=17.8 ms
+        64 bytes from sea09s29-in-f4.1e100.net (142.250.217.68): icmp_seq=2 ttl=56 time=17.3 ms
+        
+        --- www.google.com ping statistics ---
+        2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+        rtt min/avg/max/mdev = 17.270/17.544/17.818/0.274 ms
+    
+    -   [X] compute1 to controller
+    
+        sgc@compute1:~$ ping -c 2 controller
+        PING controller (10.0.0.11) 56(84) bytes of data.
+        64 bytes from controller (10.0.0.11): icmp_seq=1 ttl=64 time=0.295 ms
+        64 bytes from controller (10.0.0.11): icmp_seq=2 ttl=64 time=0.353 ms
+        
+        --- controller ping statistics ---
+        2 packets transmitted, 2 received, 0% packet loss, time 1003ms
+        rtt min/avg/max/mdev = 0.295/0.324/0.353/0.029 ms
+    
+    -   [X] compute1 to WAN
+    
+        sgc@compute1:~$ ping -c 2 www.google.com
+        PING www.google.com (142.250.69.196) 56(84) bytes of data.
+        64 bytes from sea30s08-in-f4.1e100.net (142.250.69.196): icmp_seq=1 ttl=56 time=16.6 ms
+        64 bytes from sea30s08-in-f4.1e100.net (142.250.69.196): icmp_seq=2 ttl=56 time=16.2 ms
+        
+        --- www.google.com ping statistics ---
+        2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+        rtt min/avg/max/mdev = 16.179/16.399/16.620/0.220 ms
+        sgc@compute1:~$
+
+2.  TODO Install and configure controller node <code>[5/5]</code>
+
+    -   [X] Prerequisites (6.2.1) <code>[4/4]</code>
+        -   [X] Create Database
+            -   `$ mysql -u root -p`
+            -   `MariaDB [(none)] CREATE DATABASE neutron;`
+            -   `MariaDB [(none)]> GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'localhost' \`
+                `IDENTIFIED BY 'NEUTRON_DBPASS';`
+            -   `MariaDB [(none)]> GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'%' \`
+                `IDENTIFIED BY 'NEUTRON_DBPASS';`
+        -   [X] Re-source admin credentials
+            -   `$. ./os-scripts/admin-openrc`
+        -   [X] Create service credentials
+            -   Create neutron user
+                `$ openstack user create --domain default --password-prompt neutron`
+            -   Add admin role to neutron user
+                `$ openstack role add --project service --user neutron admin`
+            -   Create Neutron service entity
+                `$ openstack service create --name neutron \ =
+                      =--description "OpenStack Networking" network`
+        -   [X] Create Networking service API Endpoints
+            -   $ `openstack endpoint create --region RegionOne \`
+                `network public http://controller:9696`
+            -   $ `openstack endpoint create --region RegionOne \`
+                `network internal http://controller:9696`
+            -   $ `openstack endpoint create --region RegionOne \`
+                `network admin http://controller:9696`
+    -   [X] Configure Networking Options (6.2.2) <code>[6/6]</code>
+        -   Selected Provider Network, see environment notes on homelab
+        -   [X] Install components
+            
+                # apt install neutron-server neutron-plugin-ml2 \
+                neutron-linuxbridge-agent neutron-dhcp-agent \
+                neutron-metadata-agent
+        -   [X] Configure server component
+        -   [X] Configure modular layer 2 plug-in
+        -   [X] Configure linux bridge agent
+        -   [X] Configure DHCP agent
+        -   [X] Configure Metadata agent (6.2.3)
+    -   [X] Create provider network (not possilbe until neutron is finished?? why in docs?) <code>[3/3]</code>
+        -   [X] source credentials
+        -   [X] create the network (not possilbe until neutron install is finished??)
+            -   OUTPUT:
+                
+                    sgc@controller:~$ openstack network create  --share --external \
+                    >   --provider-physical-network provider \
+                    >   --provider-network-type flat provider
+                    +---------------------------+--------------------------------------+
+                    | Field                     | Value                                |
+                    +---------------------------+--------------------------------------+
+                    | admin_state_up            | UP                                   |
+                    | availability_zone_hints   |                                      |
+                    | availability_zones        |                                      |
+                    | created_at                | 2023-04-08T20:42:50Z                 |
+                    | description               |                                      |
+                    | dns_domain                | None                                 |
+                    | id                        | 5c3c019c-274b-4c72-8d19-7f1f9b99d4d4 |
+                    | ipv4_address_scope        | None                                 |
+                    | ipv6_address_scope        | None                                 |
+                    | is_default                | None                                 |
+                    | is_vlan_transparent       | None                                 |
+                    | mtu                       | 1500                                 |
+                    | name                      | provider                             |
+                    | port_security_enabled     | True                                 |
+                    | project_id                | af55244dfe134e73bb68d80af4842abb     |
+                    | provider:network_type     | flat                                 |
+                    | provider:physical_network | provider                             |
+                    | provider:segmentation_id  | None                                 |
+                    | qos_policy_id             | None                                 |
+                    | revision_number           | 1                                    |
+                    | router:external           | External                             |
+                    | segments                  | None                                 |
+                    | shared                    | True                                 |
+                    | status                    | ACTIVE                               |
+                    | subnets                   |                                      |
+                    | tags                      |                                      |
+                    | updated_at                | 2023-04-08T20:42:50Z                 |
+                    +---------------------------+--------------------------------------+
+                    sgc@controller:~$
+        -   [X] create a subnet on the network
+            -   OUTPUT:
+    -   [X] Configure compute service to use the networking service (6.2.4)
+    -   [X] Finalize (6.2.5)
+
+3.  TODO Install and configure compute node <code>[5/5]</code>
+
+    -   [X] Install the components (6.3.1)
+        `# apt install neutron-linuxbridge-agent`
+    -   [X] Configure the common component (6.3.2)
+    -   [X] Configure networking options (6.3.3)
+    -   [X] Configure the compute service to use the networking service (6.3.4)
+    -   [X] Finalize (6.3.5)
 
 
-<a id="org2fb1f06"></a>
+<a id="org40e2ebf"></a>
 
 ### TODO Neutron: HW RESULTS
 
 ---
 
 
-<a id="org2da091a"></a>
+<a id="org210902b"></a>
 
-### TODO Horizon: Install
+### NEXT Horizon: Install <code>[3/3]</code>
+
+-   [X] Install packages
+    `# apt install openstack-dashboard`
+-   [X] Edit /etc/openstack-dashboard/local<sub>settings.py</sub>
+-   [X] Append to /etc/apache2/conf-available/openstack-dashboard.conf
+-   FOOTNOTE:
+    After following the installation instructions, I could not access the horizon dashboard via a browser.  I was testing the web portal from a physical laptop on the same network as the horizon dashboard.  Every time I tried to access it I received HTTP 500 errors.  Trying to access <http://controller/> yielded an Apache2 test page.  Trying to access <http://controller/horizon/> failed.  The error logs in /var/log/apache2/error.log indicated a problem with the code used to disable layer-3 networking in the /openstack/local<sub>settings.py</sub> file.  I removed the code added in order to disable layer-3 networking and the horizon dashboard then loaded correctly.
 
 
-<a id="org989cc1c"></a>
+<a id="org0f382b8"></a>
 
 ### TODO Horizon: HW RESULTS
 
 ---
 
 
-<a id="orgd413534"></a>
+<a id="org8630861"></a>
 
 ### TODO Cinder: Install
 
 
-<a id="org7f0b8dd"></a>
+<a id="org7f8198a"></a>
 
 ### TODO Cinder: HW RESUlts
 

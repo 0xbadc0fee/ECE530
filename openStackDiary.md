@@ -1,43 +1,45 @@
 
 # Table of Contents
 
-1.  [HW 1](#org3fb1e67)
-2.  [Roadmap](#org28b0fea)
-3.  [Envrionment Installation Journal](#org5b976d0)
-    1.  [Pre-install Tests / Notes](#orgb2f8423)
-        1.  [Trial / Test VM's <code>[6/6]</code>](#orgd21be9e)
-        2.  [General Notes:](#orge4a1685)
-        3.  [Hypervisor Install Notes](#org889fcc7)
-        4.  [Home Lab Config Notes:](#org27a0e12)
-        5.  [Environment Install Task List / YOGA / UBUNTU (1 VM per host method)](#orgc899932)
-    2.  [Environment Install Footnotes](#orgbf503f6)
-4.  [Project(s) Installation Journal](#orgb88337a)
-    1.  [Projects(s) Install Task List / YOGA / UBUNTU](#orga585666)
-        1.  [Keystone: Install <code>[6/6]</code>](#orgf756271)
-        2.  [Keystone: HW RESULTS <code>[4/4]</code>](#org5750c63)
-        3.  [Glance: Install (on controller) <code>[10/10]</code>](#org1aff74a)
-        4.  [Glance: HW RESULTS <code>[2/2]</code>](#orgef75206)
-        5.  [Placement: Install <code>[4/4]</code>](#orgc5887c5)
-        6.  [Placement: HW RESULTS <code>[1/1]</code>](#orga416efb)
-        7.  [Nova: Install <code>[1/1]</code>](#orgde42961)
-        8.  [Nova: HW RESULTS](#orgceb7011)
-        9.  [Neutron: Install <code>[0/3]</code>](#org78538af)
-        10. [Neutron: HW RESULTS](#org40e2ebf)
-        11. [Horizon: Install <code>[3/3]</code>](#org210902b)
-        12. [Horizon: HW RESULTS](#org0f382b8)
-        13. [Cinder: Install](#org8630861)
-        14. [Cinder: HW RESUlts](#org7f8198a)
+1.  [HW 1](#org39c0295)
+2.  [Roadmap](#org5d6215c)
+3.  [Envrionment Installation Journal](#org02ca16f)
+    1.  [Pre-install Tests / Notes](#orgf3d6269)
+        1.  [Trial / Test VM's <code>[6/6]</code>](#org917bd87)
+        2.  [General Notes:](#orgc5a30e2)
+        3.  [Hypervisor Install Notes](#org8e71129)
+        4.  [Home Lab Config Notes:](#orgfbcf1d6)
+        5.  [Environment Install Task List / YOGA / UBUNTU (1 VM per host method)](#orgb804268)
+    2.  [Environment Install Footnotes](#org0e9f5ab)
+4.  [Project(s) Installation Journal](#org04f51c7)
+    1.  [Projects(s) Install Task List / YOGA / UBUNTU](#orge1a6c3d)
+        1.  [Keystone: Install <code>[6/6]</code>](#orgaec0512)
+        2.  [Keystone: HW RESULTS <code>[4/4]</code>](#org731f816)
+        3.  [Glance: Install (on controller) <code>[10/10]</code>](#orge3bed62)
+        4.  [Glance: HW RESULTS <code>[2/2]</code>](#org77a39a4)
+        5.  [Placement: Install <code>[4/4]</code>](#org44f4037)
+        6.  [Placement: HW RESULTS <code>[1/1]</code>](#org706b080)
+        7.  [Nova: Install <code>[3/3]</code>](#org455c85f)
+        8.  [Nova: HW RESULTS <code>[0/3]</code>](#org9385933)
+        9.  [Neutron: Install <code>[3/3]</code>](#orge6358fb)
+        10. [Neutron: HW RESULTS <code>[0/1]</code>](#org471313b)
+        11. [Horizon: Install <code>[3/3]</code>](#org66c186e)
+        12. [Horizon: HW RESULTS <code>[2/2]</code>](#orgbbd765d)
+        13. [Cinder: Install <code>[0/2]</code>](#orga359675)
+        14. [Cinder: HW RESULTS <code>[0/2]</code>](#org794f4dc)
+        15. [Swift: Install <code>[3/5]</code>](#org2acd42d)
+        16. [Swift: HW RESULTS <code>[/]</code>](#org2ba305c)
 
 
 
-<a id="org3fb1e67"></a>
+<a id="org39c0295"></a>
 
 # HW 1
 
 Set up OpenStack, see Mod 1 rubric
 
 
-<a id="org28b0fea"></a>
+<a id="org5d6215c"></a>
 
 # Roadmap
 
@@ -60,19 +62,19 @@ Set up OpenStack, see Mod 1 rubric
     7.  Cinder
 
 
-<a id="org5b976d0"></a>
+<a id="org02ca16f"></a>
 
 # Envrionment Installation Journal
 
 
-<a id="orgb2f8423"></a>
+<a id="orgf3d6269"></a>
 
 ## Pre-install Tests / Notes
 
 
-<a id="orgd21be9e"></a>
+<a id="org917bd87"></a>
 
-### TODO Trial / Test VM's <code>[6/6]</code>
+### DONE Trial / Test VM's <code>[6/6]</code>
 
 -   [X] Install a HyperVisor (VMware / esxi)
 -   [X] Create multiple VM's for OpenStack Components
@@ -85,7 +87,7 @@ Set up OpenStack, see Mod 1 rubric
 -   [X] Create a references section for external resources, links
 
 
-<a id="orge4a1685"></a>
+<a id="orgc5a30e2"></a>
 
 ### General Notes:
 
@@ -96,7 +98,7 @@ Set up OpenStack, see Mod 1 rubric
     (note that many vm's WILL have reduced performance as number of VMs increases)
 
 
-<a id="org889fcc7"></a>
+<a id="org8e71129"></a>
 
 ### Hypervisor Install Notes
 
@@ -111,7 +113,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org27a0e12"></a>
+<a id="orgfbcf1d6"></a>
 
 ### Home Lab Config Notes:
 
@@ -134,9 +136,9 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="orgc899932"></a>
+<a id="orgb804268"></a>
 
-### TODO Environment Install Task List / YOGA / UBUNTU (1 VM per host method)
+### DONE Environment Install Task List / YOGA / UBUNTU (1 VM per host method)
 
 -   [X] 5.1 <span class="underline">Security</span> (Preconfigure VM's) <code>[5/5]</code>
     (specs from testing above, using HP Proliant Microserver & ESXI 7.0)
@@ -199,7 +201,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="orgbf503f6"></a>
+<a id="org0e9f5ab"></a>
 
 ## Environment Install Footnotes
 
@@ -246,17 +248,17 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="orgb88337a"></a>
+<a id="org04f51c7"></a>
 
 # Project(s) Installation Journal
 
 
-<a id="orga585666"></a>
+<a id="orge1a6c3d"></a>
 
 ## TODO Projects(s) Install Task List / YOGA / UBUNTU
 
 
-<a id="orgf756271"></a>
+<a id="orgaec0512"></a>
 
 ### DONE Keystone: Install <code>[6/6]</code>
 
@@ -304,7 +306,7 @@ Set up OpenStack, see Mod 1 rubric
 -   NOTE: Before doing the above, do a '$ printenv' and look at the environment variables.  There should already be populated a number of OS\_ (openstack) entries.  If not, it may mean that the bootstraping commands did not complete correctly.  This happened to me.  After backing up and going through the bootstrapping commands again I found 5 of the 7 above env variables already in print env.  After adding the missing two, the rest of the process ran correctly.
 
 
-<a id="org5750c63"></a>
+<a id="org731f816"></a>
 
 ### DONE Keystone: HW RESULTS <code>[4/4]</code>
 
@@ -389,7 +391,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org1aff74a"></a>
+<a id="orge3bed62"></a>
 
 ### DONE Glance: Install (on controller) <code>[10/10]</code>
 
@@ -440,7 +442,7 @@ Set up OpenStack, see Mod 1 rubric
 -   [X] Verify Operation (see doc [link](https://docs.openstack.org/glance/yoga/install/verify.html))
 
 
-<a id="orgef75206"></a>
+<a id="org77a39a4"></a>
 
 ### DONE Glance: HW RESULTS <code>[2/2]</code>
 
@@ -488,7 +490,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="orgc5887c5"></a>
+<a id="org44f4037"></a>
 
 ### DONE Placement: Install <code>[4/4]</code>
 
@@ -601,7 +603,7 @@ Set up OpenStack, see Mod 1 rubric
 -   [X] Finalize Installation
 
 
-<a id="orga416efb"></a>
+<a id="org706b080"></a>
 
 ### DONE Placement: HW RESULTS <code>[1/1]</code>
 
@@ -610,9 +612,9 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="orgde42961"></a>
+<a id="org455c85f"></a>
 
-### DONE Nova: Install <code>[1/1]</code>
+### DONE Nova: Install <code>[3/3]</code>
 
 NOTE: Nova installation will require steps done on both 'controller' and 'compute1'
 NOTE: Nova installation will include the following services:
@@ -627,7 +629,7 @@ NOTE: Nova installation will include the following services:
 8.  the queue (RammitMQ)
 9.  SQL database
 
-1.  TODO Controller Node: Prerequisites (doc 3.2.1.3) <code>[8/8]</code>
+1.  DONE Controller Node: Prerequisites (doc 3.2.1.3) <code>[8/8]</code>
 
     1.  [X] Create Database(s)
         
@@ -726,7 +728,7 @@ NOTE: Nova installation will include the following services:
             +--------------+----------------------------------+
     9.  [X] Install Placement Service (completed prior, see previous section)
 
-2.  TODO Controller Node: Install & Configure Components (doc 3.2.1.3 cont) <code>[8/8]</code>
+2.  DONE Controller Node: Install & Configure Components (doc 3.2.1.3 cont) <code>[8/8]</code>
 
     1.  [X] Install packages
         `# apt install nova-api nova-conductor nova-novncproxy nova-scheduler`
@@ -749,7 +751,7 @@ NOTE: Nova installation will include the following services:
             # service nova-conductor restart
             # service nova-novncproxy restart
 
-3.  TODO Install and Configure Compute Node (doc 3.2.1.4) <code>[3/3]</code>
+3.  DONE Install and Configure Compute Node (doc 3.2.1.4) <code>[3/3]</code>
 
     **NOTE: DO THESE STEPS ON THE COMPUTE NODE, NOT THE CONTROLLER NODE**
     **NOTE: to sync admin credential scripts, use SCP to copy ~/os-scripts to target node**
@@ -759,18 +761,22 @@ NOTE: Nova installation will include the following services:
     3.  [X] Finalize
 
 
-<a id="orgceb7011"></a>
+<a id="org9385933"></a>
 
-### WAITING Nova: HW RESULTS
+### TODO Nova: HW RESULTS <code>[0/3]</code>
+
+-   [ ] Screenshot: Retrieve a VM list
+-   [ ] Screenshot: Create a VM
+-   [ ] Screenshot: Login VM
 
 ---
 
 
-<a id="org78538af"></a>
+<a id="orge6358fb"></a>
 
-### DONE Neutron: Install <code>[0/3]</code>
+### DONE Neutron: Install <code>[3/3]</code>
 
-1.  TODO Verifiy connectivity <code>[4/4]</code>
+1.  DONE Verifiy connectivity <code>[4/4]</code>
 
     -   [X] controller to compute1
         
@@ -816,7 +822,7 @@ NOTE: Nova installation will include the following services:
         rtt min/avg/max/mdev = 16.179/16.399/16.620/0.220 ms
         sgc@compute1:~$
 
-2.  TODO Install and configure controller node <code>[5/5]</code>
+2.  DONE Install and configure controller node <code>[5/5]</code>
 
     -   [X] Prerequisites (6.2.1) <code>[4/4]</code>
         -   [X] Create Database
@@ -900,7 +906,7 @@ NOTE: Nova installation will include the following services:
     -   [X] Configure compute service to use the networking service (6.2.4)
     -   [X] Finalize (6.2.5)
 
-3.  TODO Install and configure compute node <code>[5/5]</code>
+3.  DONE Install and configure compute node <code>[5/5]</code>
 
     -   [X] Install the components (6.3.1)
         `# apt install neutron-linuxbridge-agent`
@@ -910,16 +916,18 @@ NOTE: Nova installation will include the following services:
     -   [X] Finalize (6.3.5)
 
 
-<a id="org40e2ebf"></a>
+<a id="org471313b"></a>
 
-### TODO Neutron: HW RESULTS
+### TODO Neutron: HW RESULTS <code>[0/1]</code>
+
+-   [ ] Screenshot: Create a Network
 
 ---
 
 
-<a id="org210902b"></a>
+<a id="org66c186e"></a>
 
-### NEXT Horizon: Install <code>[3/3]</code>
+### DONE Horizon: Install <code>[3/3]</code>
 
 -   [X] Install packages
     `# apt install openstack-dashboard`
@@ -929,21 +937,217 @@ NOTE: Nova installation will include the following services:
     After following the installation instructions, I could not access the horizon dashboard via a browser.  I was testing the web portal from a physical laptop on the same network as the horizon dashboard.  Every time I tried to access it I received HTTP 500 errors.  Trying to access <http://controller/> yielded an Apache2 test page.  Trying to access <http://controller/horizon/> failed.  The error logs in /var/log/apache2/error.log indicated a problem with the code used to disable layer-3 networking in the /openstack/local<sub>settings.py</sub> file.  I removed the code added in order to disable layer-3 networking and the horizon dashboard then loaded correctly.
 
 
-<a id="org0f382b8"></a>
+<a id="orgbbd765d"></a>
 
-### TODO Horizon: HW RESULTS
+### DONE Horizon: HW RESULTS <code>[2/2]</code>
+
+-   [X] Login in with proper account (screenshot)
+    ![img](./img/service060horizon(3).png)
+-   [X] Retrieve service information (screenshot)
+
+![img](./img/service060horizon(2)-small.png)
+
+---
+
+
+<a id="orga359675"></a>
+
+### TODO Cinder: Install <code>[0/2]</code>
+
+-   [ ] Configure 'controller' node <code>[0/4]</code>
+    -   [ ] Prerequisites <code>[0/4]</code>
+        -   [ ] Create database & grand access
+        -   [ ] refresh admin credentials
+        -   [ ] create service credentials
+        -   [ ] create service api endpoints
+    -   [ ] Install & Configure Components <code>[0/0]</code>
+        1.  Install Package(s)
+            `#$ apt install cinder-api cinder-scheduler`
+        2.  Edit /etc/cinder/cinder.conf
+            1.  [database]
+            2.  [DEFAULT]&#x2026; RabbitMQ
+            3.  [DEFAULT]&#x2026; Keystone
+            4.  [DEFAULT]&#x2026; my<sub>ip</sub>
+        3.  Set [oslo<sub>concurrency</sub>] lock path
+        4.  Poplulate the Block Storage database:
+    -   [ ] Configure Compute service to use Block Storage
+        -   Edit /etc/nova/nova.conf [cinder]&#x2026;
+            `os_region_name = RegionOne`
+    -   [ ] Finalize Installation
+        -   `# service nova-api restart`
+        -   `# service cinder-scheduler restart`
+        -   `# service apache2 restart`
+-   [ ] Configure 'block1' node <code>[0/0]</code>
+
+
+<a id="org794f4dc"></a>
+
+### TODO Cinder: HW RESULTS <code>[0/2]</code>
+
+-   [ ] Screenshot: Create a volume
+
+-   [ ] Screenshot: Retrieve a volume list
 
 ---
 
 
-<a id="org8630861"></a>
+<a id="org2acd42d"></a>
 
-### TODO Cinder: Install
+### TODO Swift: Install <code>[3/5]</code>
+
+-   [X] Install and Configure Controller Node (5.9.3)
+    -   [X] Prerequisites
+        -   [X] 1. Source admin credentials
+            `# ./os-scripts/admin-openrc`
+        -   [X] 2. Create identity service credentials
+        -   [X] 3. Create object storage api endpoints
+    -   [X] Install and configure components
+        -   [X] 1. Install Package(s) (MUST BY PYTHON3!)
+            
+                # apt-get install swift swift-proxy python3-swiftclient python3-keystoneclient python3-keystonemiddleware memcached
+        -   [X] 2. Create /etc/swift directory
+        -   [X] 3. Obtain proxy service config file from object storage repository
+            
+                # curl -o /etc/swift/proxy-server.conf https://opendev.org/openstack/swift/raw/branch/master/etc/proxy-server.conf-sample
+        -   [X] 4. Edit /etc/swift/proxy-server.conf
+            -   [DEFAULT]
+            -   [pipeline:main]
+                
+                    pipeline = catch_errors gatekeeper healthcheck proxy-logging cache container_sync bulk ratelimit authtoken keystoneauth container-quotas account-quotas slo dlo versioned_writes proxy-logging proxy-server
+            -   [app:proxy-server] 
+                
+                    use = egg:swift#proxy
+                    ...
+                    account_autocreate = True
+            -   [filter:keystoneauth]
+                
+                    use = egg:swift#keystoneauth
+                    ...
+                    operator_roles = admin,user
+            -   [filter:authtoken]
+                
+                    paste.filter_factory = keystonemiddleware.auth_token:filter_factory
+                    ...
+                    www_authenticate_uri = http://controller:5000
+                    auth_url = http://controller:5000
+                    memcached_servers = controller:11211
+                    auth_type = password
+                    project_domain_id = default
+                    user_domain_id = default
+                    project_name = service
+                    username = swift
+                    password = SWIFT_PASS
+                    delay_auth_decision = True
+            -   [filter:cache]
+                
+                    use = egg:swift#memcache
+                    ...
+                    memcache_servers = controller:11211
+-   [X] Install and Configure Storage Node(s) (5.9.4)
+    (repeat steps for each storage node)
+    -   [X] Prerequisites <code>[8/8]</code> 
+        -   [X] 1. Install packages
+            `# apt-get install xfsprogs rsync`
+        -   [X] 2. format devices
+            `# mkfs.xfs /dev/sdb`
+            `# mkfs.xfs /dev/sdc`
+        -   [X] 3. create mount points
+            `# mkdir -p /srv/node/sdb`
+            `# mkdir -p /srv/node/sdc`
+        -   [X] 4. parse UUID
+            `# blkid`
+        -   [X] 5. edit /etc/fstab
+            
+                        UUID="<UUID-from-output-above>" /srv/node/sdb xfs noatime 0 2
+                UUID="<UUID-from-output-above>" /srv/node/sdc xfs noatime 0 2
+        -   [X] 6. mount devices
+            `# mount /srv/node/sdb`
+            `# mount /srv/node/sdc`
+        -   [X] 7. edit /etc/rsyncd.conf
+            
+                        uid = swift
+                gid = swift
+                log file = /var/log/rsyncd.log
+                pid file = /var/run/rsyncd.pid
+                address = 10.0.0.51
+                
+                [account]
+                max connections = 2
+                path = /srv/node/
+                read only = False
+                lock file = /var/lock/account.lock
+                
+                [container]
+                max connections = 2
+                path = /srv/node/
+                read only = False
+                lock file = /var/lock/container.lock
+                
+                [object]
+                max connections = 2
+                path = /srv/node/
+                read only = False
+                lock file = /var/lock/object.lock
+        -   [X] 8. start rsync service
+            `# service rsync start`
+    -   [X] Install & Configure Components <code>[7/7]</code>
+        -   [X] 1. Install packages
+            `# apt-get install swift swift-account swift-container swift-object`
+        -   [X] 2. Obtain accounting, container, & object service configs from repository
+            
+                # curl -o /etc/swift/account-server.conf https://opendev.org/openstack/swift/raw/branch/master/etc/account-server.conf-sample
+                # curl -o /etc/swift/container-server.conf https://opendev.org/openstack/swift/raw/branch/master/etc/container-server.conf-sample
+                # curl -o /etc/swift/object-server.conf https://opendev.org/openstack/swift/raw/branch/master/etc/object-server.conf-sample
+        -   [X] 3. Edit /etc/swift/account-server.conf
+            -   [DEFAULT]
+                
+                              ...
+                    bind_ip = 10.0.0.51
+                    bind_port = 6201
+                    user = swift
+                    swift_dir = /etc/swift
+                    devices = /srv/node
+                    mount_check = True
+            -   [pipeline:main]
+                
+                    pipeline = healthcheck recon container-server
+            -   [filter:recon]
+                
+                              use = egg:swift#recon
+                    ...
+                    recon_cache_path = /var/cache/swift
+        -   [X] 4. Edit /etc/swift/container-server.conf
+            -   [X] DEFAULT
+            -   [X] pipeline:main
+            -   [X] filter:recon
+        -   [X] 5. Edit /etc/swift/object-server.conf
+            -   [X] DEFAULT
+            -   [X] pipeline:main
+            -   [X] filter:recon
+        -   [X] 6. Ensure ownership of mount point structure
+        -   [X] 7. Create `recon` directory and assign ownership
+-   [X] Create and Distribute Initial Rings (5.9.5) <code>[4/4]</code>
+    -   [X] Create account ring
+        -   [X] Create base account.builder
+        -   [X] add each storage node to ring
+        -   [X] verify ring contents
+        -   [X] rebalance ring
+    -   [X] Create container ring
+        -   [X] Create base account.builder
+        -   [X] add each storage node to ring
+        -   [X] verify ring contents
+        -   [X] rebalance ring
+    -   [X] Create object ring
+        -   [X] Create base account.builder
+        -   [X] add each storage node to ring
+        -   [X] verify ring contents
+        -   [X] rebalance ring
+    -   [X] Distribute ring files
+-   [ ] Finalize Installation (5.9.6)
+-   [ ] Installation Screenshots
 
 
-<a id="org7f8198a"></a>
+<a id="org2ba305c"></a>
 
-### TODO Cinder: HW RESUlts
-
----
+### TODO Swift: HW RESULTS <code>[/]</code>
 

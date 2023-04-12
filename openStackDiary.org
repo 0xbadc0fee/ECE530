@@ -55,6 +55,7 @@ Set up OpenStack, see Mod 1 rubric
 + per yoga install... compute node:1 core, 2gb ram, 10GB hdd
 + Ubuntu lts server... 2 core, 4gb ram, 25gb hdd
 + template build.... 2 core, 6gb ram, 40 gb hdd, 2 NIC
+  [[./img/environment000setup(12)-small.png]]
 ------
 *** Home Lab Config Notes:
 + Hypervisor (HVS): HP Proliant Microserver Gen10, 4tb, 32gb ram, 4 NICS,
@@ -72,6 +73,7 @@ Set up OpenStack, see Mod 1 rubric
 + Virtual Network
   + vSwitch1 = management network <-> HVS igb2
   + vSwitch2 = provider network <-> HVS igb3
+    [[./img/environment000setup(13)-small.png]]
 -----
 *** DONE Environment Install Task List / YOGA / UBUNTU (1 VM per host method)
 - [X] 5.1 _Security_ (Preconfigure VM's) [5/5]
@@ -107,6 +109,7 @@ Set up OpenStack, see Mod 1 rubric
     - [X] repeat ping from @block1
     - [X] repeat ping from @object1
     - [X] repeat ping from @object2
+      [[./img/environment000setup(9)-small.png]]
   - [X] 'object1'
   - [X] 'object2'
 - [X] 5.3 _NTP_ [3/3]
@@ -131,6 +134,7 @@ Set up OpenStack, see Mod 1 rubric
 - [X] _Etcd_ (on controller) [2/2]
   - [X] Install Package
   - [X] edit config files
+    [[./img/environment000setup(11)-small.png]]
 ------
 ** Environment Install Footnotes 
 + From [[https://docs.openstack.org/install-guide/environment-networking.html]] :

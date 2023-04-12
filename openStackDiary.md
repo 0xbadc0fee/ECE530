@@ -1,45 +1,45 @@
 
 # Table of Contents
 
-1.  [HW 1](#org39c0295)
-2.  [Roadmap](#org5d6215c)
-3.  [Envrionment Installation Journal](#org02ca16f)
-    1.  [Pre-install Tests / Notes](#orgf3d6269)
-        1.  [Trial / Test VM's <code>[6/6]</code>](#org917bd87)
-        2.  [General Notes:](#orgc5a30e2)
-        3.  [Hypervisor Install Notes](#org8e71129)
-        4.  [Home Lab Config Notes:](#orgfbcf1d6)
-        5.  [Environment Install Task List / YOGA / UBUNTU (1 VM per host method)](#orgb804268)
-    2.  [Environment Install Footnotes](#org0e9f5ab)
-4.  [Project(s) Installation Journal](#org04f51c7)
-    1.  [Projects(s) Install Task List / YOGA / UBUNTU](#orge1a6c3d)
-        1.  [Keystone: Install <code>[6/6]</code>](#orgaec0512)
-        2.  [Keystone: HW RESULTS <code>[4/4]</code>](#org731f816)
-        3.  [Glance: Install (on controller) <code>[10/10]</code>](#orge3bed62)
-        4.  [Glance: HW RESULTS <code>[2/2]</code>](#org77a39a4)
-        5.  [Placement: Install <code>[4/4]</code>](#org44f4037)
-        6.  [Placement: HW RESULTS <code>[1/1]</code>](#org706b080)
-        7.  [Nova: Install <code>[3/3]</code>](#org455c85f)
-        8.  [Nova: HW RESULTS <code>[0/3]</code>](#org9385933)
-        9.  [Neutron: Install <code>[3/3]</code>](#orge6358fb)
-        10. [Neutron: HW RESULTS <code>[0/1]</code>](#org471313b)
-        11. [Horizon: Install <code>[3/3]</code>](#org66c186e)
-        12. [Horizon: HW RESULTS <code>[2/2]</code>](#orgbbd765d)
-        13. [Cinder: Install <code>[0/2]</code>](#orga359675)
-        14. [Cinder: HW RESULTS <code>[0/2]</code>](#org794f4dc)
-        15. [Swift: Install <code>[3/5]</code>](#org2acd42d)
-        16. [Swift: HW RESULTS <code>[/]</code>](#org2ba305c)
+1.  [HW 1](#org3a4b560)
+2.  [Roadmap](#org1996482)
+3.  [Envrionment Installation Journal](#org7c0f52b)
+    1.  [Pre-install Tests / Notes](#org0913531)
+        1.  [Trial / Test VM's <code>[6/6]</code>](#orge542e32)
+        2.  [General Notes:](#org7be608c)
+        3.  [Hypervisor Install Notes](#org4885c1a)
+        4.  [Home Lab Config Notes:](#orgf4a8e8a)
+        5.  [Environment Install Task List / YOGA / UBUNTU (1 VM per host method)](#org19f04e2)
+    2.  [Environment Install Footnotes](#orgfef0dec)
+4.  [Project(s) Installation Journal](#orgc13f63d)
+    1.  [Projects(s) Install Task List / YOGA / UBUNTU](#orgc10ed89)
+        1.  [Keystone: Install <code>[6/6]</code>](#orgd5be1aa)
+        2.  [Keystone: HW RESULTS <code>[4/4]</code>](#org1fb13c8)
+        3.  [Glance: Install (on controller) <code>[10/10]</code>](#org5a92298)
+        4.  [Glance: HW RESULTS <code>[2/2]</code>](#org6951912)
+        5.  [Placement: Install <code>[4/4]</code>](#org42d0c4e)
+        6.  [Placement: HW RESULTS <code>[1/1]</code>](#orgc611240)
+        7.  [Nova: Install <code>[3/3]</code>](#org601c2cc)
+        8.  [Nova: HW RESULTS <code>[3/3]</code>](#org04193e5)
+        9.  [Neutron: Install <code>[3/3]</code>](#org5986b32)
+        10. [Neutron: HW RESULTS <code>[1/1]</code>](#orgedb4cea)
+        11. [Horizon: Install <code>[3/3]</code>](#org622321b)
+        12. [Horizon: HW RESULTS <code>[2/2]</code>](#org6a7963c)
+        13. [Cinder: Install <code>[2/2]</code>](#org5be6c8d)
+        14. [Cinder: HW RESULTS <code>[0/2]</code>](#org53ba3a3)
+        15. [Swift: Install <code>[5/5]</code>](#org3fdc5ae)
+        16. [Swift: HW RESULTS <code>[1/2]</code>](#orgb0ddb4c)
 
 
 
-<a id="org39c0295"></a>
+<a id="org3a4b560"></a>
 
 # HW 1
 
 Set up OpenStack, see Mod 1 rubric
 
 
-<a id="org5d6215c"></a>
+<a id="org1996482"></a>
 
 # Roadmap
 
@@ -62,17 +62,17 @@ Set up OpenStack, see Mod 1 rubric
     7.  Cinder
 
 
-<a id="org02ca16f"></a>
+<a id="org7c0f52b"></a>
 
 # Envrionment Installation Journal
 
 
-<a id="orgf3d6269"></a>
+<a id="org0913531"></a>
 
 ## Pre-install Tests / Notes
 
 
-<a id="org917bd87"></a>
+<a id="orge542e32"></a>
 
 ### DONE Trial / Test VM's <code>[6/6]</code>
 
@@ -87,7 +87,7 @@ Set up OpenStack, see Mod 1 rubric
 -   [X] Create a references section for external resources, links
 
 
-<a id="orgc5a30e2"></a>
+<a id="org7be608c"></a>
 
 ### General Notes:
 
@@ -98,7 +98,7 @@ Set up OpenStack, see Mod 1 rubric
     (note that many vm's WILL have reduced performance as number of VMs increases)
 
 
-<a id="org8e71129"></a>
+<a id="org4885c1a"></a>
 
 ### Hypervisor Install Notes
 
@@ -109,11 +109,12 @@ Set up OpenStack, see Mod 1 rubric
 -   per yoga install&#x2026; compute node:1 core, 2gb ram, 10GB hdd
 -   Ubuntu lts server&#x2026; 2 core, 4gb ram, 25gb hdd
 -   template build&#x2026;. 2 core, 6gb ram, 40 gb hdd, 2 NIC
+    ![img](./img/environment000setup(12)-small.png)
 
 ---
 
 
-<a id="orgfbcf1d6"></a>
+<a id="orgf4a8e8a"></a>
 
 ### Home Lab Config Notes:
 
@@ -132,11 +133,12 @@ Set up OpenStack, see Mod 1 rubric
 -   Virtual Network
     -   vSwitch1 = management network <-> HVS igb2
     -   vSwitch2 = provider network <-> HVS igb3
+        ![img](./img/environment000setup(13)-small.png)
 
 ---
 
 
-<a id="orgb804268"></a>
+<a id="org19f04e2"></a>
 
 ### DONE Environment Install Task List / YOGA / UBUNTU (1 VM per host method)
 
@@ -173,6 +175,7 @@ Set up OpenStack, see Mod 1 rubric
         -   [X] repeat ping from @block1
         -   [X] repeat ping from @object1
         -   [X] repeat ping from @object2
+            ![img](./img/environment000setup(9)-small.png)
     -   [X] 'object1'
     -   [X] 'object2'
 -   [X] 5.3 <span class="underline">NTP</span> <code>[3/3]</code>
@@ -197,11 +200,12 @@ Set up OpenStack, see Mod 1 rubric
 -   [X] <span class="underline">Etcd</span> (on controller) <code>[2/2]</code>
     -   [X] Install Package
     -   [X] edit config files
+        ![img](./img/environment000setup(11)-small.png)
 
 ---
 
 
-<a id="org0e9f5ab"></a>
+<a id="orgfef0dec"></a>
 
 ## Environment Install Footnotes
 
@@ -248,17 +252,17 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org04f51c7"></a>
+<a id="orgc13f63d"></a>
 
 # Project(s) Installation Journal
 
 
-<a id="orge1a6c3d"></a>
+<a id="orgc10ed89"></a>
 
 ## TODO Projects(s) Install Task List / YOGA / UBUNTU
 
 
-<a id="orgaec0512"></a>
+<a id="orgd5be1aa"></a>
 
 ### DONE Keystone: Install <code>[6/6]</code>
 
@@ -271,6 +275,8 @@ Set up OpenStack, see Mod 1 rubric
     2  MariaDB > CREATE DATABASE keystone;
     3  MariaDB > GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost' IDENTIFIED BY 'pwd123';
     4  MariaDB > GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%' IDENTIFIED BY 'pwd123';  replace dbpass with password
+
+![img](./img/service010keystone(0)-small.png)
 
 -   NOTE: A good test here would be to exit root (#), and as user ($) try to access the database.  If you get 1045 errors, that indicates an authentication problem and the rest of the process will fail until authentication is working.  When done testing from user, remember to return to root for remainder of process.  If the below does not produce a connection to SQL, stop and troubleshoot.
 -   [X] **Test SQL Connection**
@@ -303,10 +309,12 @@ Set up OpenStack, see Mod 1 rubric
     6  $ export OS_AUTH_URL=http://controller:5000/v3
     7  $ export OS_IDENTITY_API_VERSION=3
 
+![img](./img/service010keystone(2)-small.png)
+
 -   NOTE: Before doing the above, do a '$ printenv' and look at the environment variables.  There should already be populated a number of OS\_ (openstack) entries.  If not, it may mean that the bootstraping commands did not complete correctly.  This happened to me.  After backing up and going through the bootstrapping commands again I found 5 of the 7 above env variables already in print env.  After adding the missing two, the rest of the process ran correctly.
 
 
-<a id="org731f816"></a>
+<a id="org1fb13c8"></a>
 
 ### DONE Keystone: HW RESULTS <code>[4/4]</code>
 
@@ -361,6 +369,8 @@ Set up OpenStack, see Mod 1 rubric
     32           |
     33  +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+![img](./img/service010keystone(7)-small.png)
+
 -   [X] **Confirm user list can be retrieved**
 
     1  MariaDB [keystone]> SELECT * FROM user
@@ -391,7 +401,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="orge3bed62"></a>
+<a id="org5a92298"></a>
 
 ### DONE Glance: Install (on controller) <code>[10/10]</code>
 
@@ -428,6 +438,9 @@ Set up OpenStack, see Mod 1 rubric
     
         1  $ openstack endpoint create --region RegionOne \
         2  $ image public http://controller:9292
+
+![img](./img/service020glance(0)-small.png)
+
 -   [X] Install glance packages
     
         1  # apt install glance
@@ -442,7 +455,7 @@ Set up OpenStack, see Mod 1 rubric
 -   [X] Verify Operation (see doc [link](https://docs.openstack.org/glance/yoga/install/verify.html))
 
 
-<a id="org77a39a4"></a>
+<a id="org6951912"></a>
 
 ### DONE Glance: HW RESULTS <code>[2/2]</code>
 
@@ -478,6 +491,8 @@ Set up OpenStack, see Mod 1 rubric
     28  +------------------+----------------------------------------------------------------------------------+
     29  sgc@controller:~$
 
+![img](./img/service020glance(3)-small.png)
+
 -   [X] HW Glance 2: Retrieve Image List
 
     1    $ glance image-list
@@ -487,10 +502,12 @@ Set up OpenStack, see Mod 1 rubric
     5  | 25c894f6-fe98-4da3-a8d9-89ef27508d46 | cirros |
     6  +--------------------------------------+--------+
 
+![img](./img/service020glance(2)-small.png)
+
 ---
 
 
-<a id="org44f4037"></a>
+<a id="org42d0c4e"></a>
 
 ### DONE Placement: Install <code>[4/4]</code>
 
@@ -601,9 +618,10 @@ Set up OpenStack, see Mod 1 rubric
         -   **WARNING: IN ABOVE, YOU MUST REMOVE THE TEXT " # use noauth2 if not using keystone"**
     -   [X] Populate the placement database
 -   [X] Finalize Installation
+    ![img](./img/service030placement(0)-small.png)
 
 
-<a id="org706b080"></a>
+<a id="orgc611240"></a>
 
 ### DONE Placement: HW RESULTS <code>[1/1]</code>
 
@@ -612,7 +630,7 @@ Set up OpenStack, see Mod 1 rubric
 ---
 
 
-<a id="org455c85f"></a>
+<a id="org601c2cc"></a>
 
 ### DONE Nova: Install <code>[3/3]</code>
 
@@ -761,18 +779,22 @@ NOTE: Nova installation will include the following services:
     3.  [X] Finalize
 
 
-<a id="org9385933"></a>
+<a id="org04193e5"></a>
 
-### TODO Nova: HW RESULTS <code>[0/3]</code>
+### DONE Nova: HW RESULTS <code>[3/3]</code>
 
--   [ ] Screenshot: Retrieve a VM list
--   [ ] Screenshot: Create a VM
--   [ ] Screenshot: Login VM
+-   [X] Screenshot: Retrieve a VM list
+    -   Nova was working and I had set up 3 vm's and had logged into 2 of them.  After that Nova crashed and would no longer connect.  I did not get screenshots before the crash.  The VM's were named 'provider-instance', 'provider-instance1', and 'provider-insance2'.  'provider-insance' was on the admin project.  The other two were on the demo project with the user name of 'myuser' and attached to the 'provider' network.
+
+-   [X] Screenshot: Create a VM
+    ![img](./img/testVM.png)
+-   [X] Screenshot: Login VM
+    ![img](./img/nova_cirros.png)
 
 ---
 
 
-<a id="orge6358fb"></a>
+<a id="org5986b32"></a>
 
 ### DONE Neutron: Install <code>[3/3]</code>
 
@@ -916,16 +938,17 @@ NOTE: Nova installation will include the following services:
     -   [X] Finalize (6.3.5)
 
 
-<a id="org471313b"></a>
+<a id="orgedb4cea"></a>
 
-### TODO Neutron: HW RESULTS <code>[0/1]</code>
+### DONE Neutron: HW RESULTS <code>[1/1]</code>
 
--   [ ] Screenshot: Create a Network
+-   [X] Screenshot: Create a Network
+    ![img](./img/network.png)
 
 ---
 
 
-<a id="org66c186e"></a>
+<a id="org622321b"></a>
 
 ### DONE Horizon: Install <code>[3/3]</code>
 
@@ -937,7 +960,7 @@ NOTE: Nova installation will include the following services:
     After following the installation instructions, I could not access the horizon dashboard via a browser.  I was testing the web portal from a physical laptop on the same network as the horizon dashboard.  Every time I tried to access it I received HTTP 500 errors.  Trying to access <http://controller/> yielded an Apache2 test page.  Trying to access <http://controller/horizon/> failed.  The error logs in /var/log/apache2/error.log indicated a problem with the code used to disable layer-3 networking in the /openstack/local<sub>settings.py</sub> file.  I removed the code added in order to disable layer-3 networking and the horizon dashboard then loaded correctly.
 
 
-<a id="orgbbd765d"></a>
+<a id="org6a7963c"></a>
 
 ### DONE Horizon: HW RESULTS <code>[2/2]</code>
 
@@ -950,17 +973,18 @@ NOTE: Nova installation will include the following services:
 ---
 
 
-<a id="orga359675"></a>
+<a id="org5be6c8d"></a>
 
-### TODO Cinder: Install <code>[0/2]</code>
+### TODO Cinder: Install <code>[2/2]</code>
 
--   [ ] Configure 'controller' node <code>[0/4]</code>
-    -   [ ] Prerequisites <code>[0/4]</code>
-        -   [ ] Create database & grand access
-        -   [ ] refresh admin credentials
-        -   [ ] create service credentials
-        -   [ ] create service api endpoints
-    -   [ ] Install & Configure Components <code>[0/0]</code>
+-   [X] Configure 'controller' node <code>[4/4]</code>
+    -   [X] Prerequisites <code>[4/4]</code>
+        -   [X] Create database & grand access
+        -   [X] refresh admin credentials
+        -   [X] create service credentials
+        -   [X] create service api endpoints
+            ![img](./img/service070cinder(0)-small.png)
+    -   [X] Install & Configure Components <code>[0/0]</code>
         1.  Install Package(s)
             `#$ apt install cinder-api cinder-scheduler`
         2.  Edit /etc/cinder/cinder.conf
@@ -970,30 +994,32 @@ NOTE: Nova installation will include the following services:
             4.  [DEFAULT]&#x2026; my<sub>ip</sub>
         3.  Set [oslo<sub>concurrency</sub>] lock path
         4.  Poplulate the Block Storage database:
-    -   [ ] Configure Compute service to use Block Storage
+    -   [X] Configure Compute service to use Block Storage
         -   Edit /etc/nova/nova.conf [cinder]&#x2026;
             `os_region_name = RegionOne`
-    -   [ ] Finalize Installation
+    -   [X] Finalize Installation
         -   `# service nova-api restart`
         -   `# service cinder-scheduler restart`
         -   `# service apache2 restart`
--   [ ] Configure 'block1' node <code>[0/0]</code>
+-   [X] Configure 'block1' node <code>[0/0]</code>
+    ![img](./img/service070cinder(1)-small.png)
 
 
-<a id="org794f4dc"></a>
+<a id="org53ba3a3"></a>
 
 ### TODO Cinder: HW RESULTS <code>[0/2]</code>
 
 -   [ ] Screenshot: Create a volume
-
+    No screenshot.  Volume created, but NOVA crashed and still troubleshooting connection.
 -   [ ] Screenshot: Retrieve a volume list
+    No Screenshot.  Was able to see the volume in horizon before nova crashed but nova being offline is interfering with many of even the CLI version of openstack commands.
 
 ---
 
 
-<a id="org2acd42d"></a>
+<a id="org3fdc5ae"></a>
 
-### TODO Swift: Install <code>[3/5]</code>
+### TODO Swift: Install <code>[5/5]</code>
 
 -   [X] Install and Configure Controller Node (5.9.3)
     -   [X] Prerequisites
@@ -1143,11 +1169,25 @@ NOTE: Nova installation will include the following services:
         -   [X] verify ring contents
         -   [X] rebalance ring
     -   [X] Distribute ring files
--   [ ] Finalize Installation (5.9.6)
--   [ ] Installation Screenshots
+-   [X] Finalize Installation (5.9.6)
+-   [X] Installation Screenshots
+    ![img](./img/service080swift(1)-small.png)
+    ![img](./img/service080swift(4)-small.png)
+    ![img](./img/service080swift(6)-small.png)
+    ![img](./img/service080swift(15)-small.png)
+    ![img](./img/service080swift(19)-small.png)
+    ![img](./img/service080swift(24)-small.png)
+    ![img](./img/service080swift(26)-small.png)
+    ![img](./img/service080swift(30)-small.png)
+    ![img](./img/service080swift(32)-small.png)
 
 
-<a id="org2ba305c"></a>
+<a id="orgb0ddb4c"></a>
 
-### TODO Swift: HW RESULTS <code>[/]</code>
+### TODO Swift: HW RESULTS <code>[1/2]</code>
+
+-   [X] Create a container
+    <./img/container>
+-   [ ] Upload and Download a file
+    INCOMPLETE
 

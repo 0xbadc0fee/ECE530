@@ -193,7 +193,7 @@ network:
   MariaDB > GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost' IDENTIFIED BY 'pwd123';
   MariaDB > GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%' IDENTIFIED BY 'pwd123';  replace dbpass with password
 #+end_src
-
+[[./img/service010keystone(0)-small.png]]
 - NOTE: A good test here would be to exit root (#), and as user ($) try to access the database.  If you get 1045 errors, that indicates an authentication problem and the rest of the process will fail until authentication is working.  When done testing from user, remember to return to root for remainder of process.  If the below does not produce a connection to SQL, stop and troubleshoot.
 - [X] *Test SQL Connection*
   #+begin_src sh -n
@@ -230,6 +230,7 @@ network:
   $ export OS_AUTH_URL=http://controller:5000/v3
   $ export OS_IDENTITY_API_VERSION=3
 #+end_src
+[[./img/service010keystone(2)-small.png]]
 
 - NOTE: Before doing the above, do a '$ printenv' and look at the environment variables.  There should already be populated a number of OS_ (openstack) entries.  If not, it may mean that the bootstraping commands did not complete correctly.  This happened to me.  After backing up and going through the bootstrapping commands again I found 5 of the 7 above env variables already in print env.  After adding the missing two, the rest of the process ran correctly.
 
@@ -290,6 +291,7 @@ Password:
          |
 +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 #+end_example
+[[./img/service010keystone(7)-small.png]]
 
 - [X] *Confirm user list can be retrieved*
 #+name: RETRIEVE USER LIST
@@ -361,6 +363,7 @@ MariaDB [keystone]>
   $ openstack endpoint create --region RegionOne \
   $ image public http://controller:9292
   #+end_src
+[[./img/service020glance(0)-small.png]]
 - [X] Install glance packages
   #+begin_src sh -n
   # apt install glance
@@ -408,6 +411,8 @@ MariaDB [keystone]>
 +------------------+----------------------------------------------------------------------------------+
 sgc@controller:~$
 #+end_example
+[[./img/service020glance(3)-small.png]]
+
 - [X] HW Glance 2: Retrieve Image List
 #+begin_example sh -n
   $ glance image-list
@@ -417,6 +422,7 @@ sgc@controller:~$
 | 25c894f6-fe98-4da3-a8d9-89ef27508d46 | cirros |
 +--------------------------------------+--------+
 #+end_example
+[[./img/service020glance(2)-small.png]]
 ------
 *** DONE Placement: Install [4/4]
 - [X] Create Database [1/1]
@@ -533,6 +539,7 @@ sgc@controller:~$
     - *WARNING: IN ABOVE, YOU MUST REMOVE THE TEXT " # use noauth2 if not using keystone"*
   - [X] Populate the placement database
 - [X] Finalize Installation
+  [[./img/service030placement(0)-small.png]]
 *** DONE Placement: HW RESULTS [1/1]
 - [X] N/A, no placement resulst for HW required.
 ------
@@ -676,10 +683,14 @@ NOTE: Nova installation will include the following services:
 1. [X] Install packages
 2. [X] Make edits to /etc/nova/nova.conf (on compute node)
 3. [X] Finalize
-*** TODO Nova: HW RESULTS [0/3]
-- [ ] Screenshot: Retrieve a VM list
-- [ ] Screenshot: Create a VM
-- [ ] Screenshot: Login VM
+*** DONE Nova: HW RESULTS [3/3]
+- [X] Screenshot: Retrieve a VM list
+  - Nova was working and I had set up 3 vm's and had logged into 2 of them.  After that Nova crashed and would no longer connect.  I did not get screenshots before the crash.  The VM's were named 'provider-instance', 'provider-instance1', and 'provider-insance2'.  'provider-insance' was on the admin project.  The other two were on the demo project with the user name of 'myuser' and attached to the 'provider' network.
+    
+- [X] Screenshot: Create a VM
+  [[./img/testVM.png]]
+- [X] Screenshot: Login VM
+  [[./img/nova_cirros.png]]
 ------ 
 *** DONE Neutron: Install [3/3]
 **** DONE Verifiy connectivity [4/4]
@@ -822,9 +833,9 @@ sgc@compute1:~$
 - [X] Configure networking options (6.3.3)
 - [X] Configure the compute service to use the networking service (6.3.4)
 - [X] Finalize (6.3.5)
-*** TODO Neutron: HW RESULTS [0/1]
-- [ ] Screenshot: Create a Network
-  
+*** DONE Neutron: HW RESULTS [1/1]
+- [X] Screenshot: Create a Network
+  [[./img/network.png]]
 ------
 *** DONE Horizon: Install [3/3]
 - [X] Install packages
@@ -839,14 +850,15 @@ sgc@compute1:~$
 - [X] Retrieve service information (screenshot)
 [[./img/service060horizon(2)-small.png]]
 ------
-*** TODO Cinder: Install [0/2]
-- [ ] Configure 'controller' node [0/4]
-  - [ ] Prerequisites [0/4]
-    - [ ] Create database & grand access
-    - [ ] refresh admin credentials
-    - [ ] create service credentials
-    - [ ] create service api endpoints
-  - [ ] Install & Configure Components [0/0]
+*** TODO Cinder: Install [2/2]
+- [X] Configure 'controller' node [4/4]
+  - [X] Prerequisites [4/4]
+    - [X] Create database & grand access
+    - [X] refresh admin credentials
+    - [X] create service credentials
+    - [X] create service api endpoints
+      [[./img/service070cinder(0)-small.png]]
+  - [X] Install & Configure Components [0/0]
     1. Install Package(s)
       =#$ apt install cinder-api cinder-scheduler= 
     2. Edit /etc/cinder/cinder.conf
@@ -856,21 +868,22 @@ sgc@compute1:~$
        4. [DEFAULT]... my_ip
     3. Set [oslo_concurrency] lock path
     4. Poplulate the Block Storage database:
-  - [ ] Configure Compute service to use Block Storage
+  - [X] Configure Compute service to use Block Storage
     - Edit /etc/nova/nova.conf [cinder]...
       =os_region_name = RegionOne=
-  - [ ] Finalize Installation
+  - [X] Finalize Installation
     - =# service nova-api restart=
     - =# service cinder-scheduler restart=
     - =# service apache2 restart=
-- [ ] Configure 'block1' node [0/0]
+- [X] Configure 'block1' node [0/0]
+  [[./img/service070cinder(1)-small.png]]
 *** TODO Cinder: HW RESULTS [0/2]
 - [ ] Screenshot: Create a volume
-  
+  No screenshot.  Volume created, but NOVA crashed and still troubleshooting connection. 
 - [ ] Screenshot: Retrieve a volume list
-  
+  No Screenshot.  Was able to see the volume in horizon before nova crashed but nova being offline is interfering with many of even the CLI version of openstack commands.
 ------
-*** TODO Swift: Install [3/5]
+*** TODO Swift: Install [5/5]
 - [X] Install and Configure Controller Node (5.9.3)
   - [X] Prerequisites
     - [X] 1. Source admin credentials
@@ -1037,6 +1050,19 @@ recon_cache_path = /var/cache/swift
     - [X] verify ring contents
     - [X] rebalance ring
   - [X] Distribute ring files
-- [ ] Finalize Installation (5.9.6)
-- [ ] Installation Screenshots
-*** TODO Swift: HW RESULTS [/]
+- [X] Finalize Installation (5.9.6)
+- [X] Installation Screenshots
+  [[./img/service080swift(1)-small.png]]
+  [[./img/service080swift(4)-small.png]]
+  [[./img/service080swift(6)-small.png]]
+  [[./img/service080swift(15)-small.png]]
+  [[./img/service080swift(19)-small.png]]
+  [[./img/service080swift(24)-small.png]]
+  [[./img/service080swift(26)-small.png]]
+  [[./img/service080swift(30)-small.png]]
+  [[./img/service080swift(32)-small.png]]
+*** TODO Swift: HW RESULTS [1/2]
+- [X] Create a container
+  [[./img/container]]
+- [ ] Upload and Download a file
+  INCOMPLETE

@@ -709,7 +709,8 @@ CLOSED: [2023-04-20 Thu 10:56]
    1. Read & Review
 3. [X] Submit summary
 ** Section 3_2
-*** TODO 3_2_1 [C]onsistency
+*** DONE 3_2_1 [C]onsistency
+CLOSED: [2023-04-20 Thu 13:45]
 - Tiers:
   clouds have tiers, levels.
   - tier 1: lightweight, responsive, web based, also route or handle some services
@@ -745,13 +746,75 @@ CLOSED: [2023-04-20 Thu 10:56]
   - lack of TRUST
   - when to trust "weak" or "best effort" consistency?
   - 
-*** TODO 3_2_2 Distributed Systems
+*** DONE 3_2_2 Distributed Systems
+CLOSED: [2023-04-20 Thu 13:46]
+- Definition:
+  A collection of automata whose distribution is transparent to the user so that the system appears as one local machine.  This is in contrast to a network, where the user is AWARE that there are several machines, and their location, storage, replication, load balancing, and functionality is not transparent.  DISTRIBUTED systems usually use some kind of client-server organization.
+- Definition cont:
+  [Andrew Tanenbaum] a distributed system is a collection of independent computers that appear to the suers of the system as a single computers
+- Definition cont:
+  [Michael Schroder] a distributed system is several computers doing something together.  Thus, a distributed system has three primary characteristics: multiple computers, interconnections, and shared state.
+- Basic building blocks:
+  - RPC, remote procedure calls
+  - DO, distributed objects
+- Distributed Services
+  - 2PC/3PC and Paxos
+  - REPLICATION control
+- Cloud Computing
+  - Gossiping
+  - key-value pair / nosql stores / caches / credentials
+  - stream processing (DATA in TRANSIT)
+- Legacy Layers (old but still important)
+  - Distributed File Systems
+  - Distributed Shared Inventory
+  - Self Stabilization
+- Very IMPORTANT..
+  - Security and BYZANTINE FAULT-TOLERANCE
+- High level GOALS of DISTRIBUTED systems:
+  - Heterogeneity: varried services, but with same guarantees
+  - Robustness: fault-tolerant
+  - Availability: of data & operations despite failures / network partitions
+  - Transparency: 
+  - Concurrency: support many clients
+  - Efficiency: fast ops, reads, & writes
+  - Scalability: many ops per second despite thousand of services / millions of users
+  - Security: system should be protected from attackers and bugs
+  - Openness: each system built on top of other services/potocols, layered stack architecture
+- Some intricacies of DISTRIBUTED systems
+  - Syncronization: multiple clocks, difficult to agree on exact time
+  - Concurrency: multiple SIMULTANEOUS accesses potential to CONFLICT
+  - Failures: High probability (guarantee?) of failures, many moving parts.
+  - Consensus: difficult to reach consensus, lack of synchronization, who has best latest copy  of data?
+- different DISTRIBUTED system MODELS, CURRENT
+  - Client/Server
+  - Multi-tier
+  - Peer-to-Peer
+  - Agent based system
+  - Mobile CODE
+  - Service-orientec computing
+  - Cloud Computing
+- EMERGING DISTRIBUTED system MODELS
+  - Cloud, Edge, Beneath the Cloud
+  - 
+*** DONE 3_2_3 Two Phase Commit
+CLOSED: [2023-04-20 Thu 13:46]
+- addressing the [C]onsistency issue:
+  - [Leslie Lamport] DON'T USE CLOCKS, clocks contradict each other, who wins?
+  - use LOGICAL CLOCKS. i.e. if [B] happens after [A], response to [B] must be at least as current as response to [A]
+  - also researched... VECTOR CLOCKS (but not in this material)
+- hence 2 PHASE COMMIT
+  - a kind of building block for a LOGICAL CLOCK, tied to 'consensus' or 'agreement'
+  - TRANSACTION:
+    1. assign transaction and ID
+    2. GET pending state
+       1. updated done at various places visited..
+       2. read and update or write lock...
+    3. if WRONG, ABORT.
+    4. OTHERWISE, request a COMMIT (commit can fail though)
 - 
 - 
-- 
-- 
-*** TODO 3_2_3 Two Phase Commit
-*** TODO QUIZ 3.2
+*** DONE QUIZ 3.2
+CLOSED: [2023-04-20 Thu 13:46]
 ** Section 3_3
 *** TODO 3_3_1 Byzantine Failures
 *** TODO 3_3_2 Examples of Failure Modes

@@ -1,76 +1,76 @@
 
 # Table of Contents
 
-1.  [Module 1](#org50f4043)
-    1.  [Overview](#org4db565d)
-    2.  [Section 1<sub>1</sub>](#org447db0d)
-        1.  [Notes:](#org32ebbba)
-        2.  [Watch lectures](#org1515faf)
-        3.  [Quiz 1.1 (100pts)](#orgd214069)
-    3.  [Section 1<sub>2</sub>](#org16ea681)
-        1.  [Notes:](#org9a891b3)
-        2.  [Watch Lectures](#org91af889)
-    4.  [Section 1<sub>3</sub>](#orgb724ce2)
-        1.  [Notes:](#orge77eb34)
-        2.  [Watch Lectures](#org70560ce)
-        3.  [Quiz 1.3 (100pts)](#org89b0ffe)
-    5.  [Section 1<sub>4</sub>](#orgdb66356)
-        1.  [Notes:](#org38cbd96)
-        2.  [Watch Lectures](#org53beb40)
-        3.  [Homework 1: IaaS Infrastructure (140pts) <code>[8/8]</code>](#org6857b3f)
-2.  [Module 2](#orgb4220c1)
-    1.  [Overview](#org33b3609)
-    2.  [Section 2<sub>1</sub>](#org7f9e6f3)
-        1.  [2<sub>1</sub><sub>1</sub> AWS Intro](#orgba425b2)
-        2.  [2<sub>1</sub><sub>2</sub> AWS Infrastructure](#org2e82a63)
-        3.  [2<sub>1</sub><sub>3</sub> AWS Networking](#org5d3ecfa)
-        4.  [2<sub>1</sub><sub>4</sub> AWS EC2 & EBS](#org044f696)
-        5.  [2<sub>1</sub><sub>5</sub> Google Cloud](#org47ee5cd)
-        6.  [2<sub>1</sub><sub>6</sub> MS Azure](#orgae8b824)
-        7.  [Quiz 2<sub>1</sub>](#org0b00634)
-    3.  [Section 2<sub>2</sub>](#org2426cca)
-        1.  [2<sub>2</sub><sub>1</sub> Cloude Edge](#org51d7d45)
-        2.  [2<sub>2</sub><sub>2</sub> Sharding](#orga150d54)
-        3.  [2<sub>2</sub><sub>3</sub> Critical Path](#org30dd061)
-        4.  [Quiz 2<sub>2</sub>](#orgbf2109b)
-3.  [Module 3](#org7d5deea)
-    1.  [Overview](#org60dfc71)
-    2.  [Section 3<sub>1</sub>](#org9cc6140)
-        1.  [3<sub>1</sub><sub>1</sub> CAP Theorem](#org5cc48e0)
-        2.  [3<sub>1</sub><sub>2</sub> CAP Theorem Examples](#orgeb2850c)
-        3.  [3<sub>1</sub><sub>3</sub> CAP Theorem Details](#orga6c7d01)
-        4.  [3<sub>1</sub><sub>4</sub> CAP Theorem and the Cloud](#orga06db68)
-        5.  [Assignment: CAP Theroem Reading Notes](#orge796e2a)
-    3.  [Section 3<sub>2</sub>](#org87b88e5)
-        1.  [3<sub>2</sub><sub>1</sub> [C]onsistency](#org935084b)
-        2.  [3<sub>2</sub><sub>2</sub> Distributed Systems](#org2444fba)
-        3.  [3<sub>2</sub><sub>3</sub> Two Phase Commit](#org25fdd83)
-        4.  [QUIZ 3.2](#org296869b)
-    4.  [Section 3<sub>3</sub>](#orga5c5218)
-        1.  [3<sub>3</sub><sub>1</sub> Byzantine Failures](#org5052823)
-        2.  [3<sub>3</sub><sub>2</sub> Examples of Failure Modes](#orgae9a639)
-        3.  [3<sub>3</sub><sub>3</sub> Synchronous and Asynchronous Execution](#orge0b0c85)
-        4.  [3<sub>3</sub><sub>4</sub> Data Partioning](#org133ce30)
-        5.  [QUIZ 3.3](#org2645770)
-    5.  [Section 3<sub>4</sub>](#org73b2303)
-        1.  [3<sub>4</sub><sub>1</sub>](#orgc3d9200)
-        2.  [3<sub>4</sub><sub>2</sub>](#org14f8bbe)
-        3.  [3<sub>4</sub><sub>3</sub>](#orgf0076ea)
-        4.  [3<sub>4</sub><sub>4</sub>](#org3aeae77)
-        5.  [3<sub>4</sub><sub>5</sub>](#orgd7a95af)
-        6.  [Reading Assignment: DYNAMO](#orgf079a2c)
-    6.  [Homework #2](#org0a466ec)
-4.  [Module 4](#orga3c46a2)
-5.  [Module 5](#orgfe90596)
+1.  [Module 1](#orgbbaba41)
+    1.  [Overview](#org1c1836f)
+    2.  [Section 1<sub>1</sub>](#org6e020cc)
+        1.  [Notes:](#orgf1acedc)
+        2.  [Watch lectures](#org275872a)
+        3.  [Quiz 1.1 (100pts)](#orgf48419c)
+    3.  [Section 1<sub>2</sub>](#orgce0909e)
+        1.  [Notes:](#orge2bfeba)
+        2.  [Watch Lectures](#org1eb1083)
+    4.  [Section 1<sub>3</sub>](#org23c274c)
+        1.  [Notes:](#org3319526)
+        2.  [Watch Lectures](#orga495c30)
+        3.  [Quiz 1.3 (100pts)](#org232fe35)
+    5.  [Section 1<sub>4</sub>](#org879110b)
+        1.  [Notes:](#org3d1616c)
+        2.  [Watch Lectures](#org05b04f6)
+        3.  [Homework 1: IaaS Infrastructure (140pts) <code>[8/8]</code>](#org598e7a5)
+2.  [Module 2](#org0acc89a)
+    1.  [Overview](#org54ab166)
+    2.  [Section 2<sub>1</sub>](#org9c841af)
+        1.  [2<sub>1</sub><sub>1</sub> AWS Intro](#orgb184cfd)
+        2.  [2<sub>1</sub><sub>2</sub> AWS Infrastructure](#org235ac87)
+        3.  [2<sub>1</sub><sub>3</sub> AWS Networking](#orgdb1f2b6)
+        4.  [2<sub>1</sub><sub>4</sub> AWS EC2 & EBS](#org28438ee)
+        5.  [2<sub>1</sub><sub>5</sub> Google Cloud](#org52b10d2)
+        6.  [2<sub>1</sub><sub>6</sub> MS Azure](#org5dbe40b)
+        7.  [Quiz 2<sub>1</sub>](#org8e26406)
+    3.  [Section 2<sub>2</sub>](#org0e517a0)
+        1.  [2<sub>2</sub><sub>1</sub> Cloude Edge](#orga0a8cd5)
+        2.  [2<sub>2</sub><sub>2</sub> Sharding](#orgf7d320d)
+        3.  [2<sub>2</sub><sub>3</sub> Critical Path](#orgf237050)
+        4.  [Quiz 2<sub>2</sub>](#org393a84c)
+3.  [Module 3](#org32b682e)
+    1.  [Overview](#orgc93683d)
+    2.  [Section 3<sub>1</sub>](#orgd7160c8)
+        1.  [3<sub>1</sub><sub>1</sub> CAP Theorem](#org15b9ea0)
+        2.  [3<sub>1</sub><sub>2</sub> CAP Theorem Examples](#orgc4c1186)
+        3.  [3<sub>1</sub><sub>3</sub> CAP Theorem Details](#org8fbcc8a)
+        4.  [3<sub>1</sub><sub>4</sub> CAP Theorem and the Cloud](#orgc1d9e6b)
+        5.  [Assignment: CAP Theroem Reading Notes](#org10363e0)
+    3.  [Section 3<sub>2</sub>](#org34ee500)
+        1.  [3<sub>2</sub><sub>1</sub> [C]onsistency](#org48641c1)
+        2.  [3<sub>2</sub><sub>2</sub> Distributed Systems](#org13a96ee)
+        3.  [3<sub>2</sub><sub>3</sub> Two Phase Commit](#org0a2501d)
+        4.  [QUIZ 3.2](#org2aca102)
+    4.  [Section 3<sub>3</sub>](#org3befaea)
+        1.  [3<sub>3</sub><sub>1</sub> Byzantine Failures](#org997f6fb)
+        2.  [3<sub>3</sub><sub>2</sub> Examples of Failure Modes](#org1d37db2)
+        3.  [3<sub>3</sub><sub>3</sub> Synchronous and Asynchronous Execution](#orge31d547)
+        4.  [3<sub>3</sub><sub>4</sub> Data Partioning](#org4b4811d)
+        5.  [QUIZ 3.3](#org00f9db8)
+    5.  [Section 3<sub>4</sub>](#orgd119cac)
+        1.  [3<sub>4</sub><sub>1</sub>](#org8dda7eb)
+        2.  [3<sub>4</sub><sub>2</sub>](#org1418a3b)
+        3.  [3<sub>4</sub><sub>3</sub>](#org4a39e28)
+        4.  [3<sub>4</sub><sub>4</sub>](#orgd55af3e)
+        5.  [3<sub>4</sub><sub>5</sub>](#org21ddc29)
+        6.  [Reading Assignment: DYNAMO](#org276408d)
+    6.  [Homework #2](#org0dd4654)
+4.  [Module 4](#orgddbfd96)
+5.  [Module 5](#org762a234)
 
 
 
-<a id="org50f4043"></a>
+<a id="orgbbaba41"></a>
 
 # Module 1
 
 
-<a id="org4db565d"></a>
+<a id="org1c1836f"></a>
 
 ## Overview
 
@@ -78,12 +78,12 @@
 -   Purpose on how the cloud is used today
 
 
-<a id="org447db0d"></a>
+<a id="org6e020cc"></a>
 
 ## Section 1<sub>1</sub>
 
 
-<a id="org32ebbba"></a>
+<a id="orgf1acedc"></a>
 
 ### Notes:
 
@@ -132,22 +132,22 @@
         -   CLOUD COMPUTER != CYBERINFRASTRUCTURE, but is "part of" cyberinfrastructure,
 
 
-<a id="org1515faf"></a>
+<a id="org275872a"></a>
 
 ### DONE Watch lectures
 
 
-<a id="orgd214069"></a>
+<a id="orgf48419c"></a>
 
 ### DONE Quiz 1.1 (100pts)
 
 
-<a id="org16ea681"></a>
+<a id="orgce0909e"></a>
 
 ## Section 1<sub>2</sub>
 
 
-<a id="org9a891b3"></a>
+<a id="orge2bfeba"></a>
 
 ### Notes:
 
@@ -242,17 +242,17 @@
         -   Amazon approach&#x2026; SPOT MARKET vs GENERAL MARKET, different pricing based on level of assurances
 
 
-<a id="org91af889"></a>
+<a id="org1eb1083"></a>
 
 ### DONE Watch Lectures
 
 
-<a id="orgb724ce2"></a>
+<a id="org23c274c"></a>
 
 ## Section 1<sub>3</sub>
 
 
-<a id="orge77eb34"></a>
+<a id="org3319526"></a>
 
 ### Notes:
 
@@ -412,22 +412,22 @@
         -   i.e. amazon created it's on DB system (not SQL)
 
 
-<a id="org70560ce"></a>
+<a id="orga495c30"></a>
 
 ### DONE Watch Lectures
 
 
-<a id="org89b0ffe"></a>
+<a id="org232fe35"></a>
 
 ### DONE Quiz 1.3 (100pts)
 
 
-<a id="orgdb66356"></a>
+<a id="org879110b"></a>
 
 ## Section 1<sub>4</sub>
 
 
-<a id="org38cbd96"></a>
+<a id="org3d1616c"></a>
 
 ### Notes:
 
@@ -545,12 +545,12 @@
 </table>
 
 
-<a id="org53beb40"></a>
+<a id="org05b04f6"></a>
 
 ### DONE Watch Lectures
 
 
-<a id="org6857b3f"></a>
+<a id="org598e7a5"></a>
 
 ### DONE Homework 1: IaaS Infrastructure (140pts) <code>[8/8]</code>
 
@@ -584,22 +584,22 @@
     -   [X] install one extra service (Ceilometer, Heat, etc)
 
 
-<a id="orgb4220c1"></a>
+<a id="org0acc89a"></a>
 
 # Module 2
 
 
-<a id="org33b3609"></a>
+<a id="org54ab166"></a>
 
 ## Overview
 
 
-<a id="org7f9e6f3"></a>
+<a id="org9c841af"></a>
 
 ## Section 2<sub>1</sub>
 
 
-<a id="orgba425b2"></a>
+<a id="orgb184cfd"></a>
 
 ### DONE 2<sub>1</sub><sub>1</sub> AWS Intro
 
@@ -628,7 +628,7 @@
     -   | AWS Global Infrastructure |
 
 
-<a id="org2e82a63"></a>
+<a id="org235ac87"></a>
 
 ### DONE 2<sub>1</sub><sub>2</sub> AWS Infrastructure
 
@@ -647,7 +647,7 @@
     -
 
 
-<a id="org5d3ecfa"></a>
+<a id="orgdb1f2b6"></a>
 
 ### DONE 2<sub>1</sub><sub>3</sub> AWS Networking
 
@@ -661,7 +661,7 @@
 -   i.e. create a public store front, publice facing subnet for webservers
 
 
-<a id="org044f696"></a>
+<a id="org28438ee"></a>
 
 ### DONE 2<sub>1</sub><sub>4</sub> AWS EC2 & EBS
 
@@ -685,7 +685,7 @@
     -   EC2 handles INSTANCES / EBS handles STORAGE
 
 
-<a id="org47ee5cd"></a>
+<a id="org52b10d2"></a>
 
 ### DONE 2<sub>1</sub><sub>5</sub> Google Cloud
 
@@ -698,7 +698,7 @@
 -   Market share, GCP growing but still a fraction of AWS
 
 
-<a id="orgae8b824"></a>
+<a id="org5dbe40b"></a>
 
 ### DONE 2<sub>1</sub><sub>6</sub> MS Azure
 
@@ -735,17 +735,17 @@
 -   Amazon specifies AWS revenue, MS only reports Azure growth rate (2019 62%, 2018 78%) over previous (compound ?)
 
 
-<a id="org0b00634"></a>
+<a id="org8e26406"></a>
 
 ### DONE Quiz 2<sub>1</sub>
 
 
-<a id="org2426cca"></a>
+<a id="org0e517a0"></a>
 
 ## Section 2<sub>2</sub>
 
 
-<a id="org51d7d45"></a>
+<a id="orga0a8cd5"></a>
 
 ### DONE 2<sub>2</sub><sub>1</sub> Cloude Edge
 
@@ -767,7 +767,7 @@
     -   replicate CONTROL INFORMATION (keys, ssl, managment info)
 
 
-<a id="orga150d54"></a>
+<a id="orgf7d320d"></a>
 
 ### DONE 2<sub>2</sub><sub>2</sub> Sharding
 
@@ -800,7 +800,7 @@
     -
 
 
-<a id="org30dd061"></a>
+<a id="orgf237050"></a>
 
 ### DONE 2<sub>2</sub><sub>3</sub> Critical Path
 
@@ -820,17 +820,17 @@
     -   networks, data centers, infrastructure can all faile along the way adn create inconsistencies..
 
 
-<a id="orgbf2109b"></a>
+<a id="org393a84c"></a>
 
 ### DONE Quiz 2<sub>2</sub>
 
 
-<a id="org7d5deea"></a>
+<a id="org32b682e"></a>
 
 # Module 3
 
 
-<a id="org60dfc71"></a>
+<a id="orgc93683d"></a>
 
 ## Overview
 
@@ -841,12 +841,12 @@
     -   Partitioning Algorithms
 
 
-<a id="org9cc6140"></a>
+<a id="orgd7160c8"></a>
 
 ## Section 3<sub>1</sub>
 
 
-<a id="org5cc48e0"></a>
+<a id="org15b9ea0"></a>
 
 ### DONE 3<sub>1</sub><sub>1</sub> CAP Theorem
 
@@ -888,7 +888,7 @@
     -
 
 
-<a id="orgeb2850c"></a>
+<a id="orgc4c1186"></a>
 
 ### DONE 3<sub>1</sub><sub>2</sub> CAP Theorem Examples
 
@@ -905,7 +905,7 @@
         -
 
 
-<a id="orga6c7d01"></a>
+<a id="org8fbcc8a"></a>
 
 ### 3<sub>1</sub><sub>3</sub> CAP Theorem Details
 
@@ -941,7 +941,7 @@
             -
 
 
-<a id="orga06db68"></a>
+<a id="orgc1d9e6b"></a>
 
 ### 3<sub>1</sub><sub>4</sub> CAP Theorem and the Cloud
 
@@ -1044,7 +1044,7 @@
         -   but thinking in terms of WEAK properties is often SUCCESSFUL strategy that yields good solutions requiring less effort
 
 
-<a id="orge796e2a"></a>
+<a id="org10363e0"></a>
 
 ### DONE Assignment: CAP Theroem Reading Notes
 
@@ -1055,12 +1055,12 @@
 3.  [X] Submit summary
 
 
-<a id="org87b88e5"></a>
+<a id="org34ee500"></a>
 
 ## Section 3<sub>2</sub>
 
 
-<a id="org935084b"></a>
+<a id="org48641c1"></a>
 
 ### DONE 3<sub>2</sub><sub>1</sub> [C]onsistency
 
@@ -1101,7 +1101,7 @@
     -
 
 
-<a id="org2444fba"></a>
+<a id="org13a96ee"></a>
 
 ### DONE 3<sub>2</sub><sub>2</sub> Distributed Systems
 
@@ -1155,7 +1155,7 @@
     -
 
 
-<a id="org25fdd83"></a>
+<a id="org0a2501d"></a>
 
 ### DONE 3<sub>2</sub><sub>3</sub> Two Phase Commit
 
@@ -1177,87 +1177,171 @@
 -   
 
 
-<a id="org296869b"></a>
+<a id="org2aca102"></a>
 
 ### DONE QUIZ 3.2
 
 
-<a id="orga5c5218"></a>
+<a id="org3befaea"></a>
 
 ## Section 3<sub>3</sub>
 
 
-<a id="org5052823"></a>
+<a id="org997f6fb"></a>
 
-### TODO 3<sub>3</sub><sub>1</sub> Byzantine Failures
+### DONE 3<sub>3</sub><sub>1</sub> Byzantine Failures
+
+-   Failure Detection in a newtwork
+    -   Many think of SKEEN's 3PC as a practical protocol..
+    -   but to use it one needs perfect failure detection that never makes mistakes
+    -   is it even possible to build such a failure detection
+-   Notions of FAILURE
+    -   types of failure models?
+    -   lots of things can go wrong:
+        -   networks drop packets
+        -   links break
+        -   processes fail / hang
+        -   clock malfunction, go out of sync
+        -   a machine could freeze up then resume
+        -   processes can corrupt memory yet not quite crash
+        -   processes can be hijacked by viruses / malware..
+    -   EXAMPLE: Byzantine Failure @ Amazon
+        -   2008: AWS S3 brought down for several hours.  Single bit hardware error propogated throughout system..
+        -   <http://status.aws.amazon.com/s3-20080720.html>
+    -   REAL systems
+        -   LINUX and WINDOWS use timers for FAILURE detection
+            -   can fire even if remote side is healthy
+            -   possible to get innacurate failure detection, false pos failure
+            -   using time, many types of failure can be detected
+        -   Some APP depend on TCP, but TCP also uses timers at it's core and has same problem
+    -   BYZANTINE failure model
+        -   much debated..
+        -   since programs are buggy, always apealing to use such a model.  A bug gives a random corrupt behavior, like a mild attack
+        -   but BYZANTINE model is hard work with and can be costly (must 'outvote' the bad process)
 
 
-<a id="orgae9a639"></a>
+<a id="org1d37db2"></a>
 
-### TODO 3<sub>3</sub><sub>2</sub> Examples of Failure Modes
+### DONE 3<sub>3</sub><sub>2</sub> Examples of Failure Modes
+
+-   FAILURE MODES (cont)
+-   Recall, 2PC and 3PC normally used, std in linux & windows, rely on timers to detect failures
+    -   prone to mistakes, i.e. P thinks L is faulty but L is really fine.
+-   VOGELS: World wide failure sensing technique
+    -   VOGELS wrote a paper, argued we could do much better than BYZANTINE
+        -   cloud managment layer, forces slow nodes to crash and restart&#x2026;
+        -   so management layer already a trusted partner more robust than most nodes&#x2026;
+    -   'POSTMAN ALWAYS RINGS TWICE'
+        -   suppose mailman wants signature, rings bell, waits, no answer, does he assume you DIED?
+        -   hopefully not&#x2026;
+        -   VOGELS suggest multiple reasons machines timeout but are not faulty
+-   Causes of delay in CLOUD..
+    -   Scheduling can be sluggish,
+    -   node might get BURST of messages, temp overflow sockets, triggers message loss,
+    -   machine might become overloaded, too many vm's,
+    -   application might run wide, page heavily,
+-   VOGELS suggestions..
+    -   ADD some kind of failure monitoring SERVICE as a STANDARD network component,
+    -   instead of relying on TIMEOUT, even protocols like RPC and TCP would ASK the SERVICE and it would tell them,
+    -   set it up to do some inquiry, sleuthing first.  ask the OS for info on that machine, check network, etc.,
+-   Why clouds DON'T do this&#x2026;
+    -   in clouds, focus is on keep MAJORITY of system running,
+    -   not concerned with the WHY or EXCUSE for a failing node, just move on,
+    -   keeping cloud up as a WHOLE is more valuable than waiting for slow node to catch up,
+    -   END USER EXPERIENCE IS WHAT MATTERS MOST
+    -   So, cloud is casual about killing things
+    -   avoids failure monitoring SERVICES because could become bottlenecks.
+-   More reasons&#x2026;
+    -   most sofware is buggy
+        -   BOHRBUGS and HEISENBUGS
+            -   BOHRBUGS: boring and easy to fix
+            -   HEISENBUGS: seem to hide when troubleshooting, caused by concurrency problems, hard to fix, crashes can seem unrelated to the bug
+    -   Studies show that BUGS persist throughout LIFETIME of software no matter how mature
+    -   if something acting strange, maybe it's failing,
+-   More reasons &#x2026;
+    -   TIMING is flakey
+        -   at cloud scale, w/ millions of nodes, CANNOT trust TIMING,
+        -   too many things can cause problems, show up as timing faults or time out incorrectly
 
 
-<a id="orge0b0c85"></a>
+<a id="orge31d547"></a>
 
-### TODO 3<sub>3</sub><sub>3</sub> Synchronous and Asynchronous Execution
+### DONE 3<sub>3</sub><sub>3</sub> Synchronous and Asynchronous Execution
+
+-   SYNCHRONOUS
+    -   messages ARRIVE on time,
+    -   &#x2026; PROCESSES share synch clock
+    -   &#x2026; failured detected easily
+-   ASYNCRHONOUS
+    -   NONE OF THE ABOVE
+-   Clouds are NEITHER
+    -   Designed around ASYNCHRONOUS, but clocks do work most of the time,
+    -   the systems all have clocks, the SOFTWARE TREATS the system as ASYNCHRONOUS, but in practice we do have access to time.
+    -   BEGIN as ASYNCHRONOUS, as resources allow, can ENRICH system with some SYNCHRONOUS tools,
+-   SUMMARY,
+    -   3PC in theory is better than 2PC, but world doesn't work perfectly enough for 3PC
+    -   3PC more costly, extra communication round, but still blocks / fails
+    -   failure detection tools could help, but cloud is not a good fit for failure detection services,
+    -   cloud transactions REQUIRE active, health loggin service.  If it goes down, could transaction subsystem hangs till restart.
+    -
 
 
-<a id="org133ce30"></a>
+<a id="org4b4811d"></a>
 
 ### TODO 3<sub>3</sub><sub>4</sub> Data Partioning
 
 
-<a id="org2645770"></a>
+<a id="org00f9db8"></a>
 
 ### TODO QUIZ 3.3
 
 
-<a id="org73b2303"></a>
+<a id="orgd119cac"></a>
 
 ## Section 3<sub>4</sub>
 
 
-<a id="orgc3d9200"></a>
+<a id="org8dda7eb"></a>
 
 ### TODO 3<sub>4</sub><sub>1</sub>
 
 
-<a id="org14f8bbe"></a>
+<a id="org1418a3b"></a>
 
 ### TODO 3<sub>4</sub><sub>2</sub>
 
 
-<a id="orgf0076ea"></a>
+<a id="org4a39e28"></a>
 
 ### TODO 3<sub>4</sub><sub>3</sub>
 
 
-<a id="org3aeae77"></a>
+<a id="orgd55af3e"></a>
 
 ### TODO 3<sub>4</sub><sub>4</sub>
 
 
-<a id="orgd7a95af"></a>
+<a id="org21ddc29"></a>
 
 ### TODO 3<sub>4</sub><sub>5</sub>
 
 
-<a id="orgf079a2c"></a>
+<a id="org276408d"></a>
 
 ### TODO Reading Assignment: DYNAMO
 
 
-<a id="org0a466ec"></a>
+<a id="org0dd4654"></a>
 
 ## TODO Homework #2
 
 
-<a id="orga3c46a2"></a>
+<a id="orgddbfd96"></a>
 
 # Module 4
 
 
-<a id="orgfe90596"></a>
+<a id="org762a234"></a>
 
 # Module 5
 

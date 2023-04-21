@@ -816,9 +816,93 @@ CLOSED: [2023-04-20 Thu 13:46]
 *** DONE QUIZ 3.2
 CLOSED: [2023-04-20 Thu 13:46]
 ** Section 3_3
-*** TODO 3_3_1 Byzantine Failures
-*** TODO 3_3_2 Examples of Failure Modes
-*** TODO 3_3_3 Synchronous and Asynchronous Execution
+*** DONE 3_3_1 Byzantine Failures
+CLOSED: [2023-04-20 Thu 17:40]
+- Failure Detection in a newtwork
+  - Many think of SKEEN's 3PC as a practical protocol..
+  - but to use it one needs perfect failure detection that never makes mistakes
+  - is it even possible to build such a failure detection
+- Notions of FAILURE
+  - types of failure models?
+  - lots of things can go wrong:
+    - networks drop packets
+    - links break
+    - processes fail / hang
+    - clock malfunction, go out of sync
+    - a machine could freeze up then resume
+    - processes can corrupt memory yet not quite crash
+    - processes can be hijacked by viruses / malware..
+  - EXAMPLE: Byzantine Failure @ Amazon
+    - 2008: AWS S3 brought down for several hours.  Single bit hardware error propogated throughout system..
+    - http://status.aws.amazon.com/s3-20080720.html
+  - REAL systems
+    - LINUX and WINDOWS use timers for FAILURE detection
+      - can fire even if remote side is healthy
+      - possible to get innacurate failure detection, false pos failure
+      - using time, many types of failure can be detected
+    - Some APP depend on TCP, but TCP also uses timers at it's core and has same problem
+  - BYZANTINE failure model
+    - much debated..
+    - since programs are buggy, always apealing to use such a model.  A bug gives a random corrupt behavior, like a mild attack
+    - but BYZANTINE model is hard work with and can be costly (must 'outvote' the bad process)
+*** DONE 3_3_2 Examples of Failure Modes
+CLOSED: [2023-04-20 Thu 17:40]
+- FAILURE MODES (cont)
+- Recall, 2PC and 3PC normally used, std in linux & windows, rely on timers to detect failures
+  - prone to mistakes, i.e. P thinks L is faulty but L is really fine.
+- VOGELS: World wide failure sensing technique
+  - VOGELS wrote a paper, argued we could do much better than BYZANTINE
+    - cloud managment layer, forces slow nodes to crash and restart...
+    - so management layer already a trusted partner more robust than most nodes...
+  - 'POSTMAN ALWAYS RINGS TWICE'
+    - suppose mailman wants signature, rings bell, waits, no answer, does he assume you DIED?
+    - hopefully not...
+    - VOGELS suggest multiple reasons machines timeout but are not faulty
+- Causes of delay in CLOUD..
+  - Scheduling can be sluggish,
+  - node might get BURST of messages, temp overflow sockets, triggers message loss,
+  - machine might become overloaded, too many vm's,
+  - application might run wide, page heavily,
+- VOGELS suggestions..
+  - ADD some kind of failure monitoring SERVICE as a STANDARD network component,
+  - instead of relying on TIMEOUT, even protocols like RPC and TCP would ASK the SERVICE and it would tell them,
+  - set it up to do some inquiry, sleuthing first.  ask the OS for info on that machine, check network, etc.,
+- Why clouds DON'T do this...
+  - in clouds, focus is on keep MAJORITY of system running,
+  - not concerned with the WHY or EXCUSE for a failing node, just move on,
+  - keeping cloud up as a WHOLE is more valuable than waiting for slow node to catch up,
+  - END USER EXPERIENCE IS WHAT MATTERS MOST
+  - So, cloud is casual about killing things
+  - avoids failure monitoring SERVICES because could become bottlenecks.
+- More reasons...
+  - most sofware is buggy
+    - BOHRBUGS and HEISENBUGS
+      - BOHRBUGS: boring and easy to fix
+      - HEISENBUGS: seem to hide when troubleshooting, caused by concurrency problems, hard to fix, crashes can seem unrelated to the bug
+  - Studies show that BUGS persist throughout LIFETIME of software no matter how mature
+  - if something acting strange, maybe it's failing,
+- More reasons ...
+  - TIMING is flakey
+    - at cloud scale, w/ millions of nodes, CANNOT trust TIMING,
+    - too many things can cause problems, show up as timing faults or time out incorrectly
+*** DONE 3_3_3 Synchronous and Asynchronous Execution
+CLOSED: [2023-04-20 Thu 17:51]
+- SYNCHRONOUS
+  - messages ARRIVE on time,
+  - ... PROCESSES share synch clock
+  - ... failured detected easily
+- ASYNCRHONOUS
+  - NONE OF THE ABOVE
+- Clouds are NEITHER
+  - Designed around ASYNCHRONOUS, but clocks do work most of the time,
+  - the systems all have clocks, the SOFTWARE TREATS the system as ASYNCHRONOUS, but in practice we do have access to time.
+  - BEGIN as ASYNCHRONOUS, as resources allow, can ENRICH system with some SYNCHRONOUS tools,
+- SUMMARY,
+  - 3PC in theory is better than 2PC, but world doesn't work perfectly enough for 3PC
+  - 3PC more costly, extra communication round, but still blocks / fails
+  - failure detection tools could help, but cloud is not a good fit for failure detection services,
+  - cloud transactions REQUIRE active, health loggin service.  If it goes down, could transaction subsystem hangs till restart.
+  - 
 *** TODO 3_3_4 Data Partioning
 *** TODO QUIZ 3.3
 ** Section 3_4

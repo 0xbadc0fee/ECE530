@@ -1,76 +1,104 @@
 
 # Table of Contents
 
-1.  [Module 1](#orgbbaba41)
-    1.  [Overview](#org1c1836f)
-    2.  [Section 1<sub>1</sub>](#org6e020cc)
-        1.  [Notes:](#orgf1acedc)
-        2.  [Watch lectures](#org275872a)
-        3.  [Quiz 1.1 (100pts)](#orgf48419c)
-    3.  [Section 1<sub>2</sub>](#orgce0909e)
-        1.  [Notes:](#orge2bfeba)
-        2.  [Watch Lectures](#org1eb1083)
-    4.  [Section 1<sub>3</sub>](#org23c274c)
-        1.  [Notes:](#org3319526)
-        2.  [Watch Lectures](#orga495c30)
-        3.  [Quiz 1.3 (100pts)](#org232fe35)
-    5.  [Section 1<sub>4</sub>](#org879110b)
-        1.  [Notes:](#org3d1616c)
-        2.  [Watch Lectures](#org05b04f6)
-        3.  [Homework 1: IaaS Infrastructure (140pts) <code>[8/8]</code>](#org598e7a5)
-2.  [Module 2](#org0acc89a)
-    1.  [Overview](#org54ab166)
-    2.  [Section 2<sub>1</sub>](#org9c841af)
-        1.  [2<sub>1</sub><sub>1</sub> AWS Intro](#orgb184cfd)
-        2.  [2<sub>1</sub><sub>2</sub> AWS Infrastructure](#org235ac87)
-        3.  [2<sub>1</sub><sub>3</sub> AWS Networking](#orgdb1f2b6)
-        4.  [2<sub>1</sub><sub>4</sub> AWS EC2 & EBS](#org28438ee)
-        5.  [2<sub>1</sub><sub>5</sub> Google Cloud](#org52b10d2)
-        6.  [2<sub>1</sub><sub>6</sub> MS Azure](#org5dbe40b)
-        7.  [Quiz 2<sub>1</sub>](#org8e26406)
-    3.  [Section 2<sub>2</sub>](#org0e517a0)
-        1.  [2<sub>2</sub><sub>1</sub> Cloude Edge](#orga0a8cd5)
-        2.  [2<sub>2</sub><sub>2</sub> Sharding](#orgf7d320d)
-        3.  [2<sub>2</sub><sub>3</sub> Critical Path](#orgf237050)
-        4.  [Quiz 2<sub>2</sub>](#org393a84c)
-3.  [Module 3](#org32b682e)
-    1.  [Overview](#orgc93683d)
-    2.  [Section 3<sub>1</sub>](#orgd7160c8)
-        1.  [3<sub>1</sub><sub>1</sub> CAP Theorem](#org15b9ea0)
-        2.  [3<sub>1</sub><sub>2</sub> CAP Theorem Examples](#orgc4c1186)
-        3.  [3<sub>1</sub><sub>3</sub> CAP Theorem Details](#org8fbcc8a)
-        4.  [3<sub>1</sub><sub>4</sub> CAP Theorem and the Cloud](#orgc1d9e6b)
-        5.  [Assignment: CAP Theroem Reading Notes](#org10363e0)
-    3.  [Section 3<sub>2</sub>](#org34ee500)
-        1.  [3<sub>2</sub><sub>1</sub> [C]onsistency](#org48641c1)
-        2.  [3<sub>2</sub><sub>2</sub> Distributed Systems](#org13a96ee)
-        3.  [3<sub>2</sub><sub>3</sub> Two Phase Commit](#org0a2501d)
-        4.  [QUIZ 3.2](#org2aca102)
-    4.  [Section 3<sub>3</sub>](#org3befaea)
-        1.  [3<sub>3</sub><sub>1</sub> Byzantine Failures](#org997f6fb)
-        2.  [3<sub>3</sub><sub>2</sub> Examples of Failure Modes](#org1d37db2)
-        3.  [3<sub>3</sub><sub>3</sub> Synchronous and Asynchronous Execution](#orge31d547)
-        4.  [3<sub>3</sub><sub>4</sub> Data Partioning](#org4b4811d)
-        5.  [QUIZ 3.3](#org00f9db8)
-    5.  [Section 3<sub>4</sub>](#orgd119cac)
-        1.  [3<sub>4</sub><sub>1</sub>](#org8dda7eb)
-        2.  [3<sub>4</sub><sub>2</sub>](#org1418a3b)
-        3.  [3<sub>4</sub><sub>3</sub>](#org4a39e28)
-        4.  [3<sub>4</sub><sub>4</sub>](#orgd55af3e)
-        5.  [3<sub>4</sub><sub>5</sub>](#org21ddc29)
-        6.  [Reading Assignment: DYNAMO](#org276408d)
-    6.  [Homework #2](#org0dd4654)
-4.  [Module 4](#orgddbfd96)
-5.  [Module 5](#org762a234)
+1.  [Module 1](#org566514a)
+    1.  [Overview](#orgc0fc325)
+    2.  [Section 1<sub>1</sub>](#org96e055f)
+        1.  [Notes:](#org81b29f3)
+        2.  [Watch lectures](#org8aeaf05)
+        3.  [Quiz 1.1 (100pts)](#orgcc27cf2)
+    3.  [Section 1<sub>2</sub>](#org13de52e)
+        1.  [Notes:](#org89eb179)
+        2.  [Watch Lectures](#org7d4628b)
+    4.  [Section 1<sub>3</sub>](#org4c99bde)
+        1.  [Notes:](#org67d9b93)
+        2.  [Watch Lectures](#orgfe7ed3b)
+        3.  [Quiz 1.3 (100pts)](#org8268a42)
+    5.  [Section 1<sub>4</sub>](#org0e72275)
+        1.  [Notes:](#org6c3e134)
+        2.  [Watch Lectures](#org9642f3d)
+        3.  [Homework 1: IaaS Infrastructure (140pts) <code>[8/8]</code>](#orgfc7db85)
+2.  [Module 2](#orgd1052b0)
+    1.  [Overview](#orgbbdbf07)
+    2.  [Section 2<sub>1</sub>](#org82b5192)
+        1.  [2<sub>1</sub><sub>1</sub> AWS Intro](#org8df2f85)
+        2.  [2<sub>1</sub><sub>2</sub> AWS Infrastructure](#org118b5d1)
+        3.  [2<sub>1</sub><sub>3</sub> AWS Networking](#orgaaff100)
+        4.  [2<sub>1</sub><sub>4</sub> AWS EC2 & EBS](#org351767e)
+        5.  [2<sub>1</sub><sub>5</sub> Google Cloud](#org50d1392)
+        6.  [2<sub>1</sub><sub>6</sub> MS Azure](#orgede4ee0)
+        7.  [Quiz 2<sub>1</sub>](#org1d5c30c)
+    3.  [Section 2<sub>2</sub>](#org530ccc9)
+        1.  [2<sub>2</sub><sub>1</sub> Cloude Edge](#org8a99620)
+        2.  [2<sub>2</sub><sub>2</sub> Sharding](#orged1df21)
+        3.  [2<sub>2</sub><sub>3</sub> Critical Path](#orgdfa019f)
+        4.  [Quiz 2<sub>2</sub>](#orge30a209)
+3.  [Module 3](#org8787c32)
+    1.  [Overview](#orgb1f1425)
+    2.  [Section 3<sub>1</sub>](#orgc60e5fc)
+        1.  [3<sub>1</sub><sub>1</sub> CAP Theorem](#org1c6fd46)
+        2.  [3<sub>1</sub><sub>2</sub> CAP Theorem Examples](#org4789d67)
+        3.  [3<sub>1</sub><sub>3</sub> CAP Theorem Details](#org36fefcf)
+        4.  [3<sub>1</sub><sub>4</sub> CAP Theorem and the Cloud](#orgb74b73d)
+        5.  [Assignment: CAP Theroem Reading Notes](#org9491b22)
+    3.  [Section 3<sub>2</sub>](#orgaca883c)
+        1.  [3<sub>2</sub><sub>1</sub> [C]onsistency](#orgd437399)
+        2.  [3<sub>2</sub><sub>2</sub> Distributed Systems](#org4790d88)
+        3.  [3<sub>2</sub><sub>3</sub> Two Phase Commit](#org31ded13)
+        4.  [QUIZ 3.2](#org7dc34fd)
+    4.  [Section 3<sub>3</sub>](#orgbd259ba)
+        1.  [3<sub>3</sub><sub>1</sub> Byzantine Failures](#orgbda7c33)
+        2.  [3<sub>3</sub><sub>2</sub> Examples of Failure Modes](#org3cd5838)
+        3.  [3<sub>3</sub><sub>3</sub> Synchronous and Asynchronous Execution](#org68b5eb4)
+        4.  [3<sub>3</sub><sub>4</sub> Data Partioning](#org5f093a7)
+        5.  [QUIZ 3.3](#org07fd676)
+    5.  [Section 3<sub>4</sub>](#org2b0e685)
+        1.  [3<sub>4</sub><sub>1</sub> Scaling Data Systems on the Cloud](#orgb35baaa)
+        2.  [3<sub>4</sub><sub>2</sub> Eventual Consistency (Examples)](#org2d69cfd)
+        3.  [3<sub>4</sub><sub>3</sub> Deep Dive on DynamoDB](#orgdcd3850)
+        4.  [3<sub>4</sub><sub>4</sub> Service Level Agreements](#org0095166)
+        5.  [3<sub>4</sub><sub>5</sub> Dynamo Partition Algorithm](#orgf6be1b7)
+        6.  [Reading Assignment: DYNAMO](#orgcf1254c)
+    6.  [Homework #2](#org5063c47)
+4.  [Module 4](#orge7fbad3)
+    1.  [Section 4<sub>1</sub>](#orgc2f79e4)
+        1.  [4<sub>1</sub><sub>1</sub> SQN and NoSQL](#orgf760061)
+        2.  [4<sub>1</sub><sub>2</sub> Relational](#orgecf7e65)
+        3.  [4<sub>1</sub><sub>3</sub> Non Relational](#org07c7161)
+        4.  [4<sub>1</sub><sub>4</sub> NoSQL Flavors](#org04c42a2)
+        5.  [4<sub>1</sub><sub>5</sub> NoSQL Data Modeling](#orgf57d735)
+        6.  [Quiz 4<sub>1</sub>](#org8486035)
+    2.  [Section 4<sub>2</sub>](#org19556c8)
+        1.  [4<sub>2</sub><sub>1</sub> Active Cloud Storage](#org98ee264)
+        2.  [4<sub>2</sub><sub>2</sub> Long Term Storage](#orga94629b)
+        3.  [Quiz 4<sub>2</sub>](#org3d364ac)
+    3.  [Section 4<sub>3</sub>](#org0104a5f)
+        1.  [4<sub>3</sub><sub>1</sub> Data Pipeline without Messaging System](#org7e11167)
+        2.  [4<sub>3</sub><sub>2</sub> Data Pipeline with Messaging System](#orged1f611)
+        3.  [4<sub>3</sub><sub>3</sub> Amazon SQS](#orgb3ace10)
+        4.  [4<sub>3</sub><sub>4</sub> AMQP and Exchanges](#org07549d3)
+        5.  [Reading Assignment: Apache Kafka](#org13bda8b)
+    4.  [Section 4<sub>4</sub>](#orgf09b05d)
+        1.  [4<sub>4</sub><sub>1</sub> Introduction to Kafka](#org56e812f)
+        2.  [4<sub>4</sub><sub>2</sub> Deeper in Kafka](#org407bea1)
+        3.  [4<sub>4</sub><sub>3</sub> Data Streaming Techniques](#org4fb3d21)
+    5.  [Homework 3](#orgb2306b5)
+    6.  [Midterm](#orgf3cc1f7)
+5.  [Module 5](#orga952f75)
+    1.  [Section 5<sub>1</sub>](#org0c47b5b)
+    2.  [Section 5<sub>2</sub>](#org44ad744)
+    3.  [Section 5<sub>3</sub>](#org66aff3c)
+    4.  [Homework 4](#orgd94e250)
+    5.  [End of Course Eval](#org48c9283)
 
 
 
-<a id="orgbbaba41"></a>
+<a id="org566514a"></a>
 
 # Module 1
 
 
-<a id="org1c1836f"></a>
+<a id="orgc0fc325"></a>
 
 ## Overview
 
@@ -78,12 +106,12 @@
 -   Purpose on how the cloud is used today
 
 
-<a id="org6e020cc"></a>
+<a id="org96e055f"></a>
 
 ## Section 1<sub>1</sub>
 
 
-<a id="orgf1acedc"></a>
+<a id="org81b29f3"></a>
 
 ### Notes:
 
@@ -132,22 +160,22 @@
         -   CLOUD COMPUTER != CYBERINFRASTRUCTURE, but is "part of" cyberinfrastructure,
 
 
-<a id="org275872a"></a>
+<a id="org8aeaf05"></a>
 
 ### DONE Watch lectures
 
 
-<a id="orgf48419c"></a>
+<a id="orgcc27cf2"></a>
 
 ### DONE Quiz 1.1 (100pts)
 
 
-<a id="orgce0909e"></a>
+<a id="org13de52e"></a>
 
 ## Section 1<sub>2</sub>
 
 
-<a id="orge2bfeba"></a>
+<a id="org89eb179"></a>
 
 ### Notes:
 
@@ -242,17 +270,17 @@
         -   Amazon approach&#x2026; SPOT MARKET vs GENERAL MARKET, different pricing based on level of assurances
 
 
-<a id="org1eb1083"></a>
+<a id="org7d4628b"></a>
 
 ### DONE Watch Lectures
 
 
-<a id="org23c274c"></a>
+<a id="org4c99bde"></a>
 
 ## Section 1<sub>3</sub>
 
 
-<a id="org3319526"></a>
+<a id="org67d9b93"></a>
 
 ### Notes:
 
@@ -412,22 +440,22 @@
         -   i.e. amazon created it's on DB system (not SQL)
 
 
-<a id="orga495c30"></a>
+<a id="orgfe7ed3b"></a>
 
 ### DONE Watch Lectures
 
 
-<a id="org232fe35"></a>
+<a id="org8268a42"></a>
 
 ### DONE Quiz 1.3 (100pts)
 
 
-<a id="org879110b"></a>
+<a id="org0e72275"></a>
 
 ## Section 1<sub>4</sub>
 
 
-<a id="org3d1616c"></a>
+<a id="org6c3e134"></a>
 
 ### Notes:
 
@@ -545,12 +573,12 @@
 </table>
 
 
-<a id="org05b04f6"></a>
+<a id="org9642f3d"></a>
 
 ### DONE Watch Lectures
 
 
-<a id="org598e7a5"></a>
+<a id="orgfc7db85"></a>
 
 ### DONE Homework 1: IaaS Infrastructure (140pts) <code>[8/8]</code>
 
@@ -584,22 +612,22 @@
     -   [X] install one extra service (Ceilometer, Heat, etc)
 
 
-<a id="org0acc89a"></a>
+<a id="orgd1052b0"></a>
 
 # Module 2
 
 
-<a id="org54ab166"></a>
+<a id="orgbbdbf07"></a>
 
 ## Overview
 
 
-<a id="org9c841af"></a>
+<a id="org82b5192"></a>
 
 ## Section 2<sub>1</sub>
 
 
-<a id="orgb184cfd"></a>
+<a id="org8df2f85"></a>
 
 ### DONE 2<sub>1</sub><sub>1</sub> AWS Intro
 
@@ -628,7 +656,7 @@
     -   | AWS Global Infrastructure |
 
 
-<a id="org235ac87"></a>
+<a id="org118b5d1"></a>
 
 ### DONE 2<sub>1</sub><sub>2</sub> AWS Infrastructure
 
@@ -647,7 +675,7 @@
     -
 
 
-<a id="orgdb1f2b6"></a>
+<a id="orgaaff100"></a>
 
 ### DONE 2<sub>1</sub><sub>3</sub> AWS Networking
 
@@ -661,7 +689,7 @@
 -   i.e. create a public store front, publice facing subnet for webservers
 
 
-<a id="org28438ee"></a>
+<a id="org351767e"></a>
 
 ### DONE 2<sub>1</sub><sub>4</sub> AWS EC2 & EBS
 
@@ -685,7 +713,7 @@
     -   EC2 handles INSTANCES / EBS handles STORAGE
 
 
-<a id="org52b10d2"></a>
+<a id="org50d1392"></a>
 
 ### DONE 2<sub>1</sub><sub>5</sub> Google Cloud
 
@@ -698,7 +726,7 @@
 -   Market share, GCP growing but still a fraction of AWS
 
 
-<a id="org5dbe40b"></a>
+<a id="orgede4ee0"></a>
 
 ### DONE 2<sub>1</sub><sub>6</sub> MS Azure
 
@@ -735,17 +763,17 @@
 -   Amazon specifies AWS revenue, MS only reports Azure growth rate (2019 62%, 2018 78%) over previous (compound ?)
 
 
-<a id="org8e26406"></a>
+<a id="org1d5c30c"></a>
 
 ### DONE Quiz 2<sub>1</sub>
 
 
-<a id="org0e517a0"></a>
+<a id="org530ccc9"></a>
 
 ## Section 2<sub>2</sub>
 
 
-<a id="orga0a8cd5"></a>
+<a id="org8a99620"></a>
 
 ### DONE 2<sub>2</sub><sub>1</sub> Cloude Edge
 
@@ -767,7 +795,7 @@
     -   replicate CONTROL INFORMATION (keys, ssl, managment info)
 
 
-<a id="orgf7d320d"></a>
+<a id="orged1df21"></a>
 
 ### DONE 2<sub>2</sub><sub>2</sub> Sharding
 
@@ -800,7 +828,7 @@
     -
 
 
-<a id="orgf237050"></a>
+<a id="orgdfa019f"></a>
 
 ### DONE 2<sub>2</sub><sub>3</sub> Critical Path
 
@@ -820,17 +848,17 @@
     -   networks, data centers, infrastructure can all faile along the way adn create inconsistencies..
 
 
-<a id="org393a84c"></a>
+<a id="orge30a209"></a>
 
 ### DONE Quiz 2<sub>2</sub>
 
 
-<a id="org32b682e"></a>
+<a id="org8787c32"></a>
 
 # Module 3
 
 
-<a id="orgc93683d"></a>
+<a id="orgb1f1425"></a>
 
 ## Overview
 
@@ -841,12 +869,12 @@
     -   Partitioning Algorithms
 
 
-<a id="orgd7160c8"></a>
+<a id="orgc60e5fc"></a>
 
 ## Section 3<sub>1</sub>
 
 
-<a id="org15b9ea0"></a>
+<a id="org1c6fd46"></a>
 
 ### DONE 3<sub>1</sub><sub>1</sub> CAP Theorem
 
@@ -888,7 +916,7 @@
     -
 
 
-<a id="orgc4c1186"></a>
+<a id="org4789d67"></a>
 
 ### DONE 3<sub>1</sub><sub>2</sub> CAP Theorem Examples
 
@@ -905,9 +933,9 @@
         -
 
 
-<a id="org8fbcc8a"></a>
+<a id="org36fefcf"></a>
 
-### 3<sub>1</sub><sub>3</sub> CAP Theorem Details
+### DONE 3<sub>1</sub><sub>3</sub> CAP Theorem Details
 
 -   Consistency: Eventual / Convergence
     -   informal guarantee that if no new updates, eventually all accesses to item with return last updated result
@@ -941,9 +969,9 @@
             -
 
 
-<a id="orgc1d9e6b"></a>
+<a id="orgb74b73d"></a>
 
-### 3<sub>1</sub><sub>4</sub> CAP Theorem and the Cloud
+### DONE 3<sub>1</sub><sub>4</sub> CAP Theorem and the Cloud
 
 -   Is CAP valid in the CLOUD ??
     -   data centers networks don't normally have partition failures&#x2026;
@@ -1044,7 +1072,7 @@
         -   but thinking in terms of WEAK properties is often SUCCESSFUL strategy that yields good solutions requiring less effort
 
 
-<a id="org10363e0"></a>
+<a id="org9491b22"></a>
 
 ### DONE Assignment: CAP Theroem Reading Notes
 
@@ -1055,12 +1083,12 @@
 3.  [X] Submit summary
 
 
-<a id="org34ee500"></a>
+<a id="orgaca883c"></a>
 
 ## Section 3<sub>2</sub>
 
 
-<a id="org48641c1"></a>
+<a id="orgd437399"></a>
 
 ### DONE 3<sub>2</sub><sub>1</sub> [C]onsistency
 
@@ -1101,7 +1129,7 @@
     -
 
 
-<a id="org13a96ee"></a>
+<a id="org4790d88"></a>
 
 ### DONE 3<sub>2</sub><sub>2</sub> Distributed Systems
 
@@ -1155,7 +1183,7 @@
     -
 
 
-<a id="org0a2501d"></a>
+<a id="org31ded13"></a>
 
 ### DONE 3<sub>2</sub><sub>3</sub> Two Phase Commit
 
@@ -1177,17 +1205,17 @@
 -   
 
 
-<a id="org2aca102"></a>
+<a id="org7dc34fd"></a>
 
 ### DONE QUIZ 3.2
 
 
-<a id="org3befaea"></a>
+<a id="orgbd259ba"></a>
 
 ## Section 3<sub>3</sub>
 
 
-<a id="org997f6fb"></a>
+<a id="orgbda7c33"></a>
 
 ### DONE 3<sub>3</sub><sub>1</sub> Byzantine Failures
 
@@ -1220,7 +1248,7 @@
         -   but BYZANTINE model is hard work with and can be costly (must 'outvote' the bad process)
 
 
-<a id="org1d37db2"></a>
+<a id="org3cd5838"></a>
 
 ### DONE 3<sub>3</sub><sub>2</sub> Examples of Failure Modes
 
@@ -1264,7 +1292,7 @@
         -   too many things can cause problems, show up as timing faults or time out incorrectly
 
 
-<a id="orge31d547"></a>
+<a id="org68b5eb4"></a>
 
 ### DONE 3<sub>3</sub><sub>3</sub> Synchronous and Asynchronous Execution
 
@@ -1286,62 +1314,528 @@
     -
 
 
-<a id="org4b4811d"></a>
+<a id="org5f093a7"></a>
 
-### TODO 3<sub>3</sub><sub>4</sub> Data Partioning
+### DONE 3<sub>3</sub><sub>4</sub> Data Partioning
+
+-   Definition:
+    a technique to break up big database (DB) into many smaller parts
+    -   process of splitting DB tables across multiple machines,
+    -   improves performance, reliability, availability
+    -   justified because it is cheaper and more feasible to scale horizontally by adding more machines than to grow vertically by building bigger individual servers
+-   Many different schema / approaches
+    -   horizontal partioning
+    -   vertical partioning
+    -   directory based partioning
+-   HORIZONTAL partitioning
+    -   push different rows to different tables, aka range based partioning (all columns, split up rows)
+    -   PROBLEM: have to very carefully divide up or partion will be unbalanced
+        -   zip code distribution example
+-   VERTICAL partitioning
+    -   divides the data by features, making servers specialized to what groups of database features they are managing
+    -   straightforward to implement, low impact on application
+    -   PROBLEM: if project grows significantly, may need to further partition a feature specific DB across various servers (not possible for single server handle it all)
+-   DIRECTORY BASED partioning
+    -   Loosely built around the issues mentioned above.  idea is to creat a lookup service which knows your current paritioning schema and abstracts it wasy from the DB access code.  Query the directory service, it holds the map, it will return a path to get what info you want.  "loosely coupled" so that means we can perform tasks like adding servers to teh DB pool, change partition scheme, all without having impact on the application.
+-   PARTIONING CRITERIAS
+    -   Apply hash function to some key attribute of entitiy being stored, that yields partition number..
+    -   i.e., if have 100 DB servers, & ID is numberic, incremented 1 each time&#x2026;
+    -   hash function could be 'ID%100' which will give server number where we can store/read that record.  should ensure a uniform allocation of data among server
+    -   PROBLEM: effectivly creates a fixed number of DB servers, adding servers would mean changing the hash function, which would require redistribution of data, downtime
+    -   WORKAROUND: use CONSISTENT hashing
+    -   another option LIST PARTITIONING
+        -   each partition assigned a list of values, so whenver we want to insert a new record, we will see which partition contains our key and then store it there.  for example, we can decide all users living in Iceland, Norway, Sweden, Finland, or Denmark will be stored in a partition for 'NORDIC' countries.
+    -   another option: ROUND ROBIN
+        -   very simple.  with 'n' partitions, the 'i' tuple is assign to partition (i mod n),
+    -   another option: COMPOSITE PARTITIONING
+        -   combine any of the above partition schema to devise new scheme. i.e. first applying list partitioning schem and THEN a HASH based PARTITIONING.
 
 
-<a id="org00f9db8"></a>
+<a id="org07fd676"></a>
 
-### TODO QUIZ 3.3
+### DONE QUIZ 3.3
 
 
-<a id="orgd119cac"></a>
+<a id="org2b0e685"></a>
 
 ## Section 3<sub>4</sub>
 
 
-<a id="org8dda7eb"></a>
+<a id="orgb35baaa"></a>
 
-### TODO 3<sub>4</sub><sub>1</sub>
+### DONE 3<sub>4</sub><sub>1</sub> Scaling Data Systems on the Cloud
+
+-   Quick Review:
+    -   early 2000's, things scaled out by adding replication SLAVES to a MASTER DB&#x2026;
+    -   writes went to a single MASTER, reads went to SLAVES&#x2026;
+    -   SLAVES could lose transactions, get out of sync..
+-   RDBMS problems on the CLOUD..
+    -   when small, OK
+        -   single node for write data though CAN become overloaded with high write throughput.
+    -   Nodes can be terminated or restarted by Cloud provider
+        -   RDBMS are [C][P] systems (consistency guarantee, partition tolerant guarantee, no availability guarantee).  Hence, when MASTER node gets terminated, must need to re-elect a new MASTER node.  This creates DOWNTIME.
+        -   due to growth of online platforms and explosion of numbers of users; a lot more data today being generated by online users of all kinds of services / apps.
+-   consider PESSIMISTIC vs OPTOMISTIC design
+    -   PESSIMISTIC design
+        -   design w/ high [C]consistency, punish users 99.99% of the time
+        -   higher consistency = higher latency (percieved slow)
+        -   diminished user experience
+    -   OPTIMISTIC design
+        -   trust your datastore
+        -   know your business AND your APPLICATION
+            -   ask yourself, is X reliability that important?
+        -   have a BACKUP plan
+    -   Cassandra (C\*) Replication & Consistency
+        -   famous implementation of DYNAMO protocol is CASSANDRA or C\*
+        -   C\* WILL eventually converge on consistency, eventually
+        -   EVENTUALLY is not..
+            -   a day from now,
+            -   a min from now,
+            -   a second from  now,
+        -   EVENTUALLY is usually just MILLISECONDS from NOW.
 
 
-<a id="org1418a3b"></a>
+<a id="org2d69cfd"></a>
 
-### TODO 3<sub>4</sub><sub>2</sub>
+### DONE 3<sub>4</sub><sub>2</sub> Eventual Consistency (Examples)
+
+-   Example 1: Amazon
+    -   item stock levels, is it really in stock or notions
+        -   i.e. robotic inventory can't find it
+        -   amazon cancels the order
+    -   amazon contingency is to credit you 10% in future orders (customer dissatisfaction reward)
+-   Example 2: Finance
+    -   in theory, EVENTUAL consistency might not work..
+    -   Banks:
+        -   are actually the most consistent systems of all,
+        -   what would happen if wrote a check for $1M and it wasn't covered,
+        -   consistency plan: if check "bounces" the check, a fee is charged (punished for lack of consistency)
+    -   hence, consistency CAN work in financial institutions
+-   Why is ADOPTION of EVENTUAL CONSISTENCY so hard?
+    -   ENGINEERS are stubborn; "1 + 1 = 2" now, not eventually =2
+    -   middle management is scared,
+        -   hard sell to convince to accept low consistency, stuck with high latency = poor user experienc
+    -   have to engage product team, get them to buy in, have a contingency plan on how to compensate when rare moments of inconsistencty become visible to users
+-   Example: Netflix / Amazon OUTAGE
+    -   Netflix
+        -   had an AMAZON outage in june 2012, data center went down..
+        -   was running ORACLE..
+        -   lost whole database
+            -   had backups but spend 3-5 days restoring
+        -   applications suffered, put up "maintenance pages"
+        -   With e.g. CASSANDRA,
+            -   could span MULTIPLE DATACENTERS,
+            -   service would have DEGRADED, but still been RUNNING.
 
 
-<a id="org4a39e28"></a>
+<a id="orgdcd3850"></a>
 
-### TODO 3<sub>4</sub><sub>3</sub>
+### DONE 3<sub>4</sub><sub>3</sub> Deep Dive on DynamoDB
 
-
-<a id="orgd55af3e"></a>
-
-### TODO 3<sub>4</sub><sub>4</sub>
+-   Definition: DYANAMO is name given to a set of TECHNIQUES that when taken together can form a highly AVAILABLE key-value structured storage system or distributed datastore.  It has properties of both databases and DHT's (distributed hash tables)
+-   
 
 
-<a id="org21ddc29"></a>
+<a id="org0095166"></a>
 
-### TODO 3<sub>4</sub><sub>5</sub>
-
-
-<a id="org276408d"></a>
-
-### TODO Reading Assignment: DYNAMO
+### DONE 3<sub>4</sub><sub>4</sub> Service Level Agreements
 
 
-<a id="org0dd4654"></a>
+<a id="orgf6be1b7"></a>
+
+### DONE 3<sub>4</sub><sub>5</sub> Dynamo Partition Algorithm
+
+
+<a id="orgcf1254c"></a>
+
+### DONE Reading Assignment: DYNAMO
+
+The paper "Dynamo: Amazon's Highly Available Key-value Store" [dynamo], illustrates Amazon's solution to the problem of building an efficient, high availability, key-value storage system.
+
+Key-value pairs are data types that include two pieces of data that include data values and associated key identifiers.  Key-value pairs are a critical component to distributed systems and their inner workings.  It's through the use of such data that multiple computers working together yet widely distributed can successfully share the workload of a single large task or set of tasks.  Control of such distributed computers requires reliable coordination, scheduling, and communication between such nodes.  Such control demands high availability of whatever data store such key-value pairs are saved in.
+
+Traditionally, RDBS (relational database systems) have been the go-to tool for any problem requiring continuous read and write access to tables of data.  While key-value pairs are easily described as tables of data, the handling of them for use in distributed systems does not require most of the features that RDBS are more suited for.  For instance, key-value data stores do not require advanced queries, and management features found in RDBS's.  Additionally, key-value data stores require more flexibility in scaling up or down than what is typically found in RDBS's.
+
+After reviewing data store alternatives to RDBS's such as Peer-to-Peer and Distributed File Systems, Amazon set out to design a key-value storage system that has the following characteristics:
+
+1.  High Availability
+2.  Provides and 'always on' experience to the client / user
+3.  Easily or automatically scalable
+
+The finished product, DynamoDB, is a database system built on the Dynamo principles of:
+
+1.  Incremental Scalability
+2.  Symmetry
+3.  Decentralization
+4.  Heterogeneity
+
+DynamoDB has a number of unique features that allow it to meet these principles.  First, it sacrifices consistency for availability.  In doing so though it allows for inconsistencies that must be detected and resolved internally before return calls to the system.  Second, it distributes the workload of the multiple nodes via a distributed hash table in the form of a virtual ring.  Each computer occupies multiple 'spots' on the ring, creating the effect of virtual nodes and more evenly dispersing itself among its other peers in the ring.  Finally, access to the datastore is done as simply as possible through specialized get() and put() operations.  There is no specialized query language necessary to engage with the data store.  Additionally, this allows developers to build in awareness and even a degree of control of the key-value data stores into their applications at the design level.  While available, such design level awareness is not necessary to use DynamoDB though.  It should be noted that DynamoDB is only intended for trusted environments though.  DynamoDB does not focus on data integrity or security.  Amazon has successfully implemented DynamoDB and continues to test and refine the design.
+
+
+<a id="org5063c47"></a>
 
 ## TODO Homework #2
 
 
-<a id="orgddbfd96"></a>
+<a id="orge7fbad3"></a>
 
 # Module 4
 
 
-<a id="org762a234"></a>
+<a id="orgc2f79e4"></a>
+
+## Section 4<sub>1</sub>
+
+
+<a id="orgf760061"></a>
+
+### DONE 4<sub>1</sub><sub>1</sub> SQN and NoSQL
+
+-   battle between RELATIONAL and NON-RELATIONAL databases,
+-   primary goal is SCALABILITY, whole driving point of the CLOUD
+-   if you scale the applications, users, and up time ; but don't scale your data / databases, then you've effectively stopped scaling,
+-   STORAGE KINGDOM 1: NON RELATIONAL
+    -   common structures: blobs, tables, queues
+    -   no consistent INTERFACE
+    -   tend to SCALE very well
+    -   INTEGRITY is the domain of the developer / programmer (part of the trade off to acheive scalability, lose some transaction integrity)
+-   STORAGE KINGDOM 2: RELATIONAL
+    -   classic datbases such as oracle and ms sql server,
+    -   provide high data integrity services
+    -   support COMPLEX QUERIES involving joins of multiple tables
+    -   harder to SCALE well, especially to multiple machines
+    -   often contain LEGACY DATA from apps that need to move to the cloud.
+-   EXAMPLE: Blog / SQl
+    -   Relational:
+        -   A TABLE for all your posts
+            -   i.e. each post is a row in your table, rows have num id and text of post
+        -   when want to read post, URL in that address basically says "give me post #x"
+            -   query: "select all from POST TABLE where ID of POST is X
+            -   response: The post &#x2013;html renders text and send back to browser
+        -   relational model common for blogs with COMMENTS
+        -   COMMENTS table most like has same ID column as POSTS and COMMENTS data may be 'commentBody' or 'bodyText' etc.
+        -   TABLE also have a column "post<sub>id</sub>", "post<sub>id</sub>" contains ID of blog post "COMMENT" relates to
+        -   when reader comes buy, blog turns to database and ask for 2 things
+            -   Query 1: SELECT ALL from POSTS TABLE where ID of POST is X
+            -   Query 2: SELECT ALL from COMMENTS TABLE where ID of POST<sub>ID</sub> is X
+                -   second query will return comments (if present), an array, that your blog will render to html and APPEND to the blog
+-   EXAMPLE: Blog / NoSQL
+    -   request comes in, blogging softwar turn around to db and says "please give me back this specific post and everything related to it", in this case a listing of related comments
+    -   since not forece to be too uptight about having to define how the data is tructured beforehand, what if we atan to tag that post with an arbitrary number of categories?
+        -   no problem, stick them on the same document and when the blog software says "gimme everytingon post 1" the tags, comments, and all other related info come back with it.
+-   EXAMPLE: Grocery / NoSQL
+    -   you can model the grocery list in a lot the same way  (as a piece of paper list)
+        -   but say you figure out after a couple months that you want to keep track of how many loaves of bread you actually bought last year&#x2026;
+        -   with non relational model you might literally have to go through every list and count each loaf individually where if you HAD modeled this in a relational way you could get back that cound almost instantly
+-   SUMMARY: SQL vs NoSQL
+    -   SQL Pros
+        -   easy to use and setup
+        -   universal, compatible with many tools
+        -   good at high performance work loads
+        -   good at structured data
+    -   SQL Cons
+        -   time consuming to understand design and structure of DB
+        -   can be difficult to SCALE
+    -   NoSQL Pros
+        -   no investment to design models
+        -   rapid development cycles
+        -   gernally faster than SQL
+        -   runs well on cloud
+    -   NoSQL Cons
+        -   unsuided for interconnected data (e.g. blog-posts ++ blog-comments)
+        -   still maturing
+        -   can have slower response times
+
+
+<a id="orgecf7e65"></a>
+
+### DONE 4<sub>1</sub><sub>2</sub> Relational
+
+-   Re CAP Theorm; SQL systems emphasize ACID
+-   when you see [C]onsistency focus, think RELATIONAL db systems
+-   RELATIONAL STORAGE 1:
+    -   familiar db's such as oracle & ms sql.  made of tables containing typed columns (schema) and rows (data)
+    -   used when relationships between data are NECESSARY and COMPLEX
+    -   DB itself enforces INTEGRITY (e.g. can't delete customer when an order refers to it
+-   RELATIONAL STORAGE 2:
+    -   Have historically been the bottlenec of large systems
+    -   Scale up well on a single node, often a large fast one, have more trouble scaling out (cloud) because of need for [C]onsistency
+    -   but, most legacy data is in SQL / Relational storage, not going anywhere for time being
+-   BACGROUND: Relational DB
+    -   in rdbs, table is an organized set of data elements using a model of vertical columns, horizontal rows, & cells
+    -   cells are where vertical columns and horizontal rows intersect
+-   BACKGROUND: SQL Joins
+    -   Joins clause combines records from two or more tables in a database
+        -   creates a set that can be saved as a new table or used as is
+        -   a Join is a meas for combining fields by using values COMMON to each
+
+
+<a id="org07c7161"></a>
+
+### DONE 4<sub>1</sub><sub>3</sub> Non Relational
+
+-   definition:
+    -   any of the more modern databases that essentially GIVE UP the ability to do JOINS in order to be able to avoid huge MONOLITH tables and scale more easily
+        -   key-value (dynamo, redis)
+        -   column-based (hbase, cassandra)
+        -   document-based (mongodb)
+    -   usually has more flexible SCHEMA (no rigid tables means no rigid NxM structure / size limitation)
+        -   can build in new data / metadata / etc even after deployed without breaking anything
+-   NoSQL in the CLOUD era
+    -   datasets are just too BIG
+    -   hundreds of thousands of visitors in short timee span, massive traffic increase
+        -   rdbms developers try to cache read only front end to offload some traffic congestion
+        -   memcache or integrate other CACHING mechanisms WITHIN the applications
+            -   In-Memory indexes, distributing & replicating objecs over multiple nodes
+        -   as datasets grow, simple memcache MySQL model starts to become problematic
+-   NoSQL real world definition
+    -   ingestion of data that has unknown and /or undeterminded structure
+    -   relateve ease of scaling with increase of data
+    -   ability ot analyze large volumes of data significantly quicker than trad SQL databases
+    -   provides capabilities to derive VALUE from data (big and small)
+-   NoSQL ( "NOT ONLY" SQL)
+    -   INSERT only, no UPDATE/ DELETC
+    -   no JOIN, thereby reducing query time
+        -   involves denormalizing data (random scattering)
+    -   lack of SQL support
+    -   non-adherence to ACIC properties
+    -   'not only sql'
+    -   schema free
+    -   embraces denormalization
+    -   greater scaling capability
+    -   simplicity of design
+    -   storing objects that represent your domain
+    -   great for unstructured or semi-structured data
+-   Origins of NoSQL
+    -   BigTable (google)
+    -   Dynamo (amazon)
+        -   distributed key-value data store
+        -   gossip protocol
+    -   CAP Theorem
+        -   BASE vs ACID
+-   SCALING, Horizontal and Vertical
+    -   Scale-Up (vertical)
+        -   more ram
+        -   more cpu
+        -   more HDD
+    -   Scale-Out (horizontal)
+        -   commodity hardware,
+        -   more nodes
+-   STRUCUTRE
+    -   SQL
+        -   relational, grids
+        -   Analytical, (OLAP) branches
+    -   NoSQL
+        -   lists (key-value pairs)
+        -   column families
+        -   graphs
+        -   documents (version control, historicity, inverted tree, descendents)
+-   NoSQL DATABASES
+    -   Column Stores
+        -   Hbase, cassandra
+        -   popular read/write tools
+    -   Document Stores
+        -   occasionally changing documents
+        -   popular DB's couchbase, mongoDB
+    -   Graph Databases
+        -   usage: spatial data store
+        -   popular: Neo4J, BigData
+    -   Key-Value Pairs
+        -   usage: frequently changing data, highly available
+        -   popular: Riak, Redis
+-   Making the move from relational to non relational&#x2026;
+    -   relational uses keys like POST<sub>ID</sub> column in prev example..
+    -   schema can constantly change between entries
+-   DISADVANTAGES OF NoSQL
+    -   LACK OF SUPPORT / MATURITY
+        -   no SQL like unified language
+        -   makes difficult to MIGRATE processes from old style to new
+        -   some NoSQl are highly specialized and require more technical support
+        -   companies fall into trap of open source software, more complex, little to no paid support
+-   ADVANTAGES of NoSQL
+    -   Flexibility
+        -   easier to manage and more adept at dealing with newer data models
+    -   Highly scalable at low cost
+        -   many nosql db's are open source (free or affordable)
+        -   nosql options allow for big data processing
+        -   nosql CAN SCALE OUT vs only up
+        -   nosql can scale out and spread out nodes, distributed compute load, storage load, etc
+        -
+
+
+<a id="org04c42a2"></a>
+
+### DONE 4<sub>1</sub><sub>4</sub> NoSQL Flavors
+
+-   Key-value, Document, Graph, In-Memory, & Search
+-   Key-value Stores
+    -   Redis, DynamoDB, Azure Table Storage, Riak,
+    -   stores data in BUCKETS as a KEY and a VALUE
+    -   each KEY must be UNIQUE
+    -   values don't have a type, can contain anything
+    -   think of it as a HASH TABLE
+    -   very FAST write performance
+    -   very FAST read IF you select based on KEY
+    -   very slow if you need to search the VALUES instead of KEY
+    -   works great for:
+        -   flat data
+        -   schemas that can't be modeled in rdbms
+        -   consider .ini files, dictionary collections, hashstable collections, etc
+-   Column Stores
+    -   Cassandra, Hbase, hadoop, google bigtable,
+    -   data stored in columns
+    -   columns consist of key-value pair and timestamp
+    -   columns grouped in "rows" or "column families"
+    -   columns are grouped generally into tables
+    -   NO JOINS PERMITTED
+    -   WIDE COLUMNAR STORE
+        -   no strick schema
+        -   extremely fast performance
+        -   benefits seen through decentralization and scalability
+        -   no joins between tables
+-   Graph
+    -   Neo4J, JanusGraph, etc
+    -   topology style, mathematical edges and vertices
+    -   composed of nodes and relationships
+    -   both can have key-value collections
+    -   labels (tags) can be added
+    -   IDEAL for when you have data DEFINED by RELATIONSHIPS
+        -   friend tracking on facebook
+        -   movie database
+        -   searching for things like,
+            -   firend of a friend..
+            -   people who worked on a moveie with me who haven't worked with my friend
+            -   shortest path between me and this person
+    -   CAN also be very SLOW
+-   Document store
+    -   Azure DocumentDB, mongoDB, amazonDocumentDB, etc
+    -   information stored as documents in JSON format, binary forms of JSON , and or XML
+    -   Documents are collections of Key-Value pairs
+    -   Documents reside in collections
+    -   values can be strings, dates boolean, integers, even doucuments adn arrays
+    -   very fast writing
+    -   flexible indexing for fast value searching
+    -   horizontal scaling
+    -   schema
+    -   great as an object store
+
+
+<a id="orgf57d735"></a>
+
+### TODO 4<sub>1</sub><sub>5</sub> NoSQL Data Modeling
+
+
+<a id="org8486035"></a>
+
+### TODO Quiz 4<sub>1</sub>
+
+
+<a id="org19556c8"></a>
+
+## Section 4<sub>2</sub>
+
+
+<a id="org98ee264"></a>
+
+### TODO 4<sub>2</sub><sub>1</sub> Active Cloud Storage
+
+
+<a id="orga94629b"></a>
+
+### TODO 4<sub>2</sub><sub>2</sub> Long Term Storage
+
+
+<a id="org3d364ac"></a>
+
+### TODO Quiz 4<sub>2</sub>
+
+
+<a id="org0104a5f"></a>
+
+## Section 4<sub>3</sub>
+
+
+<a id="org7e11167"></a>
+
+### TODO 4<sub>3</sub><sub>1</sub> Data Pipeline without Messaging System
+
+
+<a id="orged1f611"></a>
+
+### TODO 4<sub>3</sub><sub>2</sub> Data Pipeline with Messaging System
+
+
+<a id="orgb3ace10"></a>
+
+### TODO 4<sub>3</sub><sub>3</sub> Amazon SQS
+
+
+<a id="org07549d3"></a>
+
+### TODO 4<sub>3</sub><sub>4</sub> AMQP and Exchanges
+
+
+<a id="org13bda8b"></a>
+
+### TODO Reading Assignment: Apache Kafka
+
+
+<a id="orgf09b05d"></a>
+
+## Section 4<sub>4</sub>
+
+
+<a id="org56e812f"></a>
+
+### TODO 4<sub>4</sub><sub>1</sub> Introduction to Kafka
+
+
+<a id="org407bea1"></a>
+
+### TODO 4<sub>4</sub><sub>2</sub> Deeper in Kafka
+
+
+<a id="org4fb3d21"></a>
+
+### TODO 4<sub>4</sub><sub>3</sub> Data Streaming Techniques
+
+
+<a id="orgb2306b5"></a>
+
+## Homework 3
+
+
+<a id="orgf3cc1f7"></a>
+
+## Midterm
+
+
+<a id="orga952f75"></a>
 
 # Module 5
+
+
+<a id="org0c47b5b"></a>
+
+## Section 5<sub>1</sub>
+
+
+<a id="org44ad744"></a>
+
+## Section 5<sub>2</sub>
+
+
+<a id="org66aff3c"></a>
+
+## Section 5<sub>3</sub>
+
+
+<a id="orgd94e250"></a>
+
+## Homework 4
+
+
+<a id="org48c9283"></a>
+
+## End of Course Eval
 

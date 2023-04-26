@@ -1,104 +1,104 @@
 
 # Table of Contents
 
-1.  [Module 1](#org566514a)
-    1.  [Overview](#orgc0fc325)
-    2.  [Section 1<sub>1</sub>](#org96e055f)
-        1.  [Notes:](#org81b29f3)
-        2.  [Watch lectures](#org8aeaf05)
-        3.  [Quiz 1.1 (100pts)](#orgcc27cf2)
-    3.  [Section 1<sub>2</sub>](#org13de52e)
-        1.  [Notes:](#org89eb179)
-        2.  [Watch Lectures](#org7d4628b)
-    4.  [Section 1<sub>3</sub>](#org4c99bde)
-        1.  [Notes:](#org67d9b93)
-        2.  [Watch Lectures](#orgfe7ed3b)
-        3.  [Quiz 1.3 (100pts)](#org8268a42)
-    5.  [Section 1<sub>4</sub>](#org0e72275)
-        1.  [Notes:](#org6c3e134)
-        2.  [Watch Lectures](#org9642f3d)
-        3.  [Homework 1: IaaS Infrastructure (140pts) <code>[8/8]</code>](#orgfc7db85)
-2.  [Module 2](#orgd1052b0)
-    1.  [Overview](#orgbbdbf07)
-    2.  [Section 2<sub>1</sub>](#org82b5192)
-        1.  [2<sub>1</sub><sub>1</sub> AWS Intro](#org8df2f85)
-        2.  [2<sub>1</sub><sub>2</sub> AWS Infrastructure](#org118b5d1)
-        3.  [2<sub>1</sub><sub>3</sub> AWS Networking](#orgaaff100)
-        4.  [2<sub>1</sub><sub>4</sub> AWS EC2 & EBS](#org351767e)
-        5.  [2<sub>1</sub><sub>5</sub> Google Cloud](#org50d1392)
-        6.  [2<sub>1</sub><sub>6</sub> MS Azure](#orgede4ee0)
-        7.  [Quiz 2<sub>1</sub>](#org1d5c30c)
-    3.  [Section 2<sub>2</sub>](#org530ccc9)
-        1.  [2<sub>2</sub><sub>1</sub> Cloude Edge](#org8a99620)
-        2.  [2<sub>2</sub><sub>2</sub> Sharding](#orged1df21)
-        3.  [2<sub>2</sub><sub>3</sub> Critical Path](#orgdfa019f)
-        4.  [Quiz 2<sub>2</sub>](#orge30a209)
-3.  [Module 3](#org8787c32)
-    1.  [Overview](#orgb1f1425)
-    2.  [Section 3<sub>1</sub>](#orgc60e5fc)
-        1.  [3<sub>1</sub><sub>1</sub> CAP Theorem](#org1c6fd46)
-        2.  [3<sub>1</sub><sub>2</sub> CAP Theorem Examples](#org4789d67)
-        3.  [3<sub>1</sub><sub>3</sub> CAP Theorem Details](#org36fefcf)
-        4.  [3<sub>1</sub><sub>4</sub> CAP Theorem and the Cloud](#orgb74b73d)
-        5.  [Assignment: CAP Theroem Reading Notes](#org9491b22)
-    3.  [Section 3<sub>2</sub>](#orgaca883c)
-        1.  [3<sub>2</sub><sub>1</sub> [C]onsistency](#orgd437399)
-        2.  [3<sub>2</sub><sub>2</sub> Distributed Systems](#org4790d88)
-        3.  [3<sub>2</sub><sub>3</sub> Two Phase Commit](#org31ded13)
-        4.  [QUIZ 3.2](#org7dc34fd)
-    4.  [Section 3<sub>3</sub>](#orgbd259ba)
-        1.  [3<sub>3</sub><sub>1</sub> Byzantine Failures](#orgbda7c33)
-        2.  [3<sub>3</sub><sub>2</sub> Examples of Failure Modes](#org3cd5838)
-        3.  [3<sub>3</sub><sub>3</sub> Synchronous and Asynchronous Execution](#org68b5eb4)
-        4.  [3<sub>3</sub><sub>4</sub> Data Partioning](#org5f093a7)
-        5.  [QUIZ 3.3](#org07fd676)
-    5.  [Section 3<sub>4</sub>](#org2b0e685)
-        1.  [3<sub>4</sub><sub>1</sub> Scaling Data Systems on the Cloud](#orgb35baaa)
-        2.  [3<sub>4</sub><sub>2</sub> Eventual Consistency (Examples)](#org2d69cfd)
-        3.  [3<sub>4</sub><sub>3</sub> Deep Dive on DynamoDB](#orgdcd3850)
-        4.  [3<sub>4</sub><sub>4</sub> Service Level Agreements](#org0095166)
-        5.  [3<sub>4</sub><sub>5</sub> Dynamo Partition Algorithm](#orgf6be1b7)
-        6.  [Reading Assignment: DYNAMO](#orgcf1254c)
-    6.  [Homework #2](#org5063c47)
-4.  [Module 4](#orge7fbad3)
-    1.  [Section 4<sub>1</sub>](#orgc2f79e4)
-        1.  [4<sub>1</sub><sub>1</sub> SQN and NoSQL](#orgf760061)
-        2.  [4<sub>1</sub><sub>2</sub> Relational](#orgecf7e65)
-        3.  [4<sub>1</sub><sub>3</sub> Non Relational](#org07c7161)
-        4.  [4<sub>1</sub><sub>4</sub> NoSQL Flavors](#org04c42a2)
-        5.  [4<sub>1</sub><sub>5</sub> NoSQL Data Modeling](#orgf57d735)
-        6.  [Quiz 4<sub>1</sub>](#org8486035)
-    2.  [Section 4<sub>2</sub>](#org19556c8)
-        1.  [4<sub>2</sub><sub>1</sub> Active Cloud Storage](#org98ee264)
-        2.  [4<sub>2</sub><sub>2</sub> Long Term Storage](#orga94629b)
-        3.  [Quiz 4<sub>2</sub>](#org3d364ac)
-    3.  [Section 4<sub>3</sub>](#org0104a5f)
-        1.  [4<sub>3</sub><sub>1</sub> Data Pipeline without Messaging System](#org7e11167)
-        2.  [4<sub>3</sub><sub>2</sub> Data Pipeline with Messaging System](#orged1f611)
-        3.  [4<sub>3</sub><sub>3</sub> Amazon SQS](#orgb3ace10)
-        4.  [4<sub>3</sub><sub>4</sub> AMQP and Exchanges](#org07549d3)
-        5.  [Reading Assignment: Apache Kafka](#org13bda8b)
-    4.  [Section 4<sub>4</sub>](#orgf09b05d)
-        1.  [4<sub>4</sub><sub>1</sub> Introduction to Kafka](#org56e812f)
-        2.  [4<sub>4</sub><sub>2</sub> Deeper in Kafka](#org407bea1)
-        3.  [4<sub>4</sub><sub>3</sub> Data Streaming Techniques](#org4fb3d21)
-    5.  [Homework 3](#orgb2306b5)
-    6.  [Midterm](#orgf3cc1f7)
-5.  [Module 5](#orga952f75)
-    1.  [Section 5<sub>1</sub>](#org0c47b5b)
-    2.  [Section 5<sub>2</sub>](#org44ad744)
-    3.  [Section 5<sub>3</sub>](#org66aff3c)
-    4.  [Homework 4](#orgd94e250)
-    5.  [End of Course Eval](#org48c9283)
+1.  [Module 1](#orge634e36)
+    1.  [Overview](#org7bc53a1)
+    2.  [Section 1<sub>1</sub>](#orgcb16d24)
+        1.  [Notes:](#org04fec6c)
+        2.  [Watch lectures](#org6a96d8b)
+        3.  [Quiz 1.1 (100pts)](#org5242877)
+    3.  [Section 1<sub>2</sub>](#org3e18ff1)
+        1.  [Notes:](#orgbf0c811)
+        2.  [Watch Lectures](#orgab7388c)
+    4.  [Section 1<sub>3</sub>](#org5ebcd59)
+        1.  [Notes:](#orgc72e248)
+        2.  [Watch Lectures](#org532203f)
+        3.  [Quiz 1.3 (100pts)](#org2c3897e)
+    5.  [Section 1<sub>4</sub>](#org6a4efdd)
+        1.  [Notes:](#org35af49e)
+        2.  [Watch Lectures](#orgc8b61d9)
+        3.  [Homework 1: IaaS Infrastructure (140pts) <code>[8/8]</code>](#org9608a7d)
+2.  [Module 2](#orga7e61cd)
+    1.  [Overview](#orgf3e91da)
+    2.  [Section 2<sub>1</sub>](#org9578e47)
+        1.  [2<sub>1</sub><sub>1</sub> AWS Intro](#org7e569dc)
+        2.  [2<sub>1</sub><sub>2</sub> AWS Infrastructure](#org0c618bb)
+        3.  [2<sub>1</sub><sub>3</sub> AWS Networking](#org3978818)
+        4.  [2<sub>1</sub><sub>4</sub> AWS EC2 & EBS](#org9ccbe37)
+        5.  [2<sub>1</sub><sub>5</sub> Google Cloud](#org2606bc5)
+        6.  [2<sub>1</sub><sub>6</sub> MS Azure](#orgb15a681)
+        7.  [Quiz 2<sub>1</sub>](#org5cc9656)
+    3.  [Section 2<sub>2</sub>](#orge369732)
+        1.  [2<sub>2</sub><sub>1</sub> Cloude Edge](#orga160bc7)
+        2.  [2<sub>2</sub><sub>2</sub> Sharding](#org4b7fa02)
+        3.  [2<sub>2</sub><sub>3</sub> Critical Path](#org5a99d55)
+        4.  [Quiz 2<sub>2</sub>](#org48b15d1)
+3.  [Module 3](#org6645ff4)
+    1.  [Overview](#org385a62b)
+    2.  [Section 3<sub>1</sub>](#org7e3e99d)
+        1.  [3<sub>1</sub><sub>1</sub> CAP Theorem](#org5196455)
+        2.  [3<sub>1</sub><sub>2</sub> CAP Theorem Examples](#org93ffaae)
+        3.  [3<sub>1</sub><sub>3</sub> CAP Theorem Details](#org7cb1888)
+        4.  [3<sub>1</sub><sub>4</sub> CAP Theorem and the Cloud](#orgeccdfc8)
+        5.  [Assignment: CAP Theroem Reading Notes](#org48851b0)
+    3.  [Section 3<sub>2</sub>](#orgb55ab2d)
+        1.  [3<sub>2</sub><sub>1</sub> [C]onsistency](#org32e848a)
+        2.  [3<sub>2</sub><sub>2</sub> Distributed Systems](#org2c19e5d)
+        3.  [3<sub>2</sub><sub>3</sub> Two Phase Commit](#org9188fab)
+        4.  [QUIZ 3.2](#orgbb24d43)
+    4.  [Section 3<sub>3</sub>](#org0a666df)
+        1.  [3<sub>3</sub><sub>1</sub> Byzantine Failures](#org6429041)
+        2.  [3<sub>3</sub><sub>2</sub> Examples of Failure Modes](#orgdc467e3)
+        3.  [3<sub>3</sub><sub>3</sub> Synchronous and Asynchronous Execution](#org0487041)
+        4.  [3<sub>3</sub><sub>4</sub> Data Partioning](#org5cae47f)
+        5.  [QUIZ 3.3](#orgbdf69d9)
+    5.  [Section 3<sub>4</sub>](#orgdfb83bb)
+        1.  [3<sub>4</sub><sub>1</sub> Scaling Data Systems on the Cloud](#orgb8e55ec)
+        2.  [3<sub>4</sub><sub>2</sub> Eventual Consistency (Examples)](#orgab8631c)
+        3.  [3<sub>4</sub><sub>3</sub> Deep Dive on DynamoDB](#orgae9ff3e)
+        4.  [3<sub>4</sub><sub>4</sub> Service Level Agreements](#org5090052)
+        5.  [3<sub>4</sub><sub>5</sub> Dynamo Partition Algorithm](#org8bd6015)
+        6.  [Reading Assignment: DYNAMO](#org0e53aa1)
+    6.  [Homework #2](#orga7ed267)
+4.  [Module 4](#org22d52fc)
+    1.  [Section 4<sub>1</sub>](#orgb36aa3a)
+        1.  [4<sub>1</sub><sub>1</sub> SQN and NoSQL](#org3ede6f5)
+        2.  [4<sub>1</sub><sub>2</sub> Relational](#org3089007)
+        3.  [4<sub>1</sub><sub>3</sub> Non Relational](#org8b7b30f)
+        4.  [4<sub>1</sub><sub>4</sub> NoSQL Flavors](#org289d326)
+        5.  [4<sub>1</sub><sub>5</sub> NoSQL Data Modeling](#org01dd6f6)
+        6.  [Quiz 4<sub>1</sub>](#orge0cacfa)
+    2.  [Section 4<sub>2</sub>](#orga48bcc0)
+        1.  [4<sub>2</sub><sub>1</sub> Active Cloud Storage](#org3388eb0)
+        2.  [4<sub>2</sub><sub>2</sub> Long Term Storage](#org4bcd119)
+        3.  [Quiz 4<sub>2</sub>](#org19e6f56)
+    3.  [Section 4<sub>3</sub>](#org9a3a90e)
+        1.  [4<sub>3</sub><sub>1</sub> Data Pipeline without Messaging System](#org8f74d4d)
+        2.  [4<sub>3</sub><sub>2</sub> Data Pipeline with Messaging System](#org56eef89)
+        3.  [4<sub>3</sub><sub>3</sub> Amazon SQS](#org37a7bfc)
+        4.  [4<sub>3</sub><sub>4</sub> AMQP and Exchanges](#org91aad98)
+        5.  [Reading Assignment: Apache Kafka](#orgedcf551)
+    4.  [Section 4<sub>4</sub>](#orged740ac)
+        1.  [4<sub>4</sub><sub>1</sub> Introduction to Kafka](#org86353d3)
+        2.  [4<sub>4</sub><sub>2</sub> Deeper in Kafka](#orgc0245a8)
+        3.  [4<sub>4</sub><sub>3</sub> Data Streaming Techniques](#org984b56d)
+    5.  [Homework 3](#org5ff9a7f)
+    6.  [Midterm](#org82d3985)
+5.  [Module 5](#org982862b)
+    1.  [Section 5<sub>1</sub>](#org1a039c8)
+    2.  [Section 5<sub>2</sub>](#org45ce885)
+    3.  [Section 5<sub>3</sub>](#org7b59b15)
+    4.  [Homework 4](#orgc547af8)
+    5.  [End of Course Eval](#orgb0f40be)
 
 
 
-<a id="org566514a"></a>
+<a id="orge634e36"></a>
 
 # Module 1
 
 
-<a id="orgc0fc325"></a>
+<a id="org7bc53a1"></a>
 
 ## Overview
 
@@ -106,12 +106,12 @@
 -   Purpose on how the cloud is used today
 
 
-<a id="org96e055f"></a>
+<a id="orgcb16d24"></a>
 
 ## Section 1<sub>1</sub>
 
 
-<a id="org81b29f3"></a>
+<a id="org04fec6c"></a>
 
 ### Notes:
 
@@ -160,22 +160,22 @@
         -   CLOUD COMPUTER != CYBERINFRASTRUCTURE, but is "part of" cyberinfrastructure,
 
 
-<a id="org8aeaf05"></a>
+<a id="org6a96d8b"></a>
 
 ### DONE Watch lectures
 
 
-<a id="orgcc27cf2"></a>
+<a id="org5242877"></a>
 
 ### DONE Quiz 1.1 (100pts)
 
 
-<a id="org13de52e"></a>
+<a id="org3e18ff1"></a>
 
 ## Section 1<sub>2</sub>
 
 
-<a id="org89eb179"></a>
+<a id="orgbf0c811"></a>
 
 ### Notes:
 
@@ -270,17 +270,17 @@
         -   Amazon approach&#x2026; SPOT MARKET vs GENERAL MARKET, different pricing based on level of assurances
 
 
-<a id="org7d4628b"></a>
+<a id="orgab7388c"></a>
 
 ### DONE Watch Lectures
 
 
-<a id="org4c99bde"></a>
+<a id="org5ebcd59"></a>
 
 ## Section 1<sub>3</sub>
 
 
-<a id="org67d9b93"></a>
+<a id="orgc72e248"></a>
 
 ### Notes:
 
@@ -440,22 +440,22 @@
         -   i.e. amazon created it's on DB system (not SQL)
 
 
-<a id="orgfe7ed3b"></a>
+<a id="org532203f"></a>
 
 ### DONE Watch Lectures
 
 
-<a id="org8268a42"></a>
+<a id="org2c3897e"></a>
 
 ### DONE Quiz 1.3 (100pts)
 
 
-<a id="org0e72275"></a>
+<a id="org6a4efdd"></a>
 
 ## Section 1<sub>4</sub>
 
 
-<a id="org6c3e134"></a>
+<a id="org35af49e"></a>
 
 ### Notes:
 
@@ -573,12 +573,12 @@
 </table>
 
 
-<a id="org9642f3d"></a>
+<a id="orgc8b61d9"></a>
 
 ### DONE Watch Lectures
 
 
-<a id="orgfc7db85"></a>
+<a id="org9608a7d"></a>
 
 ### DONE Homework 1: IaaS Infrastructure (140pts) <code>[8/8]</code>
 
@@ -612,22 +612,22 @@
     -   [X] install one extra service (Ceilometer, Heat, etc)
 
 
-<a id="orgd1052b0"></a>
+<a id="orga7e61cd"></a>
 
 # Module 2
 
 
-<a id="orgbbdbf07"></a>
+<a id="orgf3e91da"></a>
 
 ## Overview
 
 
-<a id="org82b5192"></a>
+<a id="org9578e47"></a>
 
 ## Section 2<sub>1</sub>
 
 
-<a id="org8df2f85"></a>
+<a id="org7e569dc"></a>
 
 ### DONE 2<sub>1</sub><sub>1</sub> AWS Intro
 
@@ -656,7 +656,7 @@
     -   | AWS Global Infrastructure |
 
 
-<a id="org118b5d1"></a>
+<a id="org0c618bb"></a>
 
 ### DONE 2<sub>1</sub><sub>2</sub> AWS Infrastructure
 
@@ -675,7 +675,7 @@
     -
 
 
-<a id="orgaaff100"></a>
+<a id="org3978818"></a>
 
 ### DONE 2<sub>1</sub><sub>3</sub> AWS Networking
 
@@ -689,7 +689,7 @@
 -   i.e. create a public store front, publice facing subnet for webservers
 
 
-<a id="org351767e"></a>
+<a id="org9ccbe37"></a>
 
 ### DONE 2<sub>1</sub><sub>4</sub> AWS EC2 & EBS
 
@@ -713,7 +713,7 @@
     -   EC2 handles INSTANCES / EBS handles STORAGE
 
 
-<a id="org50d1392"></a>
+<a id="org2606bc5"></a>
 
 ### DONE 2<sub>1</sub><sub>5</sub> Google Cloud
 
@@ -726,7 +726,7 @@
 -   Market share, GCP growing but still a fraction of AWS
 
 
-<a id="orgede4ee0"></a>
+<a id="orgb15a681"></a>
 
 ### DONE 2<sub>1</sub><sub>6</sub> MS Azure
 
@@ -763,17 +763,17 @@
 -   Amazon specifies AWS revenue, MS only reports Azure growth rate (2019 62%, 2018 78%) over previous (compound ?)
 
 
-<a id="org1d5c30c"></a>
+<a id="org5cc9656"></a>
 
 ### DONE Quiz 2<sub>1</sub>
 
 
-<a id="org530ccc9"></a>
+<a id="orge369732"></a>
 
 ## Section 2<sub>2</sub>
 
 
-<a id="org8a99620"></a>
+<a id="orga160bc7"></a>
 
 ### DONE 2<sub>2</sub><sub>1</sub> Cloude Edge
 
@@ -795,7 +795,7 @@
     -   replicate CONTROL INFORMATION (keys, ssl, managment info)
 
 
-<a id="orged1df21"></a>
+<a id="org4b7fa02"></a>
 
 ### DONE 2<sub>2</sub><sub>2</sub> Sharding
 
@@ -828,7 +828,7 @@
     -
 
 
-<a id="orgdfa019f"></a>
+<a id="org5a99d55"></a>
 
 ### DONE 2<sub>2</sub><sub>3</sub> Critical Path
 
@@ -848,17 +848,17 @@
     -   networks, data centers, infrastructure can all faile along the way adn create inconsistencies..
 
 
-<a id="orge30a209"></a>
+<a id="org48b15d1"></a>
 
 ### DONE Quiz 2<sub>2</sub>
 
 
-<a id="org8787c32"></a>
+<a id="org6645ff4"></a>
 
 # Module 3
 
 
-<a id="orgb1f1425"></a>
+<a id="org385a62b"></a>
 
 ## Overview
 
@@ -869,12 +869,12 @@
     -   Partitioning Algorithms
 
 
-<a id="orgc60e5fc"></a>
+<a id="org7e3e99d"></a>
 
 ## Section 3<sub>1</sub>
 
 
-<a id="org1c6fd46"></a>
+<a id="org5196455"></a>
 
 ### DONE 3<sub>1</sub><sub>1</sub> CAP Theorem
 
@@ -916,7 +916,7 @@
     -
 
 
-<a id="org4789d67"></a>
+<a id="org93ffaae"></a>
 
 ### DONE 3<sub>1</sub><sub>2</sub> CAP Theorem Examples
 
@@ -933,7 +933,7 @@
         -
 
 
-<a id="org36fefcf"></a>
+<a id="org7cb1888"></a>
 
 ### DONE 3<sub>1</sub><sub>3</sub> CAP Theorem Details
 
@@ -969,7 +969,7 @@
             -
 
 
-<a id="orgb74b73d"></a>
+<a id="orgeccdfc8"></a>
 
 ### DONE 3<sub>1</sub><sub>4</sub> CAP Theorem and the Cloud
 
@@ -1072,7 +1072,7 @@
         -   but thinking in terms of WEAK properties is often SUCCESSFUL strategy that yields good solutions requiring less effort
 
 
-<a id="org9491b22"></a>
+<a id="org48851b0"></a>
 
 ### DONE Assignment: CAP Theroem Reading Notes
 
@@ -1083,12 +1083,12 @@
 3.  [X] Submit summary
 
 
-<a id="orgaca883c"></a>
+<a id="orgb55ab2d"></a>
 
 ## Section 3<sub>2</sub>
 
 
-<a id="orgd437399"></a>
+<a id="org32e848a"></a>
 
 ### DONE 3<sub>2</sub><sub>1</sub> [C]onsistency
 
@@ -1129,7 +1129,7 @@
     -
 
 
-<a id="org4790d88"></a>
+<a id="org2c19e5d"></a>
 
 ### DONE 3<sub>2</sub><sub>2</sub> Distributed Systems
 
@@ -1183,7 +1183,7 @@
     -
 
 
-<a id="org31ded13"></a>
+<a id="org9188fab"></a>
 
 ### DONE 3<sub>2</sub><sub>3</sub> Two Phase Commit
 
@@ -1205,17 +1205,17 @@
 -   
 
 
-<a id="org7dc34fd"></a>
+<a id="orgbb24d43"></a>
 
 ### DONE QUIZ 3.2
 
 
-<a id="orgbd259ba"></a>
+<a id="org0a666df"></a>
 
 ## Section 3<sub>3</sub>
 
 
-<a id="orgbda7c33"></a>
+<a id="org6429041"></a>
 
 ### DONE 3<sub>3</sub><sub>1</sub> Byzantine Failures
 
@@ -1248,7 +1248,7 @@
         -   but BYZANTINE model is hard work with and can be costly (must 'outvote' the bad process)
 
 
-<a id="org3cd5838"></a>
+<a id="orgdc467e3"></a>
 
 ### DONE 3<sub>3</sub><sub>2</sub> Examples of Failure Modes
 
@@ -1292,7 +1292,7 @@
         -   too many things can cause problems, show up as timing faults or time out incorrectly
 
 
-<a id="org68b5eb4"></a>
+<a id="org0487041"></a>
 
 ### DONE 3<sub>3</sub><sub>3</sub> Synchronous and Asynchronous Execution
 
@@ -1314,7 +1314,7 @@
     -
 
 
-<a id="org5f093a7"></a>
+<a id="org5cae47f"></a>
 
 ### DONE 3<sub>3</sub><sub>4</sub> Data Partioning
 
@@ -1351,17 +1351,17 @@
         -   combine any of the above partition schema to devise new scheme. i.e. first applying list partitioning schem and THEN a HASH based PARTITIONING.
 
 
-<a id="org07fd676"></a>
+<a id="orgbdf69d9"></a>
 
 ### DONE QUIZ 3.3
 
 
-<a id="org2b0e685"></a>
+<a id="orgdfb83bb"></a>
 
 ## Section 3<sub>4</sub>
 
 
-<a id="orgb35baaa"></a>
+<a id="orgb8e55ec"></a>
 
 ### DONE 3<sub>4</sub><sub>1</sub> Scaling Data Systems on the Cloud
 
@@ -1395,7 +1395,7 @@
         -   EVENTUALLY is usually just MILLISECONDS from NOW.
 
 
-<a id="org2d69cfd"></a>
+<a id="orgab8631c"></a>
 
 ### DONE 3<sub>4</sub><sub>2</sub> Eventual Consistency (Examples)
 
@@ -1428,7 +1428,7 @@
             -   service would have DEGRADED, but still been RUNNING.
 
 
-<a id="orgdcd3850"></a>
+<a id="orgae9ff3e"></a>
 
 ### DONE 3<sub>4</sub><sub>3</sub> Deep Dive on DynamoDB
 
@@ -1436,17 +1436,17 @@
 -   
 
 
-<a id="org0095166"></a>
+<a id="org5090052"></a>
 
 ### DONE 3<sub>4</sub><sub>4</sub> Service Level Agreements
 
 
-<a id="orgf6be1b7"></a>
+<a id="org8bd6015"></a>
 
 ### DONE 3<sub>4</sub><sub>5</sub> Dynamo Partition Algorithm
 
 
-<a id="orgcf1254c"></a>
+<a id="org0e53aa1"></a>
 
 ### DONE Reading Assignment: DYNAMO
 
@@ -1472,22 +1472,22 @@ The finished product, DynamoDB, is a database system built on the Dynamo princip
 DynamoDB has a number of unique features that allow it to meet these principles.  First, it sacrifices consistency for availability.  In doing so though it allows for inconsistencies that must be detected and resolved internally before return calls to the system.  Second, it distributes the workload of the multiple nodes via a distributed hash table in the form of a virtual ring.  Each computer occupies multiple 'spots' on the ring, creating the effect of virtual nodes and more evenly dispersing itself among its other peers in the ring.  Finally, access to the datastore is done as simply as possible through specialized get() and put() operations.  There is no specialized query language necessary to engage with the data store.  Additionally, this allows developers to build in awareness and even a degree of control of the key-value data stores into their applications at the design level.  While available, such design level awareness is not necessary to use DynamoDB though.  It should be noted that DynamoDB is only intended for trusted environments though.  DynamoDB does not focus on data integrity or security.  Amazon has successfully implemented DynamoDB and continues to test and refine the design.
 
 
-<a id="org5063c47"></a>
+<a id="orga7ed267"></a>
 
 ## TODO Homework #2
 
 
-<a id="orge7fbad3"></a>
+<a id="org22d52fc"></a>
 
 # Module 4
 
 
-<a id="orgc2f79e4"></a>
+<a id="orgb36aa3a"></a>
 
 ## Section 4<sub>1</sub>
 
 
-<a id="orgf760061"></a>
+<a id="org3ede6f5"></a>
 
 ### DONE 4<sub>1</sub><sub>1</sub> SQN and NoSQL
 
@@ -1511,7 +1511,7 @@ DynamoDB has a number of unique features that allow it to meet these principles.
             -   i.e. each post is a row in your table, rows have num id and text of post
         -   when want to read post, URL in that address basically says "give me post #x"
             -   query: "select all from POST TABLE where ID of POST is X
-            -   response: The post &#x2013;html renders text and send back to browser
+            -   response: post &#x2013;html renders text and send back to browser
         -   relational model common for blogs with COMMENTS
         -   COMMENTS table most like has same ID column as POSTS and COMMENTS data may be 'commentBody' or 'bodyText' etc.
         -   TABLE also have a column "post<sub>id</sub>", "post<sub>id</sub>" contains ID of blog post "COMMENT" relates to
@@ -1547,7 +1547,7 @@ DynamoDB has a number of unique features that allow it to meet these principles.
         -   can have slower response times
 
 
-<a id="orgecf7e65"></a>
+<a id="org3089007"></a>
 
 ### DONE 4<sub>1</sub><sub>2</sub> Relational
 
@@ -1570,7 +1570,7 @@ DynamoDB has a number of unique features that allow it to meet these principles.
         -   a Join is a meas for combining fields by using values COMMON to each
 
 
-<a id="org07c7161"></a>
+<a id="org8b7b30f"></a>
 
 ### DONE 4<sub>1</sub><sub>3</sub> Non Relational
 
@@ -1663,7 +1663,7 @@ DynamoDB has a number of unique features that allow it to meet these principles.
         -
 
 
-<a id="org04c42a2"></a>
+<a id="org289d326"></a>
 
 ### DONE 4<sub>1</sub><sub>4</sub> NoSQL Flavors
 
@@ -1720,122 +1720,479 @@ DynamoDB has a number of unique features that allow it to meet these principles.
     -   great as an object store
 
 
-<a id="orgf57d735"></a>
+<a id="org01dd6f6"></a>
 
-### TODO 4<sub>1</sub><sub>5</sub> NoSQL Data Modeling
+### DONE 4<sub>1</sub><sub>5</sub> NoSQL Data Modeling
+
+-   Role and Importance of Data Modeling
+    -   have to really understand the nature of your data before designing storage system approach
+-   NoSQL
+    -   flexible schema. unlike sql schema (rigid)
+        -   this flexibility facilitates mapping of documents to an entity or an object
+        -   each document can match the data fields of the represented level, even if the data has substantial variation
+            -   in practice, the documents in a collection share a similar structure
+-   Challenges of DATA MODELING
+    -   key challeng is balancing the NEEDS of the APPLICATION
+        -   performance characteristics of the database engine
+        -   data retrieval pattern
+    -   when designing data models, always consider the application usage of the data (queries, updates, etc) as well as the inherent structure of the data itself.
+-   Data Structure of NoSQL
+    -   key decision in designing data models revolves around the STRUCUTRE of the DOCUMENTS and how the APPLICATION represents RELATIONSHIPS between DATA
+        -   two tools that allow applications to REPRESENT RELATIONSHIPS: references and embedded documents
+        -   <span class="underline">Embeded Documents</span>
+            -   embedded documents capture relationships between data by storing related data in a single document structure.  NoSQL documents make it possible to embed document structures as sub-documents in a field or array within a document.
+        -   when to use embedded documents,
+            -   if you have 'contains' relationships between entities (one to one relationships)
+            -   if you have one-to-many relationships between entities (one parent, many children example)
+            -   Embedding provides better performance for read operations, as well as the ability to request and retrieve related data in a single database operation.
+            -   Embedded data models make it possible to update related data in a single atomic write operation.
+        -   <span class="underline">References</span>
+            -   When to use:
+                -   when using normalized data models
+                    -   if embedding would result in duplication of data but not provide sufficient read performance advantage
+                    -   to represent more complex many-to-many relationships
+                    -   to model large hierarchical data sets
+                -   refrence provide more flexibility than embedding.  however client side applications must issue follow-up queries to resolve the references.  in other words, normalized data models can require more round trips to the server.
+        -   <span class="underline">Atomicity of Write Operations</span>
+            -   write operations are atomic at teh DOCUMENT level and no single write operation can atomically affect more than one document or more than one collection
+            -   a denormalized data model with embedded data combines all related data for a represented entity in a single document
+                -   this facilitates atomic write operations since a single write operation can insert or update the data for an entity
+            -   Normalizing the data would split teh data across multiple collectionand would requre mulitple rite operations that are not atomic collectively.
+-   <span class="underline">Query Processing, NoSQL #1</span>
+    -   NoSQL has some fundamental limitations that we need to be aware of..
+        -   it calls for a more relaced data consistency model
+        -   it provides primitive qurying and searching capability
+    -   many contemporary NoSQL DB systems are based on the DTH distributed hash system model which provides a hashtable access semantics
+        -   to access or modify ANY object data, the client is REQUIRED to supply the primary KEY of the object, then the DB will LOOKUP the object using an equality match to the supplied KEY.
+-   <span class="underline">Query Processing, NoSQL #2</span>
+    -   for example if we choose DHT to implement a customer DB, we can shoose the customer id as the key.  And then we can get/set/operate ON ANY CUSTOMER object if we know its id
+        -   *cust<sub>data</sub> = DHT.get(cust<sub>id</sub>)*
+        -   *DHT.set(cust<sub>id</sub>, modified<sub>cust</sub><sub>data</sub>)*
+        -   *DHT.execute(cust<sub>id</sub>, func(cust){cust.add<sub>credit</sub>(200)})*
+    -   in the real world, we may want to search data based on other attributes based on
+        -   "greater / less than" relationship
+        -   combine multiple search critera using a boolean expression
+-   <span class="underline">Scatter/Gather Local Search</span>
+    -   some of the NoSQL DB provide indexing and query processing mechanism within the local DB.  In this case, we can have the query processor broadcast the query to every node in the DHT where a local serch will be conducted with results send back to the query processor which aggregates into a single response.
+    -
 
 
-<a id="org8486035"></a>
+<a id="orge0cacfa"></a>
 
-### TODO Quiz 4<sub>1</sub>
+### DONE Quiz 4<sub>1</sub>
 
 
-<a id="org19556c8"></a>
+<a id="orga48bcc0"></a>
 
 ## Section 4<sub>2</sub>
 
 
-<a id="org98ee264"></a>
+<a id="org3388eb0"></a>
 
-### TODO 4<sub>2</sub><sub>1</sub> Active Cloud Storage
+### DONE 4<sub>2</sub><sub>1</sub> Active Cloud Storage
+
+-   PERSISTENT CLOUD STORAGE types (main categories provided by IaaS providers)
+    -   Ephemeral
+    -   Block Storage
+    -   Object Storage
+    -   Data Archiving
+-   Storage Access
+    -   by Blocks,
+    -   by Files,
+    -   by Objects
+-   \_<sub>Ephemeral</sub> Storage\_\_
+    -   effectively the 'whole instance' storage
+    -   stores data used in the compute instance
+    -   lifetime of the data is based on lifetime of the instance (like esxi vm management)
+    -   IaaS providers provide and instance FAMILY that include HIGH storage instance
+        -   very fast SSD-backed instance storage
+        -   optimized for very high random I/O performance
+        -   provide high IOPS at a low cost
+        -   example, i2 family
+    -   Use Cases:
+        -   NoSQL databases like cassandra and mongodb
+        -   scale out transactional databases
+        -   data warehousing
+        -   hadoop
+        -   cluster file sytems
+-   \_<sub>Block</sub> Storage\_\_
+    -   block storage SERVICES allow user to create storage VOLUMES and ATTACH them to VMs
+    -   once attached, user can create a FILE SYSTEM on these VOLUMES and run a database or use them in other ways
+    -   block storage volume by most cloud vendors, tend to b placed in specific AVAILABILITY ZONES where they are automatically replicated to protect you from failure of a single component
+    -   block storage volume TYPES offer durable SNAPSHOT capabilities and are designed for %99.999 availability
+    -   block storage system manages the CREATION, ATTACHING, and DETACHING of the block devices to servers.
+    -   appropriate for PERFORMANCE SENSITIVE scenarios
+        -   i.e. database storage, expandable file systems,
+    -   user can
+        -   dynamically increase capacity
+        -   tune performance
+        -   change the type of live volumes with no downtime or performance impact.
+    -   SNAPSHOT management:
+        -   snapshots can be restored or used to create new block storage volumes
+    -   CURRENT examples
+        -   AWS EBS (elastic block storage)
+        -   AWS EBS durability and availability
+            -   without extr charge to customer, ebs volume data is replicated across multiple aws servers to prevent failure
+            -   aws ebs volumes designed for annual failure rate (AFR) betwee  %0.1-%0.2
 
 
-<a id="orga94629b"></a>
+<a id="org4bcd119"></a>
 
-### TODO 4<sub>2</sub><sub>2</sub> Long Term Storage
+### DONE 4<sub>2</sub><sub>2</sub> Long Term Storage
+
+(cont from above)
+
+-   <span class="underline">Object Storage</span>
+    -   redundant, scalable, object storage using clusters of standardized servers capable of storing PETABYTES of data
+    -   Object Storage is not a traditional file system, but rather a distributed storage system for static data such as virtual machine images, photo storage, email storage, backups and archives
+        -   having no central brain or master point of control provides greater scalability, redundancy, and durability.
+    -   Durability:
+        -   object data written to multiple disk drives spread throughout the servers in the data center
+            -   IaaS software responsible for ensuring data replication and integrity across cluster
+        -   storage clusters scale horizontally simply by adding new servers
+            -   if a server fails, IaaS system replicates it's content from other active nodes to new lcoation in the cluster.
+            -   IaaS software uses software logic to ensure data replication and distribution across different devices, inexpensive commodity, hard drives, and servers can be used in lieu of more expensive equipment
+            -   %99.999 durability adn scal bast tens of trillions of objects.
+    -   compared to block storage
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
-<a id="org3d364ac"></a>
+<colgroup>
+<col  class="org-left" />
 
-### TODO Quiz 4<sub>2</sub>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">ephemeral</th>
+<th scope="col" class="org-left">block</th>
+<th scope="col" class="org-left">object</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">used to..</td>
+<td class="org-left">run operating system</td>
+<td class="org-left">add additional persistent</td>
+<td class="org-left">store data, including vm</td>
+</tr>
 
 
-<a id="org0104a5f"></a>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">and scratch space</td>
+<td class="org-left">storage to a virtual</td>
+<td class="org-left">images</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">machine (vm)</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">accessed through ..</td>
+<td class="org-left">a file system</td>
+<td class="org-left">a block device that can</td>
+<td class="org-left">REST API/vendor specific</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">be partitioned, formatted,</td>
+<td class="org-left">API</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">and mounted</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">accessible frome..</td>
+<td class="org-left">within a VM</td>
+<td class="org-left">within a VM</td>
+<td class="org-left">anywhere</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">persists until ..</td>
+<td class="org-left">VM is terminated</td>
+<td class="org-left">deleted by user</td>
+<td class="org-left">deleted by user</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">sizing deter by..</td>
+<td class="org-left">admin config, flavors</td>
+<td class="org-left">user initial requ</td>
+<td class="org-left">avail phys storage</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">typical example..</td>
+<td class="org-left">up to 1 TB</td>
+<td class="org-left">several TB's</td>
+<td class="org-left">10's of TB's of dataset</td>
+</tr>
+</tbody>
+</table>
+
+-   cont.
+    -   AWS S3 Storage Class
+        -   S3 standard
+        -   S3 Intelligent Tiering
+        -   S3 Standard Infrequent Access
+        -   S3 One Zone-Infrequent access
+        -   Amazon S3 Glacier
+        -   Amazon S3 Glacier Deep Archive
+-   <span class="underline">Data Archiving</span>
+    -   IaaS provide a secure, durable, extremely low cost *cloud storage service* for data archiving and long term backup
+    -   custoemrs can reliably store large or small amounts of data for less than 1 cent per cent per month
+        -   much much cheaper than on site storage
+    -   to keep costs low, data archiving technologies are optimized for infrequently accessed data where a retrieval time of several hours is suitable
+    -   canb e very useful to decres the cost of storing data to S3 by moving the infrequent data to data archiving
+-   <span class="underline">HUGE DATA TRANSFERS</span>
+    -   transfering terabytes or petabytes of data from an existing data center to the cloud remains challenging
+    -   all-in move to the cloud presents some issues..
+    -
+-   <span class="underline">Vendor offerings..</span>
+    -   Block storage
+        -   OpenStack: Cinder
+        -   AWS: Elastic Block Storage (EBS)
+    -   Object storage
+        -   OpenStack: Swift
+        -   AWS: S3
+        -   Azure: Blob Storage
+        -   Google: Google Cloud
+    -   Data Archiving
+        -   AWS: Glacier
+    -   Huge Data Transfer
+        -   AWS: SnowBall
+        -   Azure: Import / Export
+
+
+<a id="org19e6f56"></a>
+
+### DONE Quiz 4<sub>2</sub>
+
+
+<a id="org9a3a90e"></a>
 
 ## Section 4<sub>3</sub>
 
 
-<a id="org7e11167"></a>
+<a id="org8f74d4d"></a>
 
-### TODO 4<sub>3</sub><sub>1</sub> Data Pipeline without Messaging System
+### DONE 4<sub>3</sub><sub>1</sub> Data Pipeline without Messaging System
+
+-   Messages in the cloud..
+    -   Messaging deals with SENDING data over the INTERNET to scale APPLICATION
+    -   it is STATELESS (does not store, retain the data it sends)
+    -   it is used to SYNCHRONIZE STATEFUL applications
+    -   messaging carries the STATE but itself is STATELESS
+-   Messaging Systems/Broker
+    -   <span class="underline">Message Broker</span>: is an intermediary program module that TRANSLATES a MESSAGE from teh formal messaging protocol of the sender to the formal messaging protocol of the receiver.  example:
+        -   Apache Kafka
+        -   Apache ActiveMQ
+        -   RabbitMQ
+        -   Celery Task Queue, etc
+    -   Messaging is an important piece of infrastrucutre for moving data between systems
+    -   look at a data pipeline that doesn't have MESSAGING&#x2026;
+        -   [pipeline without messaging] system starts hadoop for storage and data processing (will need data sent to it)
+        -   sending initial data to seed hadoop is not a big deal..
+        -   gets more complex though when multiple data streams / sources must also upload to hadoop concurrently over multiple channels
+        -   each channel requires their own custom protocols and communication methods and moving data between these system becomes a full time job fore a team of developers..
+        -   Eventually the application does less of what it was designed for and gets bogged down simply handling external requests, it becomes congested, traffic jams
+        -
 
 
-<a id="orged1f611"></a>
+<a id="org56eef89"></a>
 
-### TODO 4<sub>3</sub><sub>2</sub> Data Pipeline with Messaging System
+### DONE 4<sub>3</sub><sub>2</sub> Data Pipeline with Messaging System
+
+-   cont. Now look at similar system WITH messaging..
+    -   Kafka messaging bus example..
+        -   all incoming data placed IN Kafka, all outgoing data is read FROM kafka
+        -   kafka centralizes communication between producers of data and consumers of that data
+    -   this is the PUB/SUB model (publishers and subscribers)
+        -   MESSAGING consists of:
+            -   *PRODUCER* are the ones that generate messages
+            -   *CONSUMER* are the ones that recieve message from producer
+            -   between the *CONSUMER* and *PRODUCER* is a message broker that is used to SYNCHRONIZE the messages between them
+            -   *MESSAGE BROKER* performs synchronization of message with the help of queues which are used to add new messages or remove messages that are consumed
+            -   Store and Forward: broker implements store and forward mechanism to sync messages
+            -   queue in the BROKER will STORE messages until and unless some consumer CONSUMES those messages
+            -   consumer consumes message -> processes it -> send back and acknowledgement indicating success
+        -   DECOUPLING: producers and consumers are separated from each other and they involve decoupling to exchange messgaes with each other.  three types of decoupling
+            -   *Logical Decoupling*: producers and consumers do not know anything about each other except routing info
+            -   *Phyiscal Decoupling*: producers and consumers are on completely diff locations / networks / nodes
+            -   *Temporal Decoupling*: messages consumed by consumer at later stage
+        -   QUEUES and LOOSELY COUPLING:
+            -   rather than controllers passing data directly to the next controller sequentially&#x2026;
+            -   insert message queues between successive controllers, this will allow traffic to buffer and accumulate while not causing individual controllers to slow down or stall due to lack of incoming messages or inability to send out messages in order.
 
 
-<a id="orgb3ace10"></a>
+<a id="org37a7bfc"></a>
 
-### TODO 4<sub>3</sub><sub>3</sub> Amazon SQS
+### DONE 4<sub>3</sub><sub>3</sub> Amazon SQS
+
+-   close look at SQS messaging system example
+    -   SQS = Simple Queue Service
+        -   fast, scalable, and managed
+    -   enables ASYNCHRONOUS MESSAGE-BASED COMMUNICAITON between DISTRIBUTED COMPONENTS of an application
+    -   WHAT can sqs do..
+        -   sqs can DECOUPLE (think like mechanical coupling) the components of a cloud application
+        -   sqs can be used to transmit HIGH VOLUME of data WITHOUT LOSING MESSAGES and does not required other services to be available
+        -   sqs can handle awareness of what services are currently up / down and knows how to handle messages accordingly
+    -   HOW sqs does it (example)..
+        -   producers &#x2013;> Master Queue &#x2013;> Master Worker..
+            -   Master Worker to..
+                -   S3 Queue
+                    -   S3Q worker
+                        -   S3 (consumer)
+                -   ES Queue
+                    -   ESQ worker
+                        -   ES (consumer)
+                -   RDS Queue
+                    -   RDSQ worker
+                        -   RDS (consumer)
+    -   MAJOR features of SQS
+        -   redundant infrastructure
+        -   multiple writers and readers
+        -   configurable setting per queue
+        -   variable message size (up  to 256 kb)
+        -   access control
+        -   delay queue
+    -   message DELETTION
+        -   once consumed from the queue SQS does not delete the message..
+            -   system is distributed: there's no guarantee that the components WILL receive the message,
+            -   SQS does not delete the message, and instead, your consuming component must delete the message from the queue after receiving and processing it (so is SQS stateful?)
+    -   message VISIBILITY TIMEOUT
+        -   don't want other components of system receiving and processing message again,
+        -   amazon SQS blocks them with a visibility timeout (de-duplication tool)
+            -   is a period of time during which sqs prevents other consuming components from receiving and processing that same message.  Give the one initial consumer some time to process it and possibly delete it before letting it pass on to other subsequent consumer components.
+    -   sqs message LIFECYCLE
+        1.  componenet 1 sned message A to the queue
+        2.  componenet 2 retreives message A from queue and visibility timeout starts
+        3.  componenet 2 processes message A and then deletes it from the queue (itself) within the visibility timeout window.
+    -   sqs DELAY QUEUES (different than message visibility timeout)
+        -   allows for postponement of message delivery for set number of seconds
+        -   any message sitting in delay queue is INVISIBLE to consumers for the duration of that period
+        -   delay queues are SIMILAR to visibility time outs but ..
+            -   difference is that for delay queues a message is hidden when IT IS FIRST ADDED to the queue, where for visibility timeouts the message is hidden ONLY AFTER A MESSAGE IS RETRIEVED from the queue by a consumer
+            -
 
 
-<a id="org07549d3"></a>
+<a id="org91aad98"></a>
 
-### TODO 4<sub>3</sub><sub>4</sub> AMQP and Exchanges
+### DONE 4<sub>3</sub><sub>4</sub> AMQP and Exchanges
+
+-   RabbitMQ / AMQP
+    -   contains producers, consumers, EXCHANGES, QUEUES, BINDINGS, and a message broker
+    -   EXCHANGES: function as putting the messages recieved from the producer into the RIGHT QUEUE present in the message broker
+    -   QUEUEs: buffer up the messages until the consumer decides to fetch the messages
+    -   BINDING: the link between EXCHANGES and QUEUES is called the BINDING
+-   EXCHANGES, three types:
+    1.  *Fan-Out Exchange*: in the fanout exchange, every message received from the producer is stored inall the queues present in the message broker (one-to-all)
+    2.  *Direct Exchange*: the messages are stored in a queue when the routing key provided by the producer matches the binding key of the queue (one-to-one)
+    3.  *Topic Exchange* involves the use of wildcard KEYS in order to store the messages to a PARTICULAR queue (one-to-many??) (like search operators)
+-   NATURE OF QUEUES
+    1.  *Transfer*: the transfer of message takes place into the ends of the queue, this ensures a consistent order of messages within the queue
+    2.  *Browsing*: the messages stored in the queue are browsed from the side of the queue, this ensured a high amount of parallelism while accessing the messages from the queue and also ensures high throughput
+    3.  *Synchronization*: whenever a copy of queue present in a message broker is created it is done using a particular order or using the sequence numbers similar to what TCP/IP does.
+-   FAILURES, handling them
+    -   failure to receive any ACK from broker the producer will try to send the same message again which leads to the duplication of messages.
+    -   there is a potential for pocessing of duplicate message when consumer fails to ACK a processed message which is also know as redlivery
+    -   even though the above is not ideal, at a minimum the system guarantees delivery of AT LEAST ONE MESSAGE
 
 
-<a id="org13bda8b"></a>
+<a id="orgedcf551"></a>
 
 ### TODO Reading Assignment: Apache Kafka
 
 
-<a id="orgf09b05d"></a>
+<a id="orged740ac"></a>
 
 ## Section 4<sub>4</sub>
 
 
-<a id="org56e812f"></a>
+<a id="org86353d3"></a>
 
 ### TODO 4<sub>4</sub><sub>1</sub> Introduction to Kafka
 
 
-<a id="org407bea1"></a>
+<a id="orgc0245a8"></a>
 
 ### TODO 4<sub>4</sub><sub>2</sub> Deeper in Kafka
 
 
-<a id="org4fb3d21"></a>
+<a id="org984b56d"></a>
 
 ### TODO 4<sub>4</sub><sub>3</sub> Data Streaming Techniques
 
 
-<a id="orgb2306b5"></a>
+<a id="org5ff9a7f"></a>
 
-## Homework 3
-
-
-<a id="orgf3cc1f7"></a>
-
-## Midterm
+## TODO Homework 3
 
 
-<a id="orga952f75"></a>
+<a id="org82d3985"></a>
+
+## TODO Midterm
+
+
+<a id="org982862b"></a>
 
 # Module 5
 
 
-<a id="org0c47b5b"></a>
+<a id="org1a039c8"></a>
 
-## Section 5<sub>1</sub>
-
-
-<a id="org44ad744"></a>
-
-## Section 5<sub>2</sub>
+## TODO Section 5<sub>1</sub>
 
 
-<a id="org66aff3c"></a>
+<a id="org45ce885"></a>
 
-## Section 5<sub>3</sub>
-
-
-<a id="orgd94e250"></a>
-
-## Homework 4
+## TODO Section 5<sub>2</sub>
 
 
-<a id="org48c9283"></a>
+<a id="org7b59b15"></a>
 
-## End of Course Eval
+## TODO Section 5<sub>3</sub>
+
+
+<a id="orgc547af8"></a>
+
+## TODO Homework 4
+
+
+<a id="orgb0f40be"></a>
+
+## TODO End of Course Eval
 

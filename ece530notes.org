@@ -1055,7 +1055,7 @@ CLOSED: [2023-04-24 Mon 10:09]
       - i.e. each post is a row in your table, rows have num id and text of post
     - when want to read post, URL in that address basically says "give me post #x"
       - query: "select all from POST TABLE where ID of POST is X
-      - response: The post --html renders text and send back to browser
+      - response: post --html renders text and send back to browser
     - relational model common for blogs with COMMENTS
     - COMMENTS table most like has same ID column as POSTS and COMMENTS data may be 'commentBody' or 'bodyText' etc.
     - TABLE also have a column "post_id", "post_id" contains ID of blog post "COMMENT" relates to
@@ -1250,27 +1250,297 @@ CLOSED: [2023-04-24 Mon 11:30]
   - horizontal scaling
   - schema
   - great as an object store
-*** TODO 4_1_5 NoSQL Data Modeling
-*** TODO Quiz 4_1
+*** DONE 4_1_5 NoSQL Data Modeling
+CLOSED: [2023-04-25 Tue 12:02]
+- Role and Importance of Data Modeling
+  - have to really understand the nature of your data before designing storage system approach
+- NoSQL
+  - flexible schema. unlike sql schema (rigid)
+    - this flexibility facilitates mapping of documents to an entity or an object
+    - each document can match the data fields of the represented level, even if the data has substantial variation
+      - in practice, the documents in a collection share a similar structure
+- Challenges of DATA MODELING
+  - key challeng is balancing the NEEDS of the APPLICATION
+    - performance characteristics of the database engine
+    - data retrieval pattern
+  - when designing data models, always consider the application usage of the data (queries, updates, etc) as well as the inherent structure of the data itself.
+- Data Structure of NoSQL
+  - key decision in designing data models revolves around the STRUCUTRE of the DOCUMENTS and how the APPLICATION represents RELATIONSHIPS between DATA
+    - two tools that allow applications to REPRESENT RELATIONSHIPS: references and embedded documents
+    - _Embeded Documents_
+      - embedded documents capture relationships between data by storing related data in a single document structure.  NoSQL documents make it possible to embed document structures as sub-documents in a field or array within a document.
+    - when to use embedded documents,
+      - if you have 'contains' relationships between entities (one to one relationships)
+      - if you have one-to-many relationships between entities (one parent, many children example)
+      - Embedding provides better performance for read operations, as well as the ability to request and retrieve related data in a single database operation.
+      - Embedded data models make it possible to update related data in a single atomic write operation.
+    - _References_
+      - When to use:
+        - when using normalized data models
+          - if embedding would result in duplication of data but not provide sufficient read performance advantage
+          - to represent more complex many-to-many relationships
+          - to model large hierarchical data sets
+        - refrence provide more flexibility than embedding.  however client side applications must issue follow-up queries to resolve the references.  in other words, normalized data models can require more round trips to the server.
+    - _Atomicity of Write Operations_
+      - write operations are atomic at teh DOCUMENT level and no single write operation can atomically affect more than one document or more than one collection
+      - a denormalized data model with embedded data combines all related data for a represented entity in a single document
+        - this facilitates atomic write operations since a single write operation can insert or update the data for an entity
+      - Normalizing the data would split teh data across multiple collectionand would requre mulitple rite operations that are not atomic collectively.
+- _Query Processing, NoSQL #1_
+  - NoSQL has some fundamental limitations that we need to be aware of..
+    - it calls for a more relaced data consistency model
+    - it provides primitive qurying and searching capability
+  - many contemporary NoSQL DB systems are based on the DTH distributed hash system model which provides a hashtable access semantics
+    - to access or modify ANY object data, the client is REQUIRED to supply the primary KEY of the object, then the DB will LOOKUP the object using an equality match to the supplied KEY.
+- _Query Processing, NoSQL #2_
+  - for example if we choose DHT to implement a customer DB, we can shoose the customer id as the key.  And then we can get/set/operate ON ANY CUSTOMER object if we know its id
+    - /cust_data = DHT.get(cust_id)/
+    - /DHT.set(cust_id, modified_cust_data)/
+    - /DHT.execute(cust_id, func(cust){cust.add_credit(200)})/
+  - in the real world, we may want to search data based on other attributes based on
+    - "greater / less than" relationship
+    - combine multiple search critera using a boolean expression
+- _Scatter/Gather Local Search_
+  - some of the NoSQL DB provide indexing and query processing mechanism within the local DB.  In this case, we can have the query processor broadcast the query to every node in the DHT where a local serch will be conducted with results send back to the query processor which aggregates into a single response.
+  - 
+*** DONE Quiz 4_1
+CLOSED: [2023-04-24 Mon 12:36]
 ** Section 4_2
-*** TODO 4_2_1 Active Cloud Storage
-*** TODO 4_2_2 Long Term Storage 
-*** TODO Quiz 4_2
+*** DONE 4_2_1 Active Cloud Storage
+CLOSED: [2023-04-25 Tue 10:50]
+- PERSISTENT CLOUD STORAGE types (main categories provided by IaaS providers)
+  - Ephemeral
+  - Block Storage
+  - Object Storage
+  - Data Archiving
+- Storage Access
+  - by Blocks,
+  - by Files,
+  - by Objects
+- __Ephemeral Storage__
+  - effectively the 'whole instance' storage
+  - stores data used in the compute instance
+  - lifetime of the data is based on lifetime of the instance (like esxi vm management)
+  - IaaS providers provide and instance FAMILY that include HIGH storage instance
+    - very fast SSD-backed instance storage
+    - optimized for very high random I/O performance
+    - provide high IOPS at a low cost
+    - example, i2 family
+  - Use Cases:
+    - NoSQL databases like cassandra and mongodb
+    - scale out transactional databases
+    - data warehousing
+    - hadoop
+    - cluster file sytems
+- __Block Storage__
+  - block storage SERVICES allow user to create storage VOLUMES and ATTACH them to VMs
+  - once attached, user can create a FILE SYSTEM on these VOLUMES and run a database or use them in other ways
+  - block storage volume by most cloud vendors, tend to b placed in specific AVAILABILITY ZONES where they are automatically replicated to protect you from failure of a single component
+  - block storage volume TYPES offer durable SNAPSHOT capabilities and are designed for %99.999 availability
+  - block storage system manages the CREATION, ATTACHING, and DETACHING of the block devices to servers.
+  - appropriate for PERFORMANCE SENSITIVE scenarios
+    - i.e. database storage, expandable file systems,
+  - user can
+    - dynamically increase capacity
+    - tune performance
+    - change the type of live volumes with no downtime or performance impact.
+  - SNAPSHOT management:
+    - snapshots can be restored or used to create new block storage volumes
+  - CURRENT examples
+    - AWS EBS (elastic block storage)
+    - AWS EBS durability and availability
+      - without extr charge to customer, ebs volume data is replicated across multiple aws servers to prevent failure
+      - aws ebs volumes designed for annual failure rate (AFR) betwee  %0.1-%0.2
+*** DONE 4_2_2 Long Term Storage
+CLOSED: [2023-04-25 Tue 10:50]
+(cont from above)
+- _Object Storage_
+  - redundant, scalable, object storage using clusters of standardized servers capable of storing PETABYTES of data
+  - Object Storage is not a traditional file system, but rather a distributed storage system for static data such as virtual machine images, photo storage, email storage, backups and archives
+    - having no central brain or master point of control provides greater scalability, redundancy, and durability.
+  - Durability:
+    - object data written to multiple disk drives spread throughout the servers in the data center
+      - IaaS software responsible for ensuring data replication and integrity across cluster
+    - storage clusters scale horizontally simply by adding new servers
+      - if a server fails, IaaS system replicates it's content from other active nodes to new lcoation in the cluster.
+      - IaaS software uses software logic to ensure data replication and distribution across different devices, inexpensive commodity, hard drives, and servers can be used in lieu of more expensive equipment
+      - %99.999 durability adn scal bast tens of trillions of objects.
+  - compared to block storage
+|                     | ephemeral            | block                     | object                   |
+|---------------------+----------------------+---------------------------+--------------------------|
+| used to..           | run operating system | add additional persistent | store data, including vm |
+|                     | and scratch space    | storage to a virtual      | images                   |
+|                     |                      | machine (vm)              |                          |
+|---------------------+----------------------+---------------------------+--------------------------|
+| accessed through .. | a file system        | a block device that can   | REST API/vendor specific |
+|                     |                      | be partitioned, formatted,| API                      |
+|                     |                      | and mounted               |                          |
+|---------------------+----------------------+---------------------------+--------------------------|
+| accessible frome..  | within a VM          | within a VM               | anywhere                 |
+|---------------------+----------------------+---------------------------+--------------------------|
+| persists until ..   | VM is terminated     | deleted by user           | deleted by user          |
+|---------------------+----------------------+---------------------------+--------------------------|
+| sizing deter by..   | admin config, flavors| user initial requ         | avail phys storage       |
+|---------------------+----------------------+---------------------------+--------------------------|
+| typical example..   | up to 1 TB           | several TB's              | 10's of TB's of dataset  |
+|---------------------+----------------------+---------------------------+--------------------------|
+
+- cont.
+  - AWS S3 Storage Class
+    - S3 standard
+    - S3 Intelligent Tiering
+    - S3 Standard Infrequent Access
+    - S3 One Zone-Infrequent access
+    - Amazon S3 Glacier
+    - Amazon S3 Glacier Deep Archive
+- _Data Archiving_
+  - IaaS provide a secure, durable, extremely low cost /cloud storage service/ for data archiving and long term backup
+  - custoemrs can reliably store large or small amounts of data for less than 1 cent per cent per month
+    - much much cheaper than on site storage
+  - to keep costs low, data archiving technologies are optimized for infrequently accessed data where a retrieval time of several hours is suitable
+  - canb e very useful to decres the cost of storing data to S3 by moving the infrequent data to data archiving
+- _HUGE DATA TRANSFERS_
+  - transfering terabytes or petabytes of data from an existing data center to the cloud remains challenging
+  - all-in move to the cloud presents some issues..
+  - 
+- _Vendor offerings.._
+  - Block storage
+    - OpenStack: Cinder
+    - AWS: Elastic Block Storage (EBS)
+  - Object storage
+    - OpenStack: Swift
+    - AWS: S3
+    - Azure: Blob Storage
+    - Google: Google Cloud
+  - Data Archiving
+    - AWS: Glacier
+  - Huge Data Transfer
+    - AWS: SnowBall
+    - Azure: Import / Export 
+
+*** DONE Quiz 4_2
+CLOSED: [2023-04-25 Tue 11:36]
 ** Section 4_3
-*** TODO 4_3_1 Data Pipeline without Messaging System
-*** TODO 4_3_2 Data Pipeline with Messaging System
-*** TODO 4_3_3 Amazon SQS
-*** TODO 4_3_4 AMQP and Exchanges
+*** DONE 4_3_1 Data Pipeline without Messaging System
+CLOSED: [2023-04-25 Tue 11:36]
+- Messages in the cloud..
+  - Messaging deals with SENDING data over the INTERNET to scale APPLICATION
+  - it is STATELESS (does not store, retain the data it sends)
+  - it is used to SYNCHRONIZE STATEFUL applications
+  - messaging carries the STATE but itself is STATELESS
+- Messaging Systems/Broker
+  - _Message Broker_: is an intermediary program module that TRANSLATES a MESSAGE from teh formal messaging protocol of the sender to the formal messaging protocol of the receiver.  example:
+    - Apache Kafka
+    - Apache ActiveMQ
+    - RabbitMQ
+    - Celery Task Queue, etc
+  - Messaging is an important piece of infrastrucutre for moving data between systems
+  - look at a data pipeline that doesn't have MESSAGING...
+    - [pipeline without messaging] system starts hadoop for storage and data processing (will need data sent to it)
+    - sending initial data to seed hadoop is not a big deal..
+    - gets more complex though when multiple data streams / sources must also upload to hadoop concurrently over multiple channels
+    - each channel requires their own custom protocols and communication methods and moving data between these system becomes a full time job fore a team of developers..
+    - Eventually the application does less of what it was designed for and gets bogged down simply handling external requests, it becomes congested, traffic jams
+    - 
+*** DONE 4_3_2 Data Pipeline with Messaging System
+CLOSED: [2023-04-25 Tue 11:36]
+- cont. Now look at similar system WITH messaging..
+  - Kafka messaging bus example..
+    - all incoming data placed IN Kafka, all outgoing data is read FROM kafka
+    - kafka centralizes communication between producers of data and consumers of that data
+  - this is the PUB/SUB model (publishers and subscribers)
+    - MESSAGING consists of:
+      - /PRODUCER/ are the ones that generate messages
+      - /CONSUMER/ are the ones that recieve message from producer
+      - between the /CONSUMER/ and /PRODUCER/ is a message broker that is used to SYNCHRONIZE the messages between them
+      - /MESSAGE BROKER/ performs synchronization of message with the help of queues which are used to add new messages or remove messages that are consumed
+      - Store and Forward: broker implements store and forward mechanism to sync messages
+      - queue in the BROKER will STORE messages until and unless some consumer CONSUMES those messages
+      - consumer consumes message -> processes it -> send back and acknowledgement indicating success
+    - DECOUPLING: producers and consumers are separated from each other and they involve decoupling to exchange messgaes with each other.  three types of decoupling
+      - /Logical Decoupling/: producers and consumers do not know anything about each other except routing info
+      - /Phyiscal Decoupling/: producers and consumers are on completely diff locations / networks / nodes
+      - /Temporal Decoupling/: messages consumed by consumer at later stage
+    - QUEUES and LOOSELY COUPLING:
+      - rather than controllers passing data directly to the next controller sequentially...
+      - insert message queues between successive controllers, this will allow traffic to buffer and accumulate while not causing individual controllers to slow down or stall due to lack of incoming messages or inability to send out messages in order.
+*** DONE 4_3_3 Amazon SQS
+CLOSED: [2023-04-25 Tue 12:02]
+- close look at SQS messaging system example
+  - SQS = Simple Queue Service
+    - fast, scalable, and managed
+  - enables ASYNCHRONOUS MESSAGE-BASED COMMUNICAITON between DISTRIBUTED COMPONENTS of an application
+  - WHAT can sqs do..
+    - sqs can DECOUPLE (think like mechanical coupling) the components of a cloud application
+    - sqs can be used to transmit HIGH VOLUME of data WITHOUT LOSING MESSAGES and does not required other services to be available
+    - sqs can handle awareness of what services are currently up / down and knows how to handle messages accordingly
+  - HOW sqs does it (example)..
+    - producers --> Master Queue --> Master Worker..
+      - Master Worker to..
+        - S3 Queue
+          - S3Q worker
+            - S3 (consumer)
+        - ES Queue
+          - ESQ worker
+            - ES (consumer)
+        - RDS Queue
+          - RDSQ worker
+            - RDS (consumer)
+  - MAJOR features of SQS
+    - redundant infrastructure
+    - multiple writers and readers
+    - configurable setting per queue
+    - variable message size (up  to 256 kb)
+    - access control
+    - delay queue
+  - message DELETTION
+    - once consumed from the queue SQS does not delete the message..
+      - system is distributed: there's no guarantee that the components WILL receive the message,
+      - SQS does not delete the message, and instead, your consuming component must delete the message from the queue after receiving and processing it (so is SQS stateful?)
+  - message VISIBILITY TIMEOUT
+    - don't want other components of system receiving and processing message again,
+    - amazon SQS blocks them with a visibility timeout (de-duplication tool)
+      - is a period of time during which sqs prevents other consuming components from receiving and processing that same message.  Give the one initial consumer some time to process it and possibly delete it before letting it pass on to other subsequent consumer components.
+  - sqs message LIFECYCLE
+    1. componenet 1 sned message A to the queue
+    2. componenet 2 retreives message A from queue and visibility timeout starts
+    3. componenet 2 processes message A and then deletes it from the queue (itself) within the visibility timeout window.
+  - sqs DELAY QUEUES (different than message visibility timeout)
+    - allows for postponement of message delivery for set number of seconds
+    - any message sitting in delay queue is INVISIBLE to consumers for the duration of that period
+    - delay queues are SIMILAR to visibility time outs but ..
+      - difference is that for delay queues a message is hidden when IT IS FIRST ADDED to the queue, where for visibility timeouts the message is hidden ONLY AFTER A MESSAGE IS RETRIEVED from the queue by a consumer
+      - 
+*** DONE 4_3_4 AMQP and Exchanges
+CLOSED: [2023-04-25 Tue 17:05]
+- RabbitMQ / AMQP
+  - contains producers, consumers, EXCHANGES, QUEUES, BINDINGS, and a message broker
+  - EXCHANGES: function as putting the messages recieved from the producer into the RIGHT QUEUE present in the message broker
+  - QUEUEs: buffer up the messages until the consumer decides to fetch the messages
+  - BINDING: the link between EXCHANGES and QUEUES is called the BINDING
+- EXCHANGES, three types:
+  1. /Fan-Out Exchange/: in the fanout exchange, every message received from the producer is stored inall the queues present in the message broker (one-to-all)
+  2. /Direct Exchange/: the messages are stored in a queue when the routing key provided by the producer matches the binding key of the queue (one-to-one)
+  3. /Topic Exchange/ involves the use of wildcard KEYS in order to store the messages to a PARTICULAR queue (one-to-many??) (like search operators)
+- NATURE OF QUEUES
+  1. /Transfer/: the transfer of message takes place into the ends of the queue, this ensures a consistent order of messages within the queue
+  2. /Browsing/: the messages stored in the queue are browsed from the side of the queue, this ensured a high amount of parallelism while accessing the messages from the queue and also ensures high throughput
+  3. /Synchronization/: whenever a copy of queue present in a message broker is created it is done using a particular order or using the sequence numbers similar to what TCP/IP does.
+- FAILURES, handling them
+  - failure to receive any ACK from broker the producer will try to send the same message again which leads to the duplication of messages.
+  - there is a potential for pocessing of duplicate message when consumer fails to ACK a processed message which is also know as redlivery
+  - even though the above is not ideal, at a minimum the system guarantees delivery of AT LEAST ONE MESSAGE
+
 *** TODO Reading Assignment: Apache Kafka
 ** Section 4_4
 *** TODO 4_4_1 Introduction to Kafka
 *** TODO 4_4_2 Deeper in Kafka
 *** TODO 4_4_3 Data Streaming Techniques
-** Homework 3
-** Midterm
+** TODO Homework 3
+** TODO Midterm
 * Module 5
-** Section 5_1
-** Section 5_2
-** Section 5_3
-** Homework 4
-** End of Course Eval
+** TODO Section 5_1
+** TODO Section 5_2
+** TODO Section 5_3
+** TODO Homework 4
+** TODO End of Course Eval

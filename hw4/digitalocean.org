@@ -1,0 +1,93 @@
+#+title: Digital Ocean Walkthrough
+#+author: Silas Curfman
+
+* Digital Ocean Combined Walkthrough
+
+** Initial Server Setup Ubuntu 20.04
+- [X] add non root sudoer user
+- [X] confirm sudo rights
+- [X] confirm remote ssh access via new user
+
+** How to install and configure Ansible on Ubuntu 20.04
+- [X] Step 1: Install Ansible
+  (see HW4 docs)
+- [X] Set up inventory file (control node is node0, managed node is node1)
+- [X] ansible all -m ping -u root (replace 'root' with sudoer user on target machine)
+- [ ] create playbook to install DOCKER on managed node(s)
+  #+begin_example
+  ---
+- hosts: all
+  become: true
+  vars:
+    container_count: 4
+    default_container_name: docker
+    default_container_image: ubuntu
+    default_container_command: sleep 1d
+
+  tasks:
+    - name: Install aptitude
+      apt:
+        name: aptitude
+        state: latest
+        update_cache: true
+
+    - name: Install required system packages
+      apt:
+        pkg:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+          - python3-pip
+          - virtualenv
+          - python3-setuptools
+        state: latest
+        update_cache: true
+
+    - iname: Add Docker GPG apt Key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker Repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu focal stable
+        state: present
+
+    - name: Update apt and install docker-ce
+      apt:
+        name: docker-ce
+        state: latest
+        update_cache: true
+
+    - name: Install Docker Module for Python
+      pip:
+        name: docker
+
+    - name: Pull default Docker image
+      community.docker.docker_image:
+        name: "{{ default_container_image }}"
+        source: pull
+
+    - name: Create default containers
+      community.docker.docker_container:
+        name: "{{ default_container_name }}{{ item }}"
+        image: "{{ default_container_image }}"
+        command: "{{ default_container_command }}"
+        state: present
+      with_sequence: count={{ container_count }}
+  #+end_example
+- [ ] execute playbook point at target managed node..
+- 
+
+** How to use ansible to automate initial server setup ubuntu 20.04
+
+** How to use ansible to install and set up docker on ubuntu 20.04
+
+** How to install MongoDB on Ubuntu 20.04
+
+** How to configure a MongoDB Replica Set on Ubuntu 20.04
+
+** How to configure remote access for MongoDB on Ubuntu 20.04
+
+* [ MongoDB 7] Sharding MongoDB via docker containers (video)

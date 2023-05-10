@@ -1,0 +1,18 @@
+#+title: Demo Diary
+#+author: Silas Curfman
+
+* Demo Diary
+** Host Machine Setup
+*** Install Ubuntu Latest server
+*** Configure for open-ssh / ssh access
+*** Install Ansible (no docker yet)
+*** 
+** NODE 0: Ansible Control Node
+This will be the master ansible node that controls NODE 1 host machine.  The control node will install to NODE 1 the necessary apps to run containers of MongoDB in a Sharded arrangement.  The MongoDB isntances will be run in individual CONTAINERS deployed by DOCKER.  Docker can be installed via ANSIBLE.  Once basic MONGODB containers are initialized within NODE 1, the ansible controller (NODE 0) will CONFIGURE databases, and MANAGE them remotely.
+
+The only thing necessary to install on the control node should be ANSIBLE.  The control node will need to have network access to NODE 1.  The ANSIBLE playbooks run from NODE 0 will have to have awareness of NODE 1.  NODE 1' basic install should include OpenSSH and a super user that has root access.
+*** APPS:
+**** Install ansible
+** NODE 1: Demo Node (controlled by ansible node)
+*** APPS:
+**** BARE METAL, install no apps manually

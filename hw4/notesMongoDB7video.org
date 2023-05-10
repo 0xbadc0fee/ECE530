@@ -1,0 +1,2 @@
+#+title: Notes for YT [MongoDB 7]
+

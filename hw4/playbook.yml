@@ -1,0 +1,21 @@
+---
+- name: HW4-ECE530
+  hosts: 192.168.1.81
+  become: yes
+
+  tasks:
+          - name: Setup Shard Host & Packages
+            import_role:
+                    name: shardhost
+
+          - name: copy team.txt to node root directories
+            import_role:
+                    name: common
+
+          - name: setup secondary node containers
+            import_role:
+                    name: secondary
+
+          - name: setup primary node container
+            import_role:
+                    name: primary

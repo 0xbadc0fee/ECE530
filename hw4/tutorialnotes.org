@@ -1,0 +1,153 @@
+#+title: Video Notes
+* Deploying MongoDB sharded clusters easily with Terraform and Ansible
+* Outline
+** Terraform 101 (vs. Docker)
+** Provisioning in GCP
+** Ansible 101
+** Deploying MongoDB
+** Q&A
+* Overview
+- 'mongos' = mongo server
+- shard = replicate set member, each containing a fraction of the overall database information
+- config servers = middle layer between monos and shards
+* The plan
+1. Define the Topology
+2. Provision the infrastructure via +Terraform+ Docker
+   1. +instances+, +disks+, +networks+, +buckets+
+   2. images, containers, clusters, networks, volumes
+3. Install the software using Ansible
+   1. MongoDB, monitoring and backup solutions
+* Terraform (not necessary)
+- Infrastructure-as-Code
+- OpenSource
+- Works with multiple resources and providers
+- Declarative approach - state what you want
+- Infrastructure converges to the desired
+** Terraform Syntax (n/a..)
+* Deploying Software (t = 19:44)
+* Ansible 101
+- Automation Engine
+- SSH-based (don't pass passwords)
+- Open Source
+- Web Interface: AWX Project
+** Why Ansible?
+- Easy to deploy
+- No agent required
+- No firewall rules required
+- YAML structure
+- Secure
+** Installing Ansible
+1. Control Machine
+   1. can be your laptop
+   2. Acts as the Ansible server
+   3. Only required when running Anisble code (playbooks)
+2. Managed Nodes (need to be already up, ansible doesn't create containers or vms)
+** Ansible Inventory
+1. Inventory Options
+   1. Static 
+      1. use an .ini or .yaml format file
+   2. Dynamic
+      1. Scripts available for most cloud providers
+      2. write your own plugin
+2. The default inventory is ~/etc/ansible/hosts~
+
+   #+begin_example sh
+   #Group Name 1
+   [webservers]
+   www.myhost.com
+   www.example.com
+
+   #Group Name 2
+   [databases]
+   db-[a:f] .example.com  #using a regex "range" to capture all discovered within a certain naming pattern
+
+   #Host vars
+   [atlanta]
+   dba.example.com http_port=80 maxRequestsPerChild=808
+
+   #Group Vars..
+   [atlanta:vars]
+   ntp_server=ntp.atlanta.example.com
+ 
+   #+end_example
+
+3. Modules..
+   1. Ansible building blocks
+
+   2. should be idempotent
+
+   #+begin_example sh
+   $ ansible example -m ping
+      www.example.com | SUCCESS => {
+         "changed": false,
+         "ping": "pong"
+      }
+   $ ansible example -m service -a "name=httpd state=started"
+   #+end_example
+
+4. Playbooks..
+
+   1. Orchestrate Steps
+   2. Composed of one or more plays
+   3. each play runs a number of tasks in order on a group of servers
+      1. e.g. call a module to do something
+   4. YML format
+
+5. Simple inventory file..
+   
+   #+begin_example sh
+   [webservers]
+   web[01:10].example.com
+
+   [databases]
+   db[01:10].example.com
+   #+end_example
+
+6. Playbook example (3)
+
+   #+begin_example sh
+   ---
+   - hosts: webservers
+     # play 1
+     tasks:
+       - name: ensure apache is at the latest version
+         yum:
+           name: httpd
+           state: latest
+
+       - name: ensure apache is started
+         service:
+           name: httpd
+           state: started
+
+   - hosts: databases
+     # play 2
+     tasks:
+       - name: ensure postgresql is at latest version
+         yum:
+           name: postgresql
+           state: latest
+           
+   #+end_example
+
+7. Runing playbook
+
+   1. ~$ ansible-playbook all my_pb.yml [--limit *example.com]~
+
+8. Ansible Variables
+   1. simple variables
+      1. foo:bar
+   2. lists
+      datacenter:
+      - us-west
+      - us-east
+   3. Dictionary.
+      foo:
+        field1: one
+        field2: two
+9. Automating it..
+   1. Create an ANSIBLE inventory file (hosts)
+   2. Edit the VARIABLES file
+   3. RUN the ansible PLAYBOOK
+      
+   
